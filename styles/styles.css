@@ -33,3 +33,14 @@ h1 {
     width: 100%;
     position: relative;
 }
+
+.branch::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 40px;
+    background-color: #fff;
+}
