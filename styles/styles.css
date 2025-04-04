@@ -26,3 +26,10 @@ h1 {
     position: relative;
 }
 
+.branch {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    position: relative;
+}
