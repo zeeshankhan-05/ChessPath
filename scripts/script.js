@@ -363,4 +363,109 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    
+    // Add modal styles
+    const modalStyles = document.createElement('style');
+    modalStyles.textContent = `
+        .modal-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .modal {
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-header {
+            padding: 1.5rem;
+            background: linear-gradient(145deg, #4657ce, #3a4bde);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            position: relative;
+        }
+        
+        .modal-header h2 {
+            color: #fff;
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        
+        .elo-range {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.3rem 0.8rem;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .close-btn:hover {
+            color: #ff5252;
+        }
+        
+        .modal-body {
+            padding: 1.5rem;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: #e0e0e0;
+        }
+        
+        .modal-body h3 {
+            margin: 1.5rem 0 0.8rem;
+            color: #42a5f5;
+            font-size: 1.3rem;
+        }
+        
+        .content-list, .resources-list {
+            padding-left: 1.5rem;
+        }
+        
+        .content-list li, .resources-list li {
+            margin-bottom: 0.5rem;
+            color: #e0e0e0;
+        }
+        
+        .resources-list li {
+            color: #81c784;
+        }
+        
+        @media (max-width: 768px) {
+            .modal {
+                width: 95%;
+                max-height: 80vh;
+            }
+            
+            .modal-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+    `;
+    document.head.appendChild(modalStyles);
+});
