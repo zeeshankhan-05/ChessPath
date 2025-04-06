@@ -309,3 +309,58 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         }
     };
+
+    // Create a modal container
+    const modalContainer = document.createElement('div');
+    modalContainer.className = 'modal-container';
+    modalContainer.style.display = 'none';
+    document.body.appendChild(modalContainer);
+
+    // Add click event listener to each node
+    nodes.forEach(node => {
+        node.addEventListener('click', () => {
+            const nodeId = node.id;
+            const info = nodeInfo[nodeId];
+            
+            if (info) {
+                // Create modal content
+                const modalContent = `
+                    <div class="modal-header">
+                        <h2>${info.title}</h2>
+                        <span class="elo-range">ELO: ${info.elo}</span>
+                        <span class="close-btn">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <p class="description">${info.description}</p>
+                        <h3>What You'll Learn:</h3>
+                        <ul class="content-list">
+                            ${info.content.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                        <h3>Recommended Resources:</h3>
+                        <ul class="resources-list">
+                            ${info.resources.map(resource => `<li>${resource}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                
+                // Update modal container
+                modalContainer.innerHTML = `<div class="modal">${modalContent}</div>`;
+                modalContainer.style.display = 'flex';
+                
+                // Add close functionality
+                const closeBtn = document.querySelector('.close-btn');
+                closeBtn.addEventListener('click', () => {
+                    modalContainer.style.display = 'none';
+                });
+                
+                // Close when clicking outside
+                modalContainer.addEventListener('click', (e) => {
+                    if (e.target === modalContainer) {
+                        modalContainer.style.display = 'none';
+                    }
+                });
+            }
+        });
+    });
+
+    
