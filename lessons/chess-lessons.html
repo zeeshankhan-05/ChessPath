@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Lessons Library - Chess Learning Roadmap</title>
+    <meta name="description" content="Browse our comprehensive collection of chess lessons organized by difficulty level and topic to improve your skills.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chess-theme.css">
+    <script src="script.js" defer></script>
+    <script src="lesson-plan.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <span class="chess-piece-icon king">♚</span>
+                <span>Chess Roadmap</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lesson-roadmap.html">Roadmap</a></li>
+                <li><a href="chess-lessons.html" class="active">Lessons</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="lessons-header">
+            <div class="container">
+                <h1>Chess Lessons Library</h1>
+                <p>Browse our collection of lessons covering all aspects of chess strategy and tactics</p>
+
+                <div class="lesson-filters">
+                    <div class="filter-group">
+                        <label for="level-filter">Level:</label>
+                        <select id="level-filter">
+                            <option value="all">All Levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="topic-filter">Topic:</label>
+                        <select id="topic-filter">
+                            <option value="all">All Topics</option>
+                            <option value="openings">Openings</option>
+                            <option value="tactics">Tactics</option>
+                            <option value="strategy">Strategy</option>
+                            <option value="endgame">Endgame</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group search-group">
+                        <label for="lesson-search">Search:</label>
+                        <input type="text" id="lesson-search" placeholder="Search lessons...">
+                    </div>
+                </div>
+            </div>
+        </section>
