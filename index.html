@@ -3,156 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chess Roadmap</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/script.js" defer></script>
+    <title>Chess Learning Roadmap - Master Chess One Step at a Time</title>
+    <meta name="description" content="A comprehensive roadmap to guide you from beginner to advanced chess player with structured lessons, exercises, and resources.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chess-theme.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Chess Roadmap</h1>
-        <div class="roadmap">
-            <!-- Fundamentals -->
-            <div class="node main-node" id="fundamentals">
-                <div class="content">
-                    <h2>Chess Fundamentals</h2>
-                    <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                </div>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <span class="chess-piece-icon-king">♚</span>
+                <span> Chess Roadmap</span>
             </div>
-            
-            <!-- Level 1 -->
-            <div class="branch">
-                <div class="node" id="rules">
-                    <div class="content">
-                        <h2>Rules & Setup</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-                <div class="node" id="tactics">
-                    <div class="content">
-                        <h2>Basic Tactics</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="lesson-roadmap.html">Roadmap</a></li>
+                <li><a href="chess-lessons.html">Lessons</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <!-- Level 2 -->
-            <div class="branch">
-                <div class="node" id="notation">
-                    <div class="content">
-                        <h2>Chess Notation</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-                <div class="node" id="openings">
-                    <div class="content">
-                        <h2>Opening Principles</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-                <div class="node" id="endgames">
-                    <div class="content">
-                        <h2>Basic Endgames</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Level 3 -->
-            <div class="branch">
-                <div class="node" id="patterns">
-                    <div class="content">
-                        <h2>Pattern Recognition</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Level 4 -->
-            <div class="branch">
-                <div class="node" id="strategies">
-                    <div class="content">
-                        <h2>Strategic Concepts</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-                <div class="node" id="calculation">
-                    <div class="content">
-                        <h2>Calculation</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Level 5 -->
-            <div class="branch">
-                <div class="node" id="advanced-openings">
-                    <div class="content">
-                        <h2>Openings</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-                <div class="node" id="middlegame">
-                    <div class="content">
-                        <h2>Middlegame Plans</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-                <div class="node" id="complex-endgames">
-                    <div class="content">
-                        <h2>Complex Endgames</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Level 6 -->
-            <div class="branch">
-                <div class="node" id="positional-play">
-                    <div class="content">
-                        <h2>Positional Play</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-                <div class="node" id="attack">
-                    <div class="content">
-                        <h2>Attack & Defense</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Level 7 -->
-            <div class="branch">
-                <div class="node" id="theory">
-                    <div class="content">
-                        <h2>Opening Theory</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-                <div class="node" id="dynamic-play">
-                    <div class="content">
-                        <h2>Dynamic Play</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-                <div class="node" id="psychology">
-                    <div class="content">
-                        <h2>Chess Psychology</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Level 8 -->
-            <div class="branch">
-                <div class="node" id="mastery">
-                    <div class="content">
-                        <h2>Chess Mastery</h2>
-                        <div class="progress-bar"><div class="progress" style="width: 0%"></div></div>
-                    </div>
-                </div>
-            </div>
-    </div>
-    <script src="script.js"></script>
+    <main>
+        
+    </main>
 </body>
-</html>
