@@ -169,3 +169,34 @@ nav {
     gap: 1.5rem;
 }
 
+/* Button hover effect background */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(226, 192, 68, 0.15);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+/* Primary button variant with solid background */
+.btn-primary {
+    background-color: #e2c044;
+    color: #0d1829;
+}
+
+.btn-primary:hover {
+    background-color: #d4b13a;
+}
