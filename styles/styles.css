@@ -69,3 +69,12 @@ header {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Navigation layout with flexbox for positioning */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
