@@ -312,3 +312,65 @@ nav {
     z-index: 0;
 }
 
+/* Individual level card with hover effects */
+.level-card {
+    background: rgba(226, 192, 68, 0.04);
+    border: 1px solid rgba(226, 192, 68, 0.1);
+    border-radius: 12px;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    z-index: 1;
+}
+
+/* Arrow connecting level cards */
+.level-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -2.5rem;
+    width: 2rem;
+    height: 1rem;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='12' viewBox='0 0 24 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.5303 6.53033C23.8232 6.23744 23.8232 5.76256 23.5303 5.46967L18.7574 0.696699C18.4645 0.403806 17.9896 0.403806 17.6967 0.696699C17.4038 0.989593 17.4038 1.46447 17.6967 1.75736L21.9393 6L17.6967 10.2426C17.4038 10.5355 17.4038 11.0104 17.6967 11.3033C17.9896 11.5962 18.4645 11.5962 18.7574 11.3033L23.5303 6.53033ZM0 6.75H23V5.25H0V6.75Z' fill='%23e2c044'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+}
+
+.level-card:last-child::after {
+    display: none;
+}
+
+.level-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(226, 192, 68, 0.2);
+    background: linear-gradient(140deg, rgba(226, 192, 68, 0.08) 0%, rgba(226, 192, 68, 0.03) 100%);
+}
+
+/* Level card heading */
+.level-card h3 {
+    color: #e2c044;
+    margin-bottom: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+/* Level card list container */
+.level-card ul {
+    list-style: none;
+}
+
+/* Level card list items with arrow markers */
+.level-card li {
+    color: #a8b2d1;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.level-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #e2c044;
+}
