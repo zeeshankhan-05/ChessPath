@@ -78,3 +78,47 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* Navigation links container */
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+/* Individual navigation link styling with hover effects */
+.nav-links a {
+    color: #ccd6f6;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e2c044;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e2c044;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a.active {
+    color: #e2c044;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
