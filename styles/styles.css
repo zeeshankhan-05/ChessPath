@@ -55,3 +55,17 @@ p {
     color: #a8b2d1;
     font-size: 1.1rem;
 }
+
+/* Header and Navigation - Fixed position with backdrop blur */
+header {
+    background-color: rgba(13, 24, 41, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(226, 192, 68, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
