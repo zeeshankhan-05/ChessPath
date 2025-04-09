@@ -288,3 +288,21 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Interactive Piece Animation */
+@keyframes pieceMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(5px, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.chess-piece-icon.animate {
+    animation: pieceMove 1.5s ease-in-out infinite;
+}
+
