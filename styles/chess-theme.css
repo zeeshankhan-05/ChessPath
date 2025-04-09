@@ -246,3 +246,28 @@
     box-shadow: inset 0 0 0 3px var(--highlight);
 }
 
+/* Chess Notation */
+.chess-notation {
+    font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', monospace;
+    font-size: 1rem;
+    color: var(--piece-light);
+    background-color: rgba(226, 192, 68, 0.08);
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(226, 192, 68, 0.15);
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.chess-notation::before {
+    content: 'Notation';
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    background-color: #0d1829;
+    padding: 0 8px;
+    font-size: 0.8rem;
+    color: rgba(226, 192, 68, 0.8);
+    font-weight: 500;
+}
