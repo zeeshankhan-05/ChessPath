@@ -66,3 +66,28 @@
 .chess-piece-icon.dark {
     color: var(--piece-dark);
 }
+
+/* Level Backgrounds */
+.beginner {
+    background: linear-gradient(135deg, 
+        rgba(118, 150, 86, 0.08) 0%,
+        rgba(118, 150, 86, 0.15) 100%);
+    border-color: rgba(118, 150, 86, 0.25) !important;
+    position: relative;
+}
+
+.beginner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(118, 150, 86, 0.1)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z'%3E%3C/path%3E%3C/svg%3E");
+    background-position: right -10px bottom -10px;
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
