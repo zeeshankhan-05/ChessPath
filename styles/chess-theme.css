@@ -139,3 +139,24 @@
     z-index: 0;
     pointer-events: none;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(13, 24, 41, 0.5);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold-gradient);
+    border-radius: 4px;
+    border: 2px solid rgba(13, 24, 41, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ffda85, #e2c044);
+}
