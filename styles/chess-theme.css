@@ -91,3 +91,28 @@
     z-index: 0;
     pointer-events: none;
 }
+
+.intermediate {
+    background: linear-gradient(135deg, 
+        rgba(226, 192, 68, 0.08) 0%,
+        rgba(226, 192, 68, 0.15) 100%);
+    border-color: rgba(226, 192, 68, 0.25) !important;
+    position: relative;
+}
+
+.intermediate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(226, 192, 68, 0.1)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2a10 10 0 0 0-6.88 17.28l3.13-3.14a4.5 4.5 0 0 1 6.37-6.35l-1.51 1.51a2.5 2.5 0 0 0-3.53 3.53l1.51 1.51a2.5 2.5 0 0 0 3.53-3.53L13.6 11.29l3.13-3.13A10 10 0 0 0 12 2z'%3E%3C/path%3E%3C/svg%3E");
+    background-position: right -10px bottom -10px;
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
