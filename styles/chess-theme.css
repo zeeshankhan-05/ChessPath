@@ -1,0 +1,12 @@
+/* Chess Theme Variables */
+:root {
+    --light-square: rgba(238, 238, 210, 0.7);
+    --dark-square: rgba(118, 150, 86, 0.7);
+    --light-square-highlight: rgba(247, 247, 130, 0.5);
+    --dark-square-highlight: rgba(187, 203, 43, 0.5);
+    --piece-light: #e2c044;
+    --piece-dark: #a8b2d1;
+    --highlight: rgba(226, 192, 68, 0.3);
+    --shadow: rgba(0, 0, 0, 0.25);
+    --gold-gradient: linear-gradient(45deg, #e2c044, #ffda85);
+}
