@@ -160,3 +160,24 @@
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(45deg, #ffda85, #e2c044);
 }
+
+/* ELO Rating Display */
+.elo-rating {
+    font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--piece-light);
+    background-color: rgba(226, 192, 68, 0.1);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(226, 192, 68, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.elo-rating::before {
+    content: '⦿';
+    color: var(--piece-light);
+    font-size: 0.8rem;
+}
