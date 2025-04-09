@@ -306,3 +306,31 @@
     animation: pieceMove 1.5s ease-in-out infinite;
 }
 
+/* Piece Collection Display */
+.piece-collection {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.piece-collection .chess-piece-icon {
+    font-size: 2rem;
+    padding: 0.8rem;
+    background-color: rgba(226, 192, 68, 0.08);
+    border-radius: 50%;
+    border: 1px solid rgba(226, 192, 68, 0.15);
+    transition: all 0.3s ease;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.piece-collection .chess-piece-icon:hover {
+    transform: translateY(-5px) rotate(15deg);
+    background-color: rgba(226, 192, 68, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
