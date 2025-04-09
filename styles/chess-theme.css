@@ -29,3 +29,40 @@
     bottom: 0;
     z-index: -1;
 }
+
+/* Chess Piece Icons */
+.chess-piece-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+    color: var(--piece-light);
+    text-shadow: 0 3px 8px var(--shadow);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.chess-piece-icon.king::before {
+    content: '♚';
+}
+
+.chess-piece-icon.queen::before {
+    content: '♛';
+}
+
+.chess-piece-icon.rook::before {
+    content: '♜';
+}
+
+.chess-piece-icon.bishop::before {
+    content: '♝';
+}
+
+.chess-piece-icon.knight::before {
+    content: '♞';
+}
+
+.chess-piece-icon.pawn::before {
+    content: '♟';
+}
+
+.chess-piece-icon.dark {
+    color: var(--piece-dark);
+}
