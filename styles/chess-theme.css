@@ -334,3 +334,31 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Progress Completion Badge */
+.completion-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--gold-gradient);
+    color: #0d1829;
+    font-weight: 600;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.completion-badge::before {
+    content: '✓';
+    background-color: #0d1829;
+    color: #e2c044;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+}
+
