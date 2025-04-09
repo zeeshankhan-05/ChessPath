@@ -362,3 +362,32 @@
     font-size: 0.8rem;
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .chess-piece-icon {
+        font-size: 2rem;
+    }
+    
+    .chessboard div {
+        font-size: 1.8rem;
+    }
+    
+    .level-indicator {
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .elo-rating, .chess-notation {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .piece-collection .chess-piece-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+    }
+    
+    .level-indicator .chess-piece-icon {
+        font-size: 1.5rem;
+    }
+} 
