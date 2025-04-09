@@ -181,3 +181,31 @@
     color: var(--piece-light);
     font-size: 0.8rem;
 }
+
+/* Level Indicators */
+.level-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+    padding: 0.6rem 1rem;
+    background-color: rgba(226, 192, 68, 0.08);
+    border-radius: 8px;
+    border: 1px solid rgba(226, 192, 68, 0.15);
+    transition: all 0.3s ease;
+}
+
+.level-indicator:hover {
+    background-color: rgba(226, 192, 68, 0.12);
+    transform: translateX(5px);
+}
+
+.level-indicator .chess-piece-icon {
+    font-size: 1.8rem;
+}
+
+.level-indicator span {
+    color: var(--piece-light);
+    font-size: 1rem;
+    font-weight: 500;
+}
