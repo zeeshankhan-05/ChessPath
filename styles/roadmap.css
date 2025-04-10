@@ -271,3 +271,57 @@ Controls */
 .control-btn:active {
     transform: translateY(-1px);
 }
+
+/* Roadmap Legend */
+.roadmap-legend {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background-color: rgba(13, 24, 41, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(226, 192, 68, 0.15);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.legend-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e2c044;
+    margin-bottom: 0.8rem;
+}
+
+.legend-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    color: #a8b2d1;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+.legend-color.incomplete {
+    background-color: rgba(226, 192, 68, 0.3);
+}
+
+.legend-color.complete {
+    background-color: rgba(118, 150, 86, 0.6);
+}
+
+.legend-color.main {
+    background: linear-gradient(135deg, #e2c044, #ffda85);
+}
+
