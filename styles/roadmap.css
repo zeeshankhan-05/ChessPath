@@ -220,3 +220,18 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     z-index: 6;
 }
+
+/* SVG Connectors */
+svg.connector {
+    position: absolute;
+    stroke: rgba(226, 192, 68, 0.3);
+    stroke-width: 2;
+    z-index: 1;
+    stroke-dasharray: 5, 5;
+    transition: stroke 0.3s ease;
+}
+
+svg.connector.completed {
+    stroke: rgba(118, 150, 86, 0.6);
+    stroke-dasharray: none;
+}
