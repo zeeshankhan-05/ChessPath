@@ -325,3 +325,60 @@ Controls */
     background: linear-gradient(135deg, #e2c044, #ffda85);
 }
 
+/* Checkbox Styling */
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+}
+
+.custom-checkbox {
+    min-width: 18px;
+    height: 18px;
+    border: 2px solid rgba(226, 192, 68, 0.4);
+    border-radius: 4px;
+    margin-right: 0.8rem;
+    margin-top: 3px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: rgba(226, 192, 68, 0.05);
+}
+
+.custom-checkbox:hover {
+    border-color: rgba(226, 192, 68, 0.8);
+    background-color: rgba(226, 192, 68, 0.1);
+}
+
+.custom-checkbox.checked {
+    background-color: #e2c044;
+    border-color: #e2c044;
+}
+
+.custom-checkbox.checked:after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0d1829;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.checkbox-label {
+    font-size: 0.95rem;
+    color: #ccd6f6;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.checkbox-label:hover {
+    color: #e6f1ff;
+}
+
+.checkbox-container.checked .checkbox-label {
+    text-decoration: line-through;
+    color: #a8b2d1;
+}
