@@ -187,3 +187,18 @@
     transition: width 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+/* Progress Status */
+.progress-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #a8b2d1;
+}
+
+.progress-percent {
+    font-weight: 600;
+    color: #e2c044;
+}
+
