@@ -52,3 +52,23 @@
     transform: translateY(-50%);
     opacity: 0.8;
 }
+
+.stage-header {
+    background: linear-gradient(135deg, rgba(226, 192, 68, 0.15) 0%, rgba(226, 192, 68, 0.05) 100%);
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    color: #e2c044;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border: 1px solid rgba(226, 192, 68, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.stage-header:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, rgba(226, 192, 68, 0.2) 0%, rgba(226, 192, 68, 0.1) 100%);
+}
