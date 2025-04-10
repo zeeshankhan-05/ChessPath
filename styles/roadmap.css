@@ -565,3 +565,55 @@ Controls */
     color: #e2c044;
     font-size: 1.1rem;
 }
+
+/* Progress Tracker */
+.progress-tracker {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(226, 192, 68, 0.15);
+}
+
+.progress-tracker h3 {
+    color: #e2c044;
+    margin-bottom: 1.5rem;
+}
+
+.save-btn {
+    background: linear-gradient(135deg, #e2c044, #ffda85);
+    color: #0d1829;
+    padding: 0.9rem 1.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.save-btn::before {
+    content: '✓';
+    background-color: #0d1829;
+    color: #e2c044;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.save-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ffda85, #e2c044);
+}
+
+.save-btn:active {
+    transform: translateY(-1px);
+}
