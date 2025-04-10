@@ -617,3 +617,60 @@ Controls */
 .save-btn:active {
     transform: translateY(-1px);
 }
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .roadmap {
+        scale: 0.7;
+    }
+}
+
+@media (max-width: 768px) {
+    .roadmap-container {
+        height: calc(100vh - 100px);
+    }
+    
+    .roadmap {
+        flex-direction: column;
+        scale: 0.6;
+    }
+    
+    .roadmap-stage:not(:last-child)::after {
+        top: auto;
+        right: 50%;
+        bottom: -1.5rem;
+        width: 1rem;
+        height: 1.5rem;
+        transform: translateX(50%) rotate(90deg);
+    }
+    
+    .branch {
+        flex-direction: row;
+    }
+    
+    .node {
+        width: 260px;
+        padding: 1.2rem;
+    }
+    
+    .content h2 {
+        font-size: 1.1rem;
+    }
+    
+    .modal {
+        width: 95%;
+        margin: 1rem;
+    }
+    
+    .controls {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+    
+    .roadmap-legend {
+        top: auto;
+        bottom: 1.5rem;
+        left: 1.5rem;
+        padding: 0.8rem 1.2rem;
+    }
+}
