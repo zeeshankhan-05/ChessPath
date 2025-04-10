@@ -674,3 +674,112 @@ Controls */
         padding: 0.8rem 1.2rem;
     }
 }
+
+/* Roadmap Styles */
+.roadmap-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+#roadmap {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: fit-content;
+    min-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.roadmap-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1.5rem;
+    min-width: 300px;
+}
+
+.stage-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    width: 100%;
+}
+
+.beginner-stage .stage-header {
+    border-bottom: 4px solid #4CAF50;
+}
+
+.intermediate-stage .stage-header {
+    border-bottom: 4px solid #2196F3;
+}
+
+.advanced-stage .stage-header {
+    border-bottom: 4px solid #9C27B0;
+}
+
+.roadmap-node {
+    position: relative;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.roadmap-node:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.roadmap-node h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem;
+}
+
+.roadmap-node .progress-bar {
+    height: 6px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.roadmap-node .progress-fill {
+    height: 100%;
+    background-color: #64ffda;
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.roadmap-node .task-list {
+    text-align: left;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.roadmap-node .task {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.roadmap-node .task input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
