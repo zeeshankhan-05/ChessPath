@@ -818,3 +818,194 @@ Controls */
     stroke: #4CAF50;
     stroke-dasharray: none;
 }
+
+/* Node interaction styles */
+.roadmap-node.highlighted {
+    border: 2px solid #64ffda;
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.5);
+    transform: translateY(-5px) scale(1.05);
+    z-index: 10;
+}
+
+.roadmap-node.connected {
+    border: 2px solid rgba(100, 255, 218, 0.7);
+    transform: translateY(-3px);
+    z-index: 6;
+}
+
+.roadmap-node.dimmed {
+    opacity: 0.4;
+}
+
+/* Controls */
+.roadmap-controls {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(10, 25, 47, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.control-btn {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+    background: rgba(100, 255, 218, 0.2);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #0a192f;
+    border: 1px solid #64ffda;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.modal-progress {
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.modal-description {
+    margin-bottom: 2rem;
+    color: #8892b0;
+    line-height: 1.6;
+}
+
+.modal-section {
+    margin-bottom: 2rem;
+}
+
+.task-list {
+    margin-top: 1rem;
+}
+
+.modal-task {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.modal-task input[type="checkbox"] {
+    margin-right: 1rem;
+}
+
+.modal-footer {
+    text-align: right;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #64ffda;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close:hover {
+    transform: rotate(90deg);
+}
+
+.roadmap-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.legend-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 1rem;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .roadmap-container {
+        overflow-x: auto;
+    }
+    
+    .roadmap-stage {
+        min-width: 250px;
+    }
+    
+    .roadmap-node {
+        width: 230px;
+    }
+    
+    .modal-content {
+        width: 95%;
+    }
+} 
