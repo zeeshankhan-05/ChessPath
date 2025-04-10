@@ -72,3 +72,12 @@
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     background: linear-gradient(135deg, rgba(226, 192, 68, 0.2) 0%, rgba(226, 192, 68, 0.1) 100%);
 }
+
+/* Branch Layout */
+.branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+}
