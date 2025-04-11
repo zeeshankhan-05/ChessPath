@@ -653,3 +653,75 @@ document.addEventListener('DOMContentLoaded', () => {
     // Window resize event to redraw connections
     window.addEventListener('resize', drawConnections);
 });
+
+/* Initialize navigation functionality */
+function initNavigation() {
+    // Get current page URL
+    const currentPage = window.location.pathname.split('/').pop();
+    
+    // Highlight active navigation link
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        if (linkHref === currentPage || 
+            (currentPage === '' && linkHref === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
+/**
+ * Initialize hero section animations
+ */
+function initHero() {
+    const hero = document.querySelector('.hero');
+    
+    // Add subtle animation to hero section
+    setTimeout(() => {
+        hero.style.opacity = '1';
+        hero.style.transform = 'translateY(0)';
+    }, 100);
+}
+
+/**
+ * Add chess pattern backgrounds to elements
+ */
+function addChessPatterns() {
+    // Add chess pattern background to footer
+    const footer = document.querySelector('footer');
+    if (footer) {
+        footer.classList.add('chess-pattern-bg');
+    }
+    
+    // Add position relative to hero for ::before pseudo-element
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        hero.style.position = 'relative';
+        hero.style.overflow = 'hidden';
+    }
+}
+
+/**
+ * Utility function to format ELO rating
+ * @param {number} elo - The ELO rating to format
+ * @return {string} - Formatted ELO rating
+ */
+function formatELO(elo) {
+    return elo.toString().padStart(4, '0');
+}
+
+/**
+ * Utility function to scroll to an element smoothly
+ * @param {string} elementId - The ID of the element to scroll to
+ */
+function scrollToElement(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+} 
