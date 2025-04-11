@@ -490,3 +490,166 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         }
     };
+
+    // Create modal container
+    const modalContainer = document.createElement('div');
+    modalContainer.className = 'modal-container';
+    modalContainer.style.display = 'none';
+    document.body.appendChild(modalContainer);
+
+    // Add click event listener to each node
+    nodes.forEach(node => {
+        node.addEventListener('click', () => {
+            const nodeId = node.id;
+            const info = nodeInfo[nodeId];
+            
+            if (info) {
+                // Initialize progress for this node if not already present
+                if (!userProgress[nodeId]) {
+                    userProgress[nodeId] = {
+                        completed: Array(info.content.length).fill(false),
+                        resourcesVisited: Array(info.resources.length).fill(false)
+                    };
+                }
+                
+                // Create checkboxes for content items
+                const contentItems = info.content.map((item, index) => {
+                    const isChecked = userProgress[nodeId].completed[index] ? 'checked' : '';
+                    return `
+                        <div class="checkbox-container" data-type="content" data-index="${index}">
+                            <div class="custom-checkbox ${isChecked}"></div>
+                            <span>${item}</span>
+                        </div>
+                    `;
+                }).join('');
+                
+                // Create resource links with checkboxes
+                const resourceItems = info.resources.map((resource, index) => {
+                    const isChecked = userProgress[nodeId].resourcesVisited[index] ? 'checked' : '';
+                    return `
+                        <div class="checkbox-container" data-type="resource" data-index="${index}">
+                            <div class="custom-checkbox ${isChecked}"></div>
+                            <a href="${resource.url}" class="resource-link" target="_blank" data-index="${index}">${resource.name}</a>
+                        </div>
+                    `;
+                }).join('');
+                
+                // Create modal content
+                const modalContent = `
+                    <div class="modal-header">
+                        <h2>${info.title}</h2>
+                        <span class="elo-range">ELO: ${info.elo}</span>
+                        <span class="close-btn">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <p class="description">${info.description}</p>
+                        <h3>What You'll Learn:</h3>
+                        <div class="content-list">
+                            ${contentItems}
+                        </div>
+                        <h3>Recommended Resources:</h3>
+                        <div class="resources-list">
+                            ${resourceItems}
+                        </div>
+                        <div class="progress-tracker">
+                            <h3>Track Your Progress</h3>
+                            <button class="save-btn">Save Progress</button>
+                        </div>
+                    </div>
+                `;
+                
+                // Update modal container
+                modalContainer.innerHTML = `<div class="modal">${modalContent}</div>`;
+                modalContainer.style.display = 'flex';
+                
+                // Add close functionality
+                const closeBtn = document.querySelector('.close-btn');
+                closeBtn.addEventListener('click', () => {
+                    modalContainer.style.display = 'none';
+                });
+                
+                // Close when clicking outside
+                modalContainer.addEventListener('click', (e) => {
+                    if (e.target === modalContainer) {
+                        modalContainer.style.display = 'none';
+                    }
+                });
+                
+                // Add checkbox functionality
+                const checkboxes = document.querySelectorAll('.custom-checkbox');
+                checkboxes.forEach(checkbox => {
+                    checkbox.addEventListener('click', () => {
+                        const container = checkbox.parentElement;
+                        const type = container.dataset.type;
+                        const index = parseInt(container.dataset.index);
+                        
+                        checkbox.classList.toggle('checked');
+                        
+                        if (type === 'content') {
+                            userProgress[nodeId].completed[index] = checkbox.classList.contains('checked');
+                        } else if (type === 'resource') {
+                            userProgress[nodeId].resourcesVisited[index] = checkbox.classList.contains('checked');
+                        }
+                    });
+                });
+                
+                // Mark resources as visited when clicked
+                const resourceLinks = document.querySelectorAll('.resource-link');
+                resourceLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        const index = parseInt(link.dataset.index);
+                        userProgress[nodeId].resourcesVisited[index] = true;
+                        
+                        // Update checkbox
+                        const checkbox = link.previousElementSibling;
+                        checkbox.classList.add('checked');
+                    });
+                });
+                
+                // Save progress button
+                const saveBtn = document.querySelector('.save-btn');
+                saveBtn.addEventListener('click', () => {
+                    localStorage.setItem('chessRoadmapProgress', JSON.stringify(userProgress));
+                    
+                    // Update progress bar
+                    updateProgressBar(nodeId);
+                    
+                    // Show feedback
+                    saveBtn.textContent = 'Progress Saved!';
+                    setTimeout(() => {
+                        saveBtn.textContent = 'Save Progress';
+                    }, 2000);
+                });
+            }
+        });
+    });
+    
+    // Update progress bar based on completed items
+    function updateProgressBar(nodeId) {
+        if (!userProgress[nodeId]) return;
+        
+        const totalItems = userProgress[nodeId].completed.length + userProgress[nodeId].resourcesVisited.length;
+        const completedItems = 
+            userProgress[nodeId].completed.filter(Boolean).length + 
+            userProgress[nodeId].resourcesVisited.filter(Boolean).length;
+        
+        const progressPercentage = Math.round((completedItems / totalItems) * 100);
+        
+        // Update the progress bar width
+        const progressBar = document.querySelector(`#${nodeId} .progress`);
+        progressBar.style.width = `${progressPercentage}%`;
+    }
+    
+    // Initialize progress bars on page load
+    function initializeProgressBars() {
+        Object.keys(userProgress).forEach(nodeId => {
+            updateProgressBar(nodeId);
+        });
+    }
+    
+    // Call once on load
+    initializeProgressBars();
+    
+    // Window resize event to redraw connections
+    window.addEventListener('resize', drawConnections);
+});
