@@ -306,3 +306,157 @@ function initRoadmap() {
     // Window resize event to redraw connections
     window.addEventListener('resize', drawConnections);
 }
+
+// Initialize all node interactions
+function initNodeInteractions() {
+    const nodes = document.querySelectorAll('.roadmap-node');
+    
+    nodes.forEach(node => {
+        // Add event listeners for highlighting connections
+        node.addEventListener('mouseenter', () => highlightConnections(node.id));
+        node.addEventListener('mouseleave', () => resetHighlights());
+        
+        // Add event listener for opening the node modal
+        node.addEventListener('click', (e) => {
+            if (!e.target.closest('.checkbox')) {
+                const nodeId = node.id;
+                openNodeModal(nodeId);
+            }
+        });
+    });
+}
+
+// Highlight connections for a specific node
+function highlightConnections(nodeId) {
+    // Dim all nodes and connections first
+    document.querySelectorAll('.roadmap-node').forEach(n => {
+        n.classList.add('dimmed');
+    });
+    
+    document.querySelectorAll('.connector').forEach(c => {
+        c.classList.add('dimmed');
+    });
+    
+    // Highlight the current node
+    const currentNode = document.getElementById(nodeId);
+    if (currentNode) {
+        currentNode.classList.remove('dimmed');
+        currentNode.classList.add('highlighted');
+    }
+    
+    // Highlight direct connections
+    document.querySelectorAll(`.connector[data-parent="${nodeId}"], .connector[data-child="${nodeId}"]`).forEach(conn => {
+        conn.classList.remove('dimmed');
+        conn.classList.add('highlighted');
+        
+        // Highlight the nodes connected to this one
+        const parentId = conn.dataset.parent;
+        const childId = conn.dataset.child;
+        
+        const connectedNodeId = (parentId === nodeId) ? childId : parentId;
+        const connectedNode = document.getElementById(connectedNodeId);
+        
+        if (connectedNode) {
+            connectedNode.classList.remove('dimmed');
+            connectedNode.classList.add('connected');
+        }
+    });
+}
+
+// Reset all highlights
+function resetHighlights() {
+    document.querySelectorAll('.roadmap-node').forEach(n => {
+        n.classList.remove('dimmed', 'highlighted', 'connected');
+    });
+    
+    document.querySelectorAll('.connector').forEach(c => {
+        c.classList.remove('dimmed', 'highlighted');
+    });
+}
+
+// Open the node modal with details
+function openNodeModal(nodeId) {
+    const node = document.getElementById(nodeId);
+    if (!node) return;
+    
+    const modal = document.getElementById('node-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalContent = document.getElementById('modal-content');
+    const modalTasks = document.getElementById('modal-tasks');
+    const modalProgress = document.getElementById('modal-progress');
+    
+    if (!modal || !modalTitle || !modalContent || !modalTasks || !modalProgress) return;
+    
+    // Get node data
+    const title = node.querySelector('h3').textContent;
+    const description = node.dataset.description || 'Master this concept to improve your chess skills.';
+    
+    // Get tasks from the node
+    const tasks = Array.from(node.querySelectorAll('.task')).map(task => {
+        const taskId = task.dataset.taskId;
+        const taskText = task.textContent;
+        const isChecked = task.querySelector('input').checked;
+        
+        return {
+            id: taskId,
+            text: taskText,
+            completed: isChecked
+        };
+    });
+    
+    // Populate modal
+    modalTitle.textContent = title;
+    modalContent.textContent = description;
+    
+    // Create task list
+    modalTasks.innerHTML = '';
+    tasks.forEach(task => {
+        const taskElement = document.createElement('div');
+        taskElement.className = 'modal-task';
+        
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.id = `modal-${task.id}`;
+        checkbox.checked = task.completed;
+        checkbox.addEventListener('change', () => {
+            // Update the actual task checkbox in the node
+            const nodeTaskCheckbox = document.querySelector(`.task[data-task-id="${task.id}"] input`);
+            if (nodeTaskCheckbox) {
+                nodeTaskCheckbox.checked = checkbox.checked;
+                // Trigger change event to update progress
+                const event = new Event('change');
+                nodeTaskCheckbox.dispatchEvent(event);
+            }
+        });
+        
+        const label = document.createElement('label');
+        label.htmlFor = `modal-${task.id}`;
+        label.textContent = task.text;
+        
+        taskElement.appendChild(checkbox);
+        taskElement.appendChild(label);
+        modalTasks.appendChild(taskElement);
+    });
+    
+    // Calculate and display progress
+    const progress = calculateProgress(nodeId);
+    modalProgress.textContent = `Progress: ${progress}%`;
+    
+    // Show modal
+    modal.classList.add('show');
+    
+    // Add close button event
+    const closeButton = document.getElementById('modal-close');
+    if (closeButton) {
+        closeButton.onclick = () => {
+            modal.classList.remove('show');
+        };
+    }
+    
+    // Close when clicking outside
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            modal.classList.remove('show');
+        }
+    };
+} 
