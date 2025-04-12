@@ -172,3 +172,93 @@ function initRoadmap() {
         roadmap.style.transform = `translate(-50%, -50%) scale(${scale}) translate(${translateX}px, ${translateY}px)`;
         drawConnections();
     }
+
+    // Draw connections between nodes using SVG paths
+    function drawConnections() {
+        const svg = document.getElementById('connections');
+        if (!svg) return;
+        
+        svg.innerHTML = ''; // Clear existing connections
+        
+        // Define connections (nodeId → parentNodeIds)
+        const connections = {
+            'rules': ['fundamentals'],
+            'notation': ['fundamentals'],
+            'tactics': ['rules', 'notation'],
+            'openings': ['notation', 'tactics'],
+            'endgames': ['tactics'],
+            'strategies': ['openings', 'endgames'],
+            'advanced-openings': ['openings', 'strategies'],
+            'mastery': ['strategies', 'advanced-openings']
+        };
+        
+        const userProgress = JSON.parse(localStorage.getItem('chessRoadmapProgress')) || {};
+        
+        // Create connections
+        for (const [childId, parentIds] of Object.entries(connections)) {
+            const childNode = document.getElementById(childId);
+            
+            if (!childNode) continue;
+            
+            for (const parentId of parentIds) {
+                const parentNode = document.getElementById(parentId);
+                
+                if (!parentNode) continue;
+                
+                // Get the positions of the nodes
+                const parentRect = parentNode.getBoundingClientRect();
+                const childRect = childNode.getBoundingClientRect();
+                
+                // Get roadmap container position for offset calculation
+                const containerRect = document.querySelector('.roadmap-container').getBoundingClientRect();
+                
+                // Calculate center points relative to the SVG
+                const px = parentRect.left + parentRect.width/2 - containerRect.left;
+                const py = parentRect.top + parentRect.height/2 - containerRect.top;
+                const cx = childRect.left + childRect.width/2 - containerRect.left;
+                const cy = childRect.top + childRect.height/2 - containerRect.top;
+                
+                // Create the path
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                
+                // Calculate control points for curved paths
+                // Determine if the connection is within the same stage or between stages
+                const parentStage = parentNode.closest('.roadmap-stage');
+                const childStage = childNode.closest('.roadmap-stage');
+                const isSameStage = parentStage === childStage;
+                
+                let pathData;
+                
+                if (isSameStage) {
+                    // Vertical connection within the same stage
+                    const midY = (py + cy) / 2;
+                    const controlX1 = px + (Math.sign(cx - px) * 40);
+                    const controlX2 = cx - (Math.sign(cx - px) * 40);
+                    
+                    pathData = `M ${px} ${py} C ${controlX1} ${py}, ${controlX2} ${cy}, ${cx} ${cy}`;
+                } else {
+                    // Horizontal connection between stages 
+                    const midX = (px + cx) / 2;
+                    
+                    // If child is above or below parent, adjust control points
+                    if (Math.abs(cy - py) > Math.abs(cx - px) * 0.5) {
+                        pathData = `M ${px} ${py} C ${px + (cx-px)*0.2} ${py}, ${cx - (cx-px)*0.2} ${cy}, ${cx} ${cy}`;
+                    } else {
+                        pathData = `M ${px} ${py} C ${midX} ${py}, ${midX} ${cy}, ${cx} ${cy}`;
+                    }
+                }
+                
+                path.setAttribute('d', pathData);
+                path.classList.add('connector');
+                path.dataset.parent = parentId;
+                path.dataset.child = childId;
+                
+                // Check if both nodes are completed
+                if (userProgress[parentId]?.completed && userProgress[childId]?.completed) {
+                    path.classList.add('completed');
+                }
+                
+                svg.appendChild(path);
+            }
+        }
+    }
