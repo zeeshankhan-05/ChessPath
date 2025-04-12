@@ -262,3 +262,47 @@ function initRoadmap() {
             }
         }
     }
+
+    // Calculate progress percentage for a node
+    function calculateProgress(nodeId) {
+        if (!userProgress[nodeId]) return 0;
+        
+        const totalItems = userProgress[nodeId].completed.length + userProgress[nodeId].resourcesVisited.length;
+        const completedItems = 
+            userProgress[nodeId].completed.filter(Boolean).length + 
+            userProgress[nodeId].resourcesVisited.filter(Boolean).length;
+        
+        return Math.round((completedItems / totalItems) * 100);
+    }
+    
+    // Initialize progress bars
+    function updateProgressBars() {
+        Object.keys(userProgress).forEach(nodeId => {
+            updateProgressBar(nodeId);
+        });
+    }
+    
+    // Update progress bar for a specific node
+    function updateProgressBar(nodeId) {
+        const progressBar = document.querySelector(`#${nodeId} .progress`);
+        if (!progressBar || !userProgress[nodeId]) return;
+        
+        const percentage = calculateProgress(nodeId);
+        progressBar.style.width = `${percentage}%`;
+        
+        // Change color based on progress
+        if (percentage === 100) {
+            progressBar.style.background = 'linear-gradient(90deg, #00e676, #00c853)';
+        } else if (percentage > 50) {
+            progressBar.style.background = 'linear-gradient(90deg, #ffee58, #fdd835)';
+        } else {
+            progressBar.style.background = 'linear-gradient(90deg, #ff9800, #f57c00)';
+        }
+    }
+    
+    // Initialize progress bars on load
+    updateProgressBars();
+    
+    // Window resize event to redraw connections
+    window.addEventListener('resize', drawConnections);
+}
