@@ -90,3 +90,85 @@ function initRoadmap() {
             applyTransform();
         });
     }
+    
+    // Drag functionality
+    if (roadmap) {
+        roadmap.addEventListener('mousedown', (e) => {
+            if (e.target.closest('.node')) return; // Don't initiate drag when clicking nodes
+            
+            isDragging = true;
+            startX = e.clientX - translateX;
+            startY = e.clientY - translateY;
+            roadmap.style.cursor = 'grabbing';
+        });
+        
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            translateX = e.clientX - startX;
+            translateY = e.clientY - startY;
+            applyTransform();
+        });
+        
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            if (roadmap) roadmap.style.cursor = 'grab';
+        });
+        
+        // Touch support for mobile
+        roadmap.addEventListener('touchstart', (e) => {
+            if (e.target.closest('.node')) return; // Don't initiate drag when tapping nodes
+            
+            if (e.touches.length === 1) {
+                isDragging = true;
+                startX = e.touches[0].clientX - translateX;
+                startY = e.touches[0].clientY - translateY;
+            } else if (e.touches.length === 2) {
+                // Handle pinch zoom
+                lastTouchDistance = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                );
+            }
+        });
+        
+        roadmap.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+            
+            if (e.touches.length === 1 && isDragging) {
+                translateX = e.touches[0].clientX - startX;
+                translateY = e.touches[0].clientY - startY;
+                applyTransform();
+            } else if (e.touches.length === 2) {
+                // Handle pinch zoom
+                const currentDistance = Math.hypot(
+                    e.touches[0].clientX - e.touches[1].clientX,
+                    e.touches[0].clientY - e.touches[1].clientY
+                );
+                
+                if (lastTouchDistance > 0) {
+                    if (currentDistance > lastTouchDistance) {
+                        // Pinch out - zoom in
+                        scale = Math.min(2, scale + 0.01);
+                    } else {
+                        // Pinch in - zoom out
+                        scale = Math.max(0.5, scale - 0.01);
+                    }
+                    applyTransform();
+                }
+                
+                lastTouchDistance = currentDistance;
+            }
+        });
+        
+        roadmap.addEventListener('touchend', () => {
+            isDragging = false;
+            lastTouchDistance = 0;
+        });
+    }
+    
+    // Apply transform to roadmap
+    function applyTransform() {
+        if (!roadmap) return;
+        roadmap.style.transform = `translate(-50%, -50%) scale(${scale}) translate(${translateX}px, ${translateY}px)`;
+        drawConnections();
+    }
