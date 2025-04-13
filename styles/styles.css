@@ -79,6 +79,16 @@ nav {
     margin: 0 auto;
 }
 
+/* Logo styling with flex alignment */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e2c044;
+}
+
 /* Navigation links container */
 .nav-links {
     display: flex;
