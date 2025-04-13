@@ -1,9 +1,25 @@
+/* Add this to the beginning of the file to ensure the body has proper height */
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Add scrollbar styles for main content */
+body {
+    overflow-y: auto;
+}
+
+main {
+    overflow: visible;
+    position: relative;
+}
+
 /* Roadmap Container */
 .roadmap-container {
     width: 100%;
     height: calc(100vh - 150px);
     min-height: 600px;
-    overflow: hidden;
+    overflow: auto;
     position: relative;
     background-color: #0d1829;
     margin: 80px 0 30px;
@@ -12,19 +28,50 @@
     border: 1px solid rgba(226, 192, 68, 0.1);
 }
 
+/* Custom Scrollbar for Roadmap Container and Body */
+.roadmap-container::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#roadmap::-webkit-scrollbar,
+.modal::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.roadmap-container::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+#roadmap::-webkit-scrollbar-track,
+.modal::-webkit-scrollbar-track {
+    background: rgba(13, 24, 41, 0.5);
+    border-radius: 4px;
+}
+
+.roadmap-container::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+#roadmap::-webkit-scrollbar-thumb,
+.modal::-webkit-scrollbar-thumb {
+    background: var(--gold-gradient);
+    border-radius: 4px;
+    border: 2px solid rgba(13, 24, 41, 0.5);
+}
+
+.roadmap-container::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover,
+#roadmap::-webkit-scrollbar-thumb:hover,
+.modal::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ffda85, #e2c044);
+}
+
 .roadmap {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 3rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    margin: 0 auto;
+    padding: 50px;
     transform-origin: center center;
     cursor: grab;
-    padding: 50px;
+    width: fit-content;
 }
 
 .roadmap:active {
@@ -627,12 +674,14 @@ Controls */
 
 @media (max-width: 768px) {
     .roadmap-container {
-        height: calc(100vh - 100px);
+        height: auto;
+        min-height: 100vh;
     }
     
-    .roadmap {
+    #roadmap {
         flex-direction: column;
-        scale: 0.6;
+        padding: 1rem;
+        align-items: center;
     }
     
     .roadmap-stage:not(:last-child)::after {
@@ -646,56 +695,43 @@ Controls */
     
     .branch {
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .node {
         width: 260px;
         padding: 1.2rem;
+        margin: 0.5rem;
     }
     
     .content h2 {
         font-size: 1.1rem;
     }
-    
-    .modal {
-        width: 95%;
-        margin: 1rem;
+}
+
+@media (max-width: 768px) {
+    .roadmap-container {
+        overflow: auto;
     }
     
-    .controls {
-        bottom: 1.5rem;
-        right: 1.5rem;
-    }
-    
-    .roadmap-legend {
-        top: auto;
-        bottom: 1.5rem;
-        left: 1.5rem;
-        padding: 0.8rem 1.2rem;
+    .roadmap-stage {
+        min-width: 250px;
+        margin-bottom: 2rem;
     }
 }
 
 /* Roadmap Styles */
-.roadmap-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 2rem 0;
-}
-
 #roadmap {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
-    justify-content: flex-start;
-    width: fit-content;
-    min-width: 100%;
+    justify-content: center;
+    width: 100%;
     margin: 0 auto;
     padding: 2rem;
-    transition: transform 0.3s ease;
     position: relative;
     z-index: 2;
+    overflow-x: auto;
 }
 
 .roadmap-stage {
