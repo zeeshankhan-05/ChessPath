@@ -2,8 +2,6 @@
 
 A modern, interactive web application designed to help chess players progress from beginner to advanced levels through structured learning paths.
 
-![Chess Roadmap Logo](assets/logo.png)
-
 ## Features
 
 - **Interactive Learning Path**: Follow a carefully structured progression from basic concepts to advanced chess strategies
