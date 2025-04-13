@@ -93,6 +93,6 @@ ChessRoadmap/
 
 ## Contact
 
-Zeeshan Khan - [@zeeshankhan-05](https://www.linkedin.com/in/zeeshankhan05/)
+Zeeshan Khan - [@zeeshankhan05](https://www.linkedin.com/in/zeeshankhan05/)
 
 Project Link: [https://github.com/zeeshankhan-05/ChessRoadmap](https://github.com/zeeshankhan-05/ChessRoadmap)
