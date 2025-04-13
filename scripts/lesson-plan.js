@@ -60,3 +60,36 @@ function initLessonPage() {
             }
         });
     });
+
+    /**
+     * Apply all filters to lesson cards
+     */
+    function applyFilters() {
+        const level = levelFilter ? levelFilter.value : 'all';
+        const topic = topicFilter ? topicFilter.value : 'all';
+        const searchText = searchInput ? searchInput.value.toLowerCase() : '';
+        
+        lessonCards.forEach(card => {
+            const cardLevel = card.dataset.level;
+            const cardTopic = card.dataset.topic;
+            const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+            const cardDescription = card.querySelector('p').textContent.toLowerCase();
+            
+            // Check if card matches all filters
+            const levelMatch = level === 'all' || cardLevel === level;
+            const topicMatch = topic === 'all' || cardTopic === topic;
+            const searchMatch = searchText === '' || 
+                               cardTitle.includes(searchText) || 
+                               cardDescription.includes(searchText);
+            
+            // Show or hide card based on filters
+            if (levelMatch && topicMatch && searchMatch) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Update the count of displayed lessons
+        updateLessonCount();
+    }
