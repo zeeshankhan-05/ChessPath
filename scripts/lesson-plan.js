@@ -93,3 +93,37 @@ function initLessonPage() {
         // Update the count of displayed lessons
         updateLessonCount();
     }
+
+    /**
+     * Update the count of displayed lessons
+     */
+    function updateLessonCount() {
+        const visibleLessons = document.querySelectorAll('.lesson-card[style="display: block"]').length;
+        const lessonsHeader = document.querySelector('.lessons-header h2');
+        
+        if (lessonsHeader) {
+            const originalText = 'Chess Lessons Library';
+            lessonsHeader.textContent = `${originalText} (${visibleLessons} lessons)`;
+        }
+    }
+
+    // Track when a lesson is started
+    const lessonLinks = document.querySelectorAll('.lesson-link');
+    lessonLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // In a real app, this would save progress
+            const lessonCard = link.closest('.lesson-card');
+            if (lessonCard) {
+                const lessonTitle = lessonCard.querySelector('h3').textContent;
+                console.log(`Starting lesson: ${lessonTitle}`);
+                
+                // For demo purposes, show an alert
+                e.preventDefault();
+                alert(`In a complete implementation, this would take you to the lesson: "${lessonTitle}"`);
+            }
+        });
+    });
+    
+    // Initialize lesson count on page load
+    updateLessonCount();
+}
