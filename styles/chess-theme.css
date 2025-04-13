@@ -39,27 +39,27 @@
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.chess-piece-icon.king::before {
+.chess-piece-icon.king {
     content: '♚';
 }
 
-.chess-piece-icon.queen::before {
+.chess-piece-icon.queen {
     content: '♛';
 }
 
-.chess-piece-icon.rook::before {
+.chess-piece-icon.rook {
     content: '♜';
 }
 
-.chess-piece-icon.bishop::before {
+.chess-piece-icon.bishop {
     content: '♝';
 }
 
-.chess-piece-icon.knight::before {
+.chess-piece-icon.knight {
     content: '♞';
 }
 
-.chess-piece-icon.pawn::before {
+.chess-piece-icon.pawn {
     content: '♟';
 }
 
