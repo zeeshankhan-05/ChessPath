@@ -30,39 +30,6 @@ main {
     border: 1px solid rgba(226, 192, 68, 0.1);
 }
 
-/* Custom Scrollbar for Roadmap Container and Body
-.roadmap-container::-webkit-scrollbar,
-body::-webkit-scrollbar,
-#roadmap::-webkit-scrollbar,
-.modal::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-.roadmap-container::-webkit-scrollbar-track,
-body::-webkit-scrollbar-track,
-#roadmap::-webkit-scrollbar-track,
-.modal::-webkit-scrollbar-track {
-    background: rgba(13, 24, 41, 0.5);
-    border-radius: 4px;
-}
-
-.roadmap-container::-webkit-scrollbar-thumb,
-body::-webkit-scrollbar-thumb,
-#roadmap::-webkit-scrollbar-thumb,
-.modal::-webkit-scrollbar-thumb {
-    background: var(--gold-gradient);
-    border-radius: 4px;
-    border: 2px solid rgba(13, 24, 41, 0.5);
-}
-
-.roadmap-container::-webkit-scrollbar-thumb:hover,
-body::-webkit-scrollbar-thumb:hover,
-#roadmap::-webkit-scrollbar-thumb:hover,
-.modal::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #ffda85, #e2c044);
-} */
-
 .roadmap {
     display: flex;
     flex-direction: row;
