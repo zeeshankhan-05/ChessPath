@@ -501,7 +501,7 @@ footer::before {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    margin: 2rem 0;
+    margin: 2rem 0 0;
     background: rgba(226, 192, 68, 0.05);
     padding: 1.5rem;
     border-radius: 8px;
@@ -636,7 +636,7 @@ footer::before {
 
 /* Lessons Header Styling */
 .lessons-header {
-    padding: 10rem 0 3rem;
+    padding: 10rem 0 2rem;
     background: linear-gradient(180deg, rgba(13, 24, 41, 0.95) 0%, rgba(13, 24, 41, 1) 100%);
     position: relative;
 }
@@ -668,7 +668,7 @@ footer::before {
 
 /* Lessons Grid Layout */
 .lessons-grid {
-    padding: 4rem 0;
+    padding: 1rem 0 4rem;
 }
 
 .lessons-grid h2 {
