@@ -860,10 +860,11 @@ footer::before {
 /* Level Header Styling */
 .level-header {
     grid-column: 1 / -1;
-    margin: 3rem 0 2rem;
-    padding-bottom: 1.5rem;
+    margin: 3rem 0 1.5rem;
+    padding-bottom: 1rem;
     position: relative;
     border-bottom: 1px solid rgba(226, 192, 68, 0.1);
+    text-align: center;
 }
 
 .level-header:first-child {
@@ -872,7 +873,7 @@ footer::before {
 
 .level-header h2 {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     font-weight: 700;
 }
 
