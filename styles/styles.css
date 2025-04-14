@@ -731,6 +731,11 @@ footer::before {
     border-bottom: 2px solid rgba(203, 67, 53, 0.4);
 }
 
+.master-bg {
+    background: linear-gradient(135deg, rgba(123, 97, 255, 0.3), rgba(123, 97, 255, 0.1));
+    border-bottom: 2px solid rgba(123, 97, 255, 0.4);
+}
+
 .lesson-content {
     padding: 1.5rem;
 }
