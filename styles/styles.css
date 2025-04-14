@@ -743,8 +743,8 @@ footer::before {
 
 .lesson-content p {
     color: #a8b2d1;
-    margin-bottom: 1.5rem;
-    min-height: 3rem;
+    margin-bottom: 2rem;
+    min-height: 4rem;
 }
 
 .lesson-meta {
@@ -843,7 +843,7 @@ footer::before {
 .lesson-link {
     font-weight: 600;
     letter-spacing: 0.02em;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
