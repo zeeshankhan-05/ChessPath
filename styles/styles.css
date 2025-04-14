@@ -856,3 +856,77 @@ footer::before {
     transform: translateY(-3px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
 }
+
+/* Level Header Styling */
+.level-header {
+    grid-column: 1 / -1;
+    margin: 3rem 0 2rem;
+    padding-bottom: 1.5rem;
+    position: relative;
+    border-bottom: 1px solid rgba(226, 192, 68, 0.1);
+}
+
+.level-header:first-child {
+    margin-top: 0;
+}
+
+.level-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.level-header p {
+    font-size: 1.1rem;
+    color: #a8b2d1;
+    max-width: 600px;
+}
+
+/* Level Header Colors */
+.beginner-header h2 {
+    color: rgba(118, 150, 86, 0.9);
+}
+
+.beginner-header {
+    border-bottom-color: rgba(118, 150, 86, 0.3);
+}
+
+.intermediate-header h2 {
+    color: rgba(226, 192, 68, 0.9);
+}
+
+.intermediate-header {
+    border-bottom-color: rgba(226, 192, 68, 0.3);
+}
+
+.advanced-header h2 {
+    color: rgba(203, 67, 53, 0.9);
+}
+
+.advanced-header {
+    border-bottom-color: rgba(203, 67, 53, 0.3);
+}
+
+.master-header h2 {
+    color: rgba(123, 97, 255, 0.9);
+}
+
+.master-header {
+    border-bottom-color: rgba(123, 97, 255, 0.3);
+}
+
+/* Responsive styling for level headers */
+@media (max-width: 768px) {
+    .level-header {
+        margin: 2rem 0 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .level-header h2 {
+        font-size: 1.7rem;
+    }
+
+    .level-header p {
+        font-size: 1rem;
+    }
+}
