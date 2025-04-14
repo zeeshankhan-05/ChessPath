@@ -690,6 +690,9 @@ footer::before {
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     border: 1px solid rgba(226, 192, 68, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .lesson-card:hover {
@@ -738,6 +741,10 @@ footer::before {
 
 .lesson-content {
     padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .lesson-content h3 {
