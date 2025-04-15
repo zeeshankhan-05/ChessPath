@@ -26,13 +26,14 @@ body {
 
 /* Typography */
 h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
     font-weight: 800;
     background: linear-gradient(45deg, #e2c044, #ffda85);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.03em;
+    white-space: nowrap;
 }
 
 h2 {
@@ -329,14 +330,7 @@ nav {
 
 /* Horizontal connecting line between roadmap cards */
 .roadmap-levels::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, rgba(226, 192, 68, 0), rgba(226, 192, 68, 0.3) 15%, rgba(226, 192, 68, 0.3) 85%, rgba(226, 192, 68, 0));
-    z-index: 0;
+    display: none;
 }
 
 /* Individual level card with hover effects */
