@@ -281,11 +281,11 @@ nav {
     font-size: 3rem;
     margin-bottom: 1.5rem;
     color: #e2c044;
-    transition: transform 0.4s ease;
+    transition: transform 0.3s ease;
 }
 
 .feature-card:hover .chess-piece-icon {
-    transform: scale(1.1);
+    transform: rotate(20deg) scale(1.2);
 }
 
 /* Feature card heading */
@@ -939,10 +939,15 @@ footer::before {
     }
 }
 
-.chess-piece-icon.king {
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.chess-piece-icon {
     transition: transform 0.3s ease;
 }
 
-.chess-piece-icon.king:hover {
+.chess-piece-icon:hover {
     transform: rotate(20deg) scale(1.2);
 }
