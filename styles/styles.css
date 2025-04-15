@@ -938,3 +938,11 @@ footer::before {
         font-size: 1rem;
     }
 }
+
+.chess-piece-icon.king {
+    transition: transform 0.3s ease;
+}
+
+.chess-piece-icon.king:hover {
+    transform: rotate(20deg) scale(1.2);
+}
