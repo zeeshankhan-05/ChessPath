@@ -93,7 +93,7 @@ function initLessonPage() {
         // Update the count of displayed lessons
         updateLessonCount();
     }
-
+    
     /**
      * Update the count of displayed lessons
      */
