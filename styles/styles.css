@@ -746,6 +746,7 @@ footer::before {
     color: #e2c044;
     margin-bottom: 1rem;
     font-size: 1.4rem;
+    text-align: center;
 }
 
 .lesson-content p {
