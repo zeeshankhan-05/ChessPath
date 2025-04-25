@@ -699,14 +699,30 @@ svg.connector.completed {
 
 .beginner-stage .stage-header {
     border-bottom: 4px solid #4CAF50;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15) 0%, rgba(76, 175, 80, 0.05) 100%);
+    border: 1px solid rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
 }
 
 .intermediate-stage .stage-header {
-    border-bottom: 4px solid #2196F3;
+    border-bottom: 4px solid #FFD700;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 215, 0, 0.05) 100%);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    color: #FFD700;
 }
 
 .advanced-stage .stage-header {
+    border-bottom: 4px solid #FF4444;
+    background: linear-gradient(135deg, rgba(255, 68, 68, 0.15) 0%, rgba(255, 68, 68, 0.05) 100%);
+    border: 1px solid rgba(255, 68, 68, 0.2);
+    color: #FF4444;
+}
+
+.master-stage .stage-header {
     border-bottom: 4px solid #9C27B0;
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.15) 0%, rgba(156, 39, 176, 0.05) 100%);
+    border: 1px solid rgba(156, 39, 176, 0.2);
+    color: #9C27B0;
 }
 
 .roadmap-node {

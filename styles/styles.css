@@ -892,35 +892,35 @@ footer::before {
 
 /* Level Header Colors */
 .beginner-header h2 {
-    color: rgba(118, 150, 86, 0.9);
+    color: rgba(76, 175, 80, 0.9);
 }
 
 .beginner-header {
-    border-bottom-color: rgba(118, 150, 86, 0.3);
+    border-bottom-color: rgba(76, 175, 80, 0.3);
 }
 
 .intermediate-header h2 {
-    color: rgba(226, 192, 68, 0.9);
+    color: rgba(255, 215, 0, 0.9);
 }
 
 .intermediate-header {
-    border-bottom-color: rgba(226, 192, 68, 0.3);
+    border-bottom-color: rgba(255, 215, 0, 0.3);
 }
 
 .advanced-header h2 {
-    color: rgba(203, 67, 53, 0.9);
+    color: rgba(255, 68, 68, 0.9);
 }
 
 .advanced-header {
-    border-bottom-color: rgba(203, 67, 53, 0.3);
+    border-bottom-color: rgba(255, 68, 68, 0.3);
 }
 
 .master-header h2 {
-    color: rgba(123, 97, 255, 0.9);
+    color: rgba(156, 39, 176, 0.9);
 }
 
 .master-header {
-    border-bottom-color: rgba(123, 97, 255, 0.3);
+    border-bottom-color: rgba(156, 39, 176, 0.3);
 }
 
 /* Responsive styling for level headers */
