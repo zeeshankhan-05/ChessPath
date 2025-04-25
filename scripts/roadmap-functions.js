@@ -309,7 +309,7 @@ function initRoadmap() {
 
 // Initialize all node interactions
 function initNodeInteractions() {
-    const nodes = document.querySelectorAll('.roadmap-node');
+    const nodes = document.querySelectorAll('.node');
     
     nodes.forEach(node => {
         // Add event listeners for highlighting connections
@@ -374,6 +374,237 @@ function resetHighlights() {
     });
 }
 
+// Node information and resources
+const nodeInfo = {
+    fundamentals: {
+        title: "Chess Fundamentals",
+        description: "Build a solid foundation by learning how each piece moves and understanding the basic concepts of chess.",
+        elo: "0-800",
+        content: [
+            "Board layout and starting position",
+            "Learning piece names and movements",
+            "Understanding check, checkmate, and stalemate",
+            "Basic piece values and material counting",
+            "Basic chess terminology"
+        ],
+        resources: [
+            { name: "ChessKid Beginner Videos", url: "https://www.chesskid.com/videos/beginner" },
+            { name: "Chess.com Learn Page", url: "https://www.chess.com/learn" },
+            { name: "Basic Chess Rules Guide", url: "https://www.chess.com/learn-how-to-play-chess" }
+        ]
+    },
+    rules: {
+        title: "Rules & Setup",
+        description: "Master all the chess rules and special moves to play the game correctly.",
+        elo: "800-1000",
+        content: [
+            "Special moves (castling, en passant)",
+            "Draw conditions and rules",
+            "Tournament rules and etiquette",
+            "Chess clock usage",
+            "Recording moves"
+        ],
+        resources: [
+            { name: "FIDE Laws of Chess", url: "https://handbook.fide.com/chapter/E012018" },
+            { name: "Special Chess Rules", url: "https://www.chess.com/article/view/chess-rules--special-moves" },
+            { name: "Chess Tournament Guide", url: "https://www.chess.com/article/view/chess-tournament-rules" }
+        ]
+    },
+    notation: {
+        title: "Chess Notation",
+        description: "Learn how to read and write chess moves using algebraic notation.",
+        elo: "0-1200",
+        content: [
+            "Algebraic notation basics",
+            "Descriptive notation",
+            "Reading chess books and articles",
+            "Writing down your games",
+            "Using notation software"
+        ],
+        resources: [
+            { name: "Chess.com Notation Guide", url: "https://www.chess.com/article/view/chess-notation" },
+            { name: "Learn Chess Notation", url: "https://www.chesskid.com/article/view/chess-notation" }
+        ]
+    },
+    tactics: {
+        title: "Tactics Training",
+        description: "Sharpen your tactical skills by solving puzzles and studying common tactical motifs.",
+        elo: "400-1600",
+        content: [
+            "Forks, pins, and skewers",
+            "Discovered attacks",
+            "Double checks",
+            "Removing the defender",
+            "Tactical motifs in your games"
+        ],
+        resources: [
+            { name: "Chess.com Tactics Trainer", url: "https://www.chess.com/tactics" },
+            { name: "CT-ART 4.0", url: "http://www.chessking.com/chess_tactics/" },
+            { name: "Chess Tempo", url: "https://chesstempo.com/" }
+        ]
+    },
+    openings: {
+        title: "Opening Principles",
+        description: "Understand the basic principles of opening play and develop your opening repertoire.",
+        elo: "600-1800",
+        content: [
+            "Controlling the center",
+            "Developing pieces effectively",
+            "King safety and pawn structure",
+            "Opening traps and pitfalls",
+            "Studying opening theory"
+        ],
+        resources: [
+            { name: "Chess.com Opening Trainer", url: "https://www.chess.com/openings" },
+            { name: "Opening Principles", url: "https://www.chesskid.com/article/view/opening-principles" }
+        ]
+    },
+    endgames: {
+        title: "Endgame Techniques",
+        description: "Learn essential endgame techniques and improve your ability to convert advantages into wins.",
+        elo: "800-2000",
+        content: [
+            "King and pawn endings",
+            "Basic checkmates (e.g., king and queen vs. king)",
+            "Opposition and triangulation",
+            "Rook endings",
+            "Using the 50-move rule"
+        ],
+        resources: [
+            { name: "Endgame Simulator", url: "https://www.chess.com/endgames" },
+            { name: "Endgame Basics", url: "https://www.chess.com/article/view/endgame-basics" }
+        ]
+    },
+    strategies: {
+        title: "Strategic Planning",
+        description: "Develop a strategic mindset and learn to create long-term plans in your games.",
+        elo: "1000-2200",
+        content: [
+            "Weak squares and strongholds",
+            "Open files and diagonals",
+            "Pawn majorities and minorities",
+            "Outposts for knights",
+            "Strategic planning in the middlegame"
+        ],
+        resources: [
+            { name: "Chess.com Strategy Guide", url: "https://www.chess.com/article/view/chess-strategy" },
+            { name: "The Complete Chess Course", url: "https://www.chess.com/article/view/the-complete-chess-course" }
+        ]
+    },
+    'advanced-openings': {
+        title: "Advanced Opening Concepts",
+        description: "Dive deeper into opening theory and learn about advanced concepts and variations.",
+        elo: "1200-2400",
+        content: [
+            "Understanding opening traps",
+            "Transpositions and move orders",
+            "Opening sacrifices",
+            "Studying grandmaster games",
+            "Preparing openings with an engine"
+        ],
+        resources: [
+            { name: "Opening Explorer", url: "https://www.chess.com/opening_explorer" },
+            { name: "ChessBase", url: "https://www.chessbase.com/" }
+        ]
+    },
+    mastery: {
+        title: "Mastery and Beyond",
+        description: "Achieve a deep understanding of chess and strive for mastery.",
+        elo: "2000+",
+        content: [
+            "Analyzing your own games",
+            "Identifying and fixing weaknesses",
+            "Playing regularly and reviewing games",
+            "Studying advanced tactics and strategies",
+            "Contributing to chess communities"
+        ],
+        resources: [
+            { name: "FIDE Master Titles", url: "https://www.fide.com/fide/handbook.html?id=208" },
+            { name: "USCF Membership", url: "https://new.uschess.org/join-us-chess" }
+        ]
+    },
+    'positional-play': {
+        title: "Advanced Positional Play",
+        description: "Master complex positional concepts and strategic planning at the highest level.",
+        elo: "2200+",
+        content: [
+            "Prophylactic thinking",
+            "Transformation of advantages",
+            "Piece placement optimization",
+            "Playing with/against isolated pawns",
+            "Strategic fortresses"
+        ],
+        resources: [
+            { name: "Positional Play by Jacob Aagaard", url: "https://www.qualitychess.co.uk/products/1/92/positional_play_by_jacob_aagaard/" },
+            { name: "GM Lecture Series - Positional Chess", url: "https://www.ichess.net/shop/positional-chess-masterclass/" }
+        ]
+    },
+    'attack': {
+        title: "Advanced Attack & Defense",
+        description: "Learn sophisticated attacking patterns and defensive techniques used by top grandmasters.",
+        elo: "2200+",
+        content: [
+            "Attack preparation",
+            "Defensive resources",
+            "Sacrifice evaluation",
+            "King safety dynamics",
+            "Counter-attacking techniques"
+        ],
+        resources: [
+            { name: "GM Attacking Manual", url: "https://www.amazon.com/Grandmaster-Repertoire-15-French-Defence/dp/1784830008" },
+            { name: "Defense Masterclass", url: "https://www.chessable.com/defense-masterclass/course/45717/" }
+        ]
+    },
+    'theory': {
+        title: "Modern Opening Theory",
+        description: "Stay current with theoretical developments and build a sophisticated opening repertoire.",
+        elo: "2200+",
+        content: [
+            "Critical line analysis",
+            "Novelty preparation",
+            "Opening trends",
+            "Computer-aided preparation",
+            "Tournament-specific preparation"
+        ],
+        resources: [
+            { name: "ChessBase Mega Database", url: "https://shop.chessbase.com/en/products/mega_database_2023" },
+            { name: "New In Chess Yearbook", url: "https://www.newinchess.com/yearbook/" }
+        ]
+    },
+    'dynamic-play': {
+        title: "Dynamic Chess",
+        description: "Master the art of dynamic play and complex calculations in critical positions.",
+        elo: "2200+",
+        content: [
+            "Concrete calculation",
+            "Initiative evaluation",
+            "Dynamic sacrifices",
+            "Time pressure handling",
+            "Critical position analysis"
+        ],
+        resources: [
+            { name: "Calculate Like a Grandmaster", url: "https://www.chessable.com/calculate-like-a-grandmaster/course/84635/" },
+            { name: "Dynamic Decision Making", url: "https://www.chess.com/lessons/dynamic-chess" }
+        ]
+    },
+    'psychology': {
+        title: "Chess Psychology",
+        description: "Develop mental toughness and psychological preparation for high-level competition.",
+        elo: "2300+",
+        content: [
+            "Tournament psychology",
+            "Stress management",
+            "Time management",
+            "Opponent preparation",
+            "Recovery after losses"
+        ],
+        resources: [
+            { name: "Psychology in Chess", url: "https://www.amazon.com/Psychology-Chess-Player-Reuben-Fine/dp/4871875407" },
+            { name: "Mental Toughness in Chess", url: "https://www.chessable.com/mental-toughness-in-chess/course/79641/" }
+        ]
+    }
+};
+
 // Open the node modal with details
 function openNodeModal(nodeId) {
     const node = document.getElementById(nodeId);
@@ -381,82 +612,151 @@ function openNodeModal(nodeId) {
     
     const modal = document.getElementById('node-modal');
     const modalTitle = document.getElementById('modal-title');
-    const modalContent = document.getElementById('modal-content');
-    const modalTasks = document.getElementById('modal-tasks');
-    const modalProgress = document.getElementById('modal-progress');
+    const modalDescription = document.getElementById('modal-description');
+    const modalElo = document.getElementById('modal-elo');
+    const contentList = document.getElementById('content-list');
+    const resourcesList = document.getElementById('resources-list');
+    const progressBar = document.getElementById('modal-progress-bar');
+    const progressText = document.getElementById('modal-progress-text');
     
-    if (!modal || !modalTitle || !modalContent || !modalTasks || !modalProgress) return;
+    if (!modal || !modalTitle || !modalDescription || !contentList || !resourcesList) return;
     
-    // Get node data
-    const title = node.querySelector('h3').textContent;
-    const description = node.dataset.description || 'Master this concept to improve your chess skills.';
+    const info = nodeInfo[nodeId];
+    if (!info) return;
     
-    // Get tasks from the node
-    const tasks = Array.from(node.querySelectorAll('.task')).map(task => {
-        const taskId = task.dataset.taskId;
-        const taskText = task.textContent;
-        const isChecked = task.querySelector('input').checked;
-        
-        return {
-            id: taskId,
-            text: taskText,
-            completed: isChecked
+    // Load saved progress
+    let userProgress = JSON.parse(localStorage.getItem('chessRoadmapProgress')) || {};
+    if (!userProgress[nodeId]) {
+        userProgress[nodeId] = {
+            content: new Array(info.content.length).fill(false),
+            resources: new Array(info.resources.length).fill(false)
         };
-    });
+    }
     
-    // Populate modal
-    modalTitle.textContent = title;
-    modalContent.textContent = description;
+    // Populate modal content
+    modalTitle.textContent = info.title;
+    modalDescription.textContent = info.description;
+    modalElo.textContent = `ELO: ${info.elo}`;
     
-    // Create task list
-    modalTasks.innerHTML = '';
-    tasks.forEach(task => {
-        const taskElement = document.createElement('div');
-        taskElement.className = 'modal-task';
-        
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.id = `modal-${task.id}`;
-        checkbox.checked = task.completed;
-        checkbox.addEventListener('change', () => {
-            // Update the actual task checkbox in the node
-            const nodeTaskCheckbox = document.querySelector(`.task[data-task-id="${task.id}"] input`);
-            if (nodeTaskCheckbox) {
-                nodeTaskCheckbox.checked = checkbox.checked;
-                // Trigger change event to update progress
-                const event = new Event('change');
-                nodeTaskCheckbox.dispatchEvent(event);
-            }
-        });
-        
-        const label = document.createElement('label');
-        label.htmlFor = `modal-${task.id}`;
-        label.textContent = task.text;
-        
-        taskElement.appendChild(checkbox);
-        taskElement.appendChild(label);
-        modalTasks.appendChild(taskElement);
-    });
+    // Create content checklist
+    contentList.innerHTML = info.content.map((item, index) => `
+        <div class="checkbox-container" data-type="content" data-index="${index}">
+            <div class="custom-checkbox ${userProgress[nodeId].content[index] ? 'checked' : ''}"></div>
+            <span class="checkbox-label">${item}</span>
+        </div>
+    `).join('');
+    
+    // Create resources list with checkboxes
+    resourcesList.innerHTML = info.resources.map((resource, index) => `
+        <div class="checkbox-container" data-type="resources" data-index="${index}">
+            <div class="custom-checkbox ${userProgress[nodeId].resources[index] ? 'checked' : ''}"></div>
+            <a href="${resource.url}" class="resource-link" target="_blank">${resource.name}</a>
+        </div>
+    `).join('');
     
     // Calculate and display progress
-    const progress = calculateProgress(nodeId);
-    modalProgress.textContent = `Progress: ${progress}%`;
+    updateModalProgress(nodeId, userProgress[nodeId]);
     
-    // Show modal
+    // Add checkbox event listeners
+    const checkboxes = modal.querySelectorAll('.custom-checkbox');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('click', () => {
+            const container = checkbox.closest('.checkbox-container');
+            const type = container.dataset.type;
+            const index = parseInt(container.dataset.index);
+            
+            checkbox.classList.toggle('checked');
+            userProgress[nodeId][type][index] = checkbox.classList.contains('checked');
+            
+            // Update progress display
+            updateModalProgress(nodeId, userProgress[nodeId]);
+        });
+    });
+    
+    // Add save button functionality
+    const saveBtn = modal.querySelector('.save-btn');
+    if (saveBtn) {
+        saveBtn.addEventListener('click', () => {
+            localStorage.setItem('chessRoadmapProgress', JSON.stringify(userProgress));
+            updateNodeProgress(nodeId, userProgress[nodeId]);
+            
+            // Show feedback
+            saveBtn.textContent = 'Progress Saved!';
+            setTimeout(() => {
+                saveBtn.textContent = 'Save Progress';
+            }, 2000);
+        });
+    }
+    
+    // Show modal with animation
     modal.classList.add('show');
     
-    // Add close button event
-    const closeButton = document.getElementById('modal-close');
-    if (closeButton) {
-        closeButton.onclick = () => {
+    // Close modal handlers
+    const closeBtn = modal.querySelector('.close-btn');
+    if (closeBtn) {
+        closeBtn.onclick = () => {
             modal.classList.remove('show');
         };
     }
     
     // Close when clicking outside
-    window.onclick = (event) => {
-        if (event.target === modal) {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
             modal.classList.remove('show');
         }
-    };
-} 
+    });
+}
+
+// Update progress display in the modal
+function updateModalProgress(nodeId, progress) {
+    const progressBar = document.getElementById('modal-progress-bar');
+    const progressText = document.getElementById('modal-progress-text');
+    
+    if (!progressBar || !progressText) return;
+    
+    const totalItems = progress.content.length + progress.resources.length;
+    const completedItems = 
+        progress.content.filter(Boolean).length + 
+        progress.resources.filter(Boolean).length;
+    
+    const percentage = Math.round((completedItems / totalItems) * 100);
+    
+    progressBar.style.width = `${percentage}%`;
+    progressText.textContent = `${percentage}% Complete`;
+    
+    // Update progress bar color based on completion
+    if (percentage === 100) {
+        progressBar.style.background = 'linear-gradient(90deg, #00e676, #00c853)';
+    } else if (percentage > 50) {
+        progressBar.style.background = 'linear-gradient(90deg, #ffee58, #fdd835)';
+    } else {
+        progressBar.style.background = 'linear-gradient(90deg, #ff9800, #f57c00)';
+    }
+}
+
+// Update node progress display in the roadmap
+function updateNodeProgress(nodeId, progress) {
+    const node = document.getElementById(nodeId);
+    if (!node) return;
+    
+    const progressBar = node.querySelector('.progress');
+    if (!progressBar) return;
+    
+    const totalItems = progress.content.length + progress.resources.length;
+    const completedItems = 
+        progress.content.filter(Boolean).length + 
+        progress.resources.filter(Boolean).length;
+    
+    const percentage = Math.round((completedItems / totalItems) * 100);
+    
+    progressBar.style.width = `${percentage}%`;
+    
+    // Update connections if node is completed
+    if (percentage === 100) {
+        node.classList.add('completed');
+        updateConnections(nodeId);
+    } else {
+        node.classList.remove('completed');
+        updateConnections(nodeId);
+    }
+}

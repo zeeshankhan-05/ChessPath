@@ -231,18 +231,29 @@
             <!-- Node Detail Modal -->
             <div id="node-modal" class="modal">
                 <div class="modal-content">
-                    <span id="modal-close" class="close">&times;</span>
                     <div class="modal-header">
-                        <h2 id="modal-title">Node Title</h2>
-                        <div id="modal-progress" class="modal-progress">Progress: 0%</div>
+                        <h2 id="modal-title"></h2>
+                        <div class="elo-range" id="modal-elo"></div>
+                        <button class="close-btn">&times;</button>
                     </div>
-                    <p id="modal-content" class="modal-description">Node description</p>
-                    <div class="modal-section">
-                        <h3>Tasks to Complete:</h3>
-                        <div id="modal-tasks" class="task-list">                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button id="modal-resources" class="btn">View Resources</button>
+                    
+                    <div class="modal-body">
+                        <p id="modal-description" class="description"></p>
+                        
+                        <h3>Learning Content</h3>
+                        <div id="content-list" class="content-list"></div>
+                        
+                        <h3>Resources</h3>
+                        <div id="resources-list" class="resources-list"></div>
+                        
+                        <div class="progress-tracker">
+                            <h3>Progress</h3>
+                            <div class="progress-bar">
+                                <div id="modal-progress-bar" class="progress"></div>
+                            </div>
+                            <span id="modal-progress-text">0% Complete</span>
+                            <button class="save-btn">Save Progress</button>
+                        </div>
                     </div>
                 </div>
             </div>
