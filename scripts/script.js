@@ -185,53 +185,53 @@ document.addEventListener('DOMContentLoaded', () => {
     const nodeInfo = {
         fundamentals: {
             title: "Chess Fundamentals",
-            description: "The foundation of chess knowledge. Learn how the game works and the basic concepts that will guide your chess journey.",
+            description: "Build a solid foundation by learning how each piece moves and understanding the basic concepts of chess.",
             elo: "0-800",
             content: [
-                "Board setup and piece movement",
-                "Basic rules (check, checkmate, stalemate)",
-                "Piece values and basic principles",
-                "Capturing and special moves (castling, en passant)",
-                "Setting up a chess board correctly"
+                "Board layout and starting position",
+                "Learning piece names and movements",
+                "Understanding check, checkmate, and stalemate",
+                "Game objective and basic strategy",
+                "Introduction to piece values and material"
             ],
             resources: [
-                { name: "Chess.com's How to Play", url: "https://www.chess.com/learn-how-to-play-chess" },
-                { name: "Lichess Learn Chess", url: "https://lichess.org/learn" },
-                { name: "Chess for Beginners by Magnus Carlsen", url: "https://www.chess.com/lessons/magnus-carlsen" }
+                { name: "ChessKid Beginner Videos", url: "https://www.chesskid.com/videos/beginner" },
+                { name: "Chess.com Beginner Lessons", url: "https://www.chess.com/lessons/beginner" },
+                { name: "GothamChess Learn in 10 Minutes", url: "https://www.youtube.com/watch?v=OCSbzArwB10" }
             ]
         },
         rules: {
             title: "Rules & Setup",
-            description: "Master the complete rules of chess including special moves and tournament regulations.",
+            description: "Master all chess rules including special moves and tournament regulations.",
             elo: "0-800",
             content: [
-                "Special moves in detail (castling, promotion, en passant)",
-                "Draw rules (50-move rule, 3-fold repetition)",
-                "Tournament rules and etiquette",
-                "Chess clocks and time controls",
-                "Chess variants (bughouse, crazyhouse, etc.)"
+                "Special moves (castling, en passant, promotion)",
+                "Illegal moves and touch-move rule",
+                "Draw rules (stalemate, repetition, 50-move)",
+                "Tournament rules and time controls",
+                "Basic chess etiquette"
             ],
             resources: [
-                { name: "FIDE Rules of Chess", url: "https://www.fide.com/FIDE/handbook/LawsOfChess.pdf" },
-                { name: "Chess.com's Articles on Rules", url: "https://www.chess.com/article/view/chess-rules" },
-                { name: "Bobby Fischer Teaches Chess", url: "https://www.amazon.com/Bobby-Fischer-Teaches-Chess/dp/0553263153" }
+                { name: "Lichess Interactive Rules", url: "https://lichess.org/learn" },
+                { name: "FIDE Laws of Chess", url: "https://www.fide.com/FIDE/handbook/LawsOfChess.pdf" },
+                { name: "Practice with Chess Bots", url: "https://www.chess.com/play/computer" }
             ]
         },
         tactics: {
             title: "Basic Tactics",
-            description: "Learn fundamental tactical patterns that form the building blocks of chess combinations.",
-            elo: "800-1200",
+            description: "Learn fundamental tactical patterns and improve your calculation abilities.",
+            elo: "1000-1400",
             content: [
                 "Forks and double attacks",
-                "Pins and skewers",
-                "Discovered attacks",
-                "Basic checkmate patterns (back rank, scholar's)",
-                "Simple sacrifices for material gain"
+                "Pins, skewers, and discovered attacks",
+                "Basic mating patterns (back rank, smothered)",
+                "Material-winning combinations",
+                "Common tactical motifs in openings"
             ],
             resources: [
-                { name: "Chess Tactics for Beginners", url: "https://www.chess.com/puzzles/learning" },
-                { name: "Lichess Training Puzzles", url: "https://lichess.org/training" },
-                { name: "Chess.com's Tactics Trainer", url: "https://www.chess.com/puzzles" }
+                { name: "ChessTempo Tactics Trainer", url: "https://chesstempo.com/chess-tactics/" },
+                { name: "Lichess Puzzle Streak", url: "https://lichess.org/streak" },
+                { name: "Hanging Pawns Tactics", url: "https://www.youtube.com/c/HangingPawns/playlists" }
             ]
         },
         notation: {
@@ -239,50 +239,50 @@ document.addEventListener('DOMContentLoaded', () => {
             description: "Learn to read and write chess moves in standard algebraic notation.",
             elo: "800-1200",
             content: [
-                "Algebraic notation basics",
-                "Reading and writing moves",
-                "Annotation symbols (!, ?, ±)",
-                "Scoresheets and game recording",
-                "Digital notation and PGN format"
+                "Understanding the chessboard coordinates",
+                "Writing and reading algebraic notation",
+                "Special move notation (0-0, 0-0-0, e.p.)",
+                "Game recording and scoresheets",
+                "Using chess databases and PGN format"
             ],
             resources: [
-                { name: "Chess Notation Guide", url: "https://www.chess.com/article/view/chess-notation" },
-                { name: "Annotated Games Collection", url: "https://www.chessgames.com/" },
-                { name: "ChessBase tutorials", url: "https://en.chessbase.com/post/chessbase-tutorial-algebraic-notation" }
+                { name: "Interactive Notation Trainer", url: "https://lichess.org/training/coordinate" },
+                { name: "Chess.com Notation Guide", url: "https://www.chess.com/article/view/chess-notation" },
+                { name: "Practice Recording Games", url: "https://www.chess.com/terms/chess-notation" }
             ]
         },
         openings: {
             title: "Opening Principles",
-            description: "Understand the fundamental principles that guide the first phase of the game.",
-            elo: "800-1400",
+            description: "Learn core opening concepts and basic repertoire for both colors.",
+            elo: "1000-1400",
             content: [
-                "Control the center",
-                "Develop pieces efficiently",
-                "King safety and castling",
-                "Pawn structure basics",
-                "Common opening mistakes"
+                "Center control and piece development",
+                "Common structures (e4/e5, d4/d5)",
+                "Basic opening strategies",
+                "Avoiding common mistakes",
+                "Building a basic repertoire"
             ],
             resources: [
-                { name: "Logical Chess: Move by Move", url: "https://www.amazon.com/Logical-Chess-Every-Explained-Algebraic/dp/0713484640" },
-                { name: "Chess Openings for Beginners", url: "https://www.chess.com/article/view/the-best-chess-openings-for-beginners" },
-                { name: "John Bartholomew's Opening Videos", url: "https://www.youtube.com/playlist?list=PLl9uuRYQ-6MDGwb5Jk5rI8iomKxF4y2Az" }
+                { name: "Gotham's Opening Guide", url: "https://www.youtube.com/playlist?list=PLBRhQ8t5YXS0UjIe6Uk3F6g1XMXQn1_Ri" },
+                { name: "Basic Opening Principles", url: "https://www.chess.com/article/view/the-principles-of-the-chess-opening" },
+                { name: "Building Your Repertoire", url: "https://www.chessable.com/basic-principles-of-opening-play/course/96221/" }
             ]
         },
         endgames: {
             title: "Basic Endgames",
-            description: "Master the fundamental endgame techniques that every chess player must know.",
+            description: "Master fundamental endgame techniques every chess player must know.",
             elo: "1000-1400",
             content: [
-                "King and pawn vs king",
-                "Queen vs pawn endgames",
-                "Rook endgames fundamentals",
+                "King and pawn endings",
+                "Rook endgame fundamentals",
+                "Basic checkmates (K+Q, K+R)",
                 "Opposition and zugzwang",
-                "Basic checkmating patterns (K+Q vs K, K+R vs K)"
+                "Converting material advantage"
             ],
             resources: [
-                { name: "Silman's Complete Endgame Course", url: "https://www.amazon.com/Silmans-Complete-Endgame-Course-Beginner/dp/1890085103" },
-                { name: "100 Endgames You Must Know", url: "https://www.amazon.com/100-Endgames-You-Must-Know/dp/9056916173" },
-                { name: "ChessTempo Endgame Training", url: "https://chesstempo.com/chess-endgames/" }
+                { name: "100 Endgames You Must Know", url: "https://www.chessable.com/100-endgames-you-must-know/course/5193/" },
+                { name: "John Bartholomew Endgames", url: "https://www.youtube.com/playlist?list=PLl9uuRYQ-6MBwqkmwT42l1fI7Z0bYuwwO" },
+                { name: "Basic Endgame Practice", url: "https://lichess.org/practice/basic-endgames" }
             ]
         },
         patterns: {
@@ -304,19 +304,19 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         strategies: {
             title: "Strategic Concepts",
-            description: "Learn the strategic elements that guide long-term planning in chess.",
-            elo: "1400-1800",
+            description: "Master advanced positional play and strategic understanding.",
+            elo: "1400-2000",
             content: [
+                "Weak squares and outposts",
                 "Pawn structure strategy",
-                "Bishop vs Knight imbalances",
-                "Open vs closed positions",
-                "Creating and exploiting weaknesses",
-                "Piece activity and coordination"
+                "Good vs bad pieces",
+                "Prophylactic thinking",
+                "Long-term planning"
             ],
             resources: [
-                { name: "My System by Aron Nimzowitsch", url: "https://www.amazon.com/My-System-Chess-Treatise-Century/dp/1880673851" },
-                { name: "The Reassess Your Chess Workbook", url: "https://www.amazon.com/Reassess-Your-Chess-Workbook-Silman/dp/1890085057" },
-                { name: "Chess Structures: A Grandmaster Guide", url: "https://www.amazon.com/Chess-Structures-Grandmaster-Mauricio-Flores/dp/1784830003" }
+                { name: "Silman's Chess Course", url: "https://www.chessable.com/reassess-your-chess-the-complete-chess-mastery-course/course/5797/" },
+                { name: "Chess Strategy for Club Players", url: "https://www.amazon.com/Chess-Strategy-Club-Players-Grooten/dp/9056916343" },
+                { name: "Strategic Play Studies", url: "https://lichess.org/study/strategic-play" }
             ]
         },
         calculation: {
@@ -337,20 +337,20 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         "advanced-openings": {
-            title: "Opening Repertoire",
-            description: "Build a personalized opening repertoire for both white and black.",
-            elo: "1600-2000",
+            title: "Advanced Opening Theory",
+            description: "Build a sophisticated opening repertoire with deep theoretical knowledge.",
+            elo: "1800-2200",
             content: [
-                "Personalized white repertoire",
-                "Responses as black to 1.e4 and 1.d4",
-                "Opening transpositions",
+                "Complex opening systems",
                 "Move order subtleties",
-                "Opening preparation methodology"
+                "Theory of critical lines",
+                "Opening preparation methods",
+                "Building a GM-level repertoire"
             ],
             resources: [
-                { name: "Lifetime Repertoires on Chessable", url: "https://www.chessable.com/courses/all/opening/" },
-                { name: "Opening Encyclopaedia", url: "https://www.chessable.com/opening-encyclopedia/s/2464/" },
-                { name: "GM opening preparation videos", url: "https://www.chess.com/lessons/guide#openings" }
+                { name: "GM Opening Preparation", url: "https://www.chessable.com/opening-preparation/course/45897/" },
+                { name: "Modern Chess Openings", url: "https://www.amazon.com/Modern-Chess-Openings-Nick-Silva/dp/0812936825" },
+                { name: "ChessBase Opening Encyclopedia", url: "https://shop.chessbase.com/en/products/mega_database_2023" }
             ]
         },
         middlegame: {
@@ -474,19 +474,19 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         mastery: {
             title: "Chess Mastery",
-            description: "Refine all aspects of your chess to reach master level.",
+            description: "Achieve mastery across all aspects of chess and compete at a high level.",
             elo: "2200+",
             content: [
-                "Personal weaknesses elimination",
-                "Deep analysis methods",
-                "Computer-assisted training",
-                "Competition strategies",
-                "Continuous improvement"
+                "Professional tournament preparation",
+                "Advanced calculation training",
+                "Engine-assisted analysis",
+                "Modern chess theory",
+                "High-level competition skills"
             ],
             resources: [
-                { name: "Quality Chess Publications", url: "https://www.qualitychess.co.uk/" },
-                { name: "Personal coaching", url: "https://www.chess.com/coaches" },
-                { name: "Study of world champions' games", url: "https://www.chessgames.com/perl/chessplayer?pid=15940" }
+                { name: "1-on-1 GM Coaching", url: "https://www.chess.com/coaches" },
+                { name: "ChessBase Pro Package", url: "https://shop.chessbase.com/en/categories/chess_programs" },
+                { name: "Advanced Tournament Guide", url: "https://www.fide.com/FIDE/handbook/Tournament_Regulations.pdf" }
             ]
         }
     };
