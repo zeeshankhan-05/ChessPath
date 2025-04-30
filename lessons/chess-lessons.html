@@ -31,7 +31,7 @@
     <main>
         <section class="lessons-header">
             <div class="container">
-                <h1>Lessons Library</h1>
+                <h1>Chess Lessons Library</h1>
                 <p>Browse our collection of lessons covering all aspects of chess strategy and tactics</p>
 
                 <div class="lesson-filters">
@@ -39,10 +39,10 @@
                         <label for="level-filter">Level:</label>
                         <select id="level-filter">
                             <option value="all">All Levels</option>
-                            <option value="beginner">Beginner</option>
-                            <option value="intermediate">Intermediate</option>
-                            <option value="advanced">Advanced</option>
-                            <option value="master">Master</option>
+                            <option value="beginner">Beginner (0-1200)</option>
+                            <option value="intermediate">Intermediate (1200-1800)</option>
+                            <option value="advanced">Advanced (1800-2200)</option>
+                            <option value="master">Master (2200+)</option>
                         </select>
                     </div>
 
@@ -50,12 +50,16 @@
                         <label for="topic-filter">Topic:</label>
                         <select id="topic-filter">
                             <option value="all">All Topics</option>
-                            <option value="basics">Chess Basics</option>
-                            <option value="openings">Openings</option>
+                            <option value="fundamentals">Fundamentals</option>
+                            <option value="rules">Rules & Setup</option>
+                            <option value="notation">Chess Notation</option>
                             <option value="tactics">Tactics</option>
+                            <option value="openings">Openings</option>
+                            <option value="endgames">Endgames</option>
                             <option value="strategy">Strategy</option>
-                            <option value="endgame">Endgame</option>
-                            <option value="attacking">Attacking</option>
+                            <option value="calculation">Calculation</option>
+                            <option value="positional">Positional Play</option>
+                            <option value="psychology">Psychology</option>
                         </select>
                     </div>
                     
@@ -69,282 +73,143 @@
 
         <section class="lessons-grid">
             <div class="container">
-                
                 <div class="lessons-container">
-                    <!-- Beginner Level Header -->
+                    <!-- Fundamentals -->
                     <div class="level-header beginner-header">
-                        <h2>Beginner Level</h2>
+                        <h2>Chess Fundamentals</h2>
                     </div>
-                    
-                    <!-- Beginner Lessons -->
-                    <div class="lesson-card" data-level="beginner" data-topic="openings">
+
+                    <div class="lesson-card" data-level="beginner" data-topic="fundamentals">
                         <div class="lesson-image beginner-bg">
                             <span class="level-indicator">Beginner</span>
                         </div>
                         <div class="lesson-content">
-                            <h3>Learn To Play Chess</h3>
-                            <p>Get to know the chess pieces and how to play the game.</p>
-                            <a href="https://www.chess.com/lessons/learn-to-play-chess" class="lesson-link btn-small btn-primary">Start Lesson</a>
+                            <h3>Introduction to Chess</h3>
+                            <p>Learn the basic rules and piece movements to start your chess journey.</p>
+                            <a href="https://www.chess.com/learn-how-to-play-chess" class="lesson-link btn-small btn-primary">Start Lesson</a>
                         </div>
                     </div>
 
-                    <div class="lesson-card" data-level="beginner" data-topic="basics">
+                    <!-- Rules & Setup -->
+                    <div class="lesson-card" data-level="beginner" data-topic="rules">
                         <div class="lesson-image beginner-bg">
                             <span class="level-indicator">Beginner</span>
                         </div>
                         <div class="lesson-content">
-                            <h3>Playing the Game</h3>
-                            <p>Learn the basic rules of chess and how to play a full game.</p>
-                            <a href="https://www.chess.com/lessons/playing-the-game" class="lesson-link btn-small btn-primary">Start Lesson</a>
+                            <h3>Special Moves and Rules</h3>
+                            <p>Master castling, en passant, pawn promotion, and other special chess rules.</p>
+                            <a href="https://www.chess.com/lessons/special-chess-rules" class="lesson-link btn-small btn-primary">Start Lesson</a>
                         </div>
                     </div>
 
-                    <div class="lesson-card" data-level="beginner" data-topic="openings">
+                    <!-- Chess Notation -->
+                    <div class="lesson-card" data-level="beginner" data-topic="notation">
                         <div class="lesson-image beginner-bg">
                             <span class="level-indicator">Beginner</span>
                         </div>
                         <div class="lesson-content">
-                            <h3>Opening Principles</h3>
-                            <p>Get an advantage in the first few moves with fundamental opening concepts.</p>
-                            <a href="https://www.chess.com/lessons/opening-principles" class="lesson-link btn-small btn-primary">Start Lesson</a>
+                            <h3>Chess Notation Basics</h3>
+                            <p>Learn how to read and write chess moves using algebraic notation.</p>
+                            <a href="https://www.chess.com/article/view/chess-notation" class="lesson-link btn-small btn-primary">Start Lesson</a>
                         </div>
                     </div>
 
-                    <div class="lesson-card" data-level="beginner" data-topic="endgame">
-                        <div class="lesson-image beginner-bg">
-                            <span class="level-indicator">Beginner</span>
-                        </div>
-                        <div class="lesson-content">
-                            <h3>Winning the Game</h3>
-                            <p>Turn your advantage into checkmate and learn how to finish games effectively.</p>
-                            <a href="https://www.chess.com/lessons/winning-the-game" class="lesson-link btn-small btn-primary">Start Lesson</a>
-                        </div>
-                    </div>
-
-                    <div class="lesson-card" data-level="beginner" data-topic="tactics">
-                        <div class="lesson-image beginner-bg">
-                            <span class="level-indicator">Beginner</span>
-                        </div>
-                        <div class="lesson-content">
-                            <h3>Capturing Pieces</h3>
-                            <p>Keep your eyes open and capture more pieces with basic tactical awareness.</p>
-                            <a href="https://www.chess.com/lessons/capturing-pieces" class="lesson-link btn-small btn-primary">Start Lesson</a>
-                        </div>
-                    </div>
-
-                    <div class="lesson-card" data-level="beginner" data-topic="tactics">
-                        <div class="lesson-image beginner-bg">
-                            <span class="level-indicator">Beginner</span>
-                        </div>
-                        <div class="lesson-content">
-                            <h3>Finding Checkmate</h3>
-                            <p>Win the game by focusing your attack on the vulnerable king.</p>
-                            <a href="https://www.chess.com/lessons/finding-checkmate" class="lesson-link btn-small btn-primary">Start Lesson</a>
-                        </div>
-                    </div>
-
-                    <!-- Intermediate Level Header -->
+                    <!-- Intermediate Level -->
                     <div class="level-header intermediate-header">
                         <h2>Intermediate Level</h2>
                     </div>
 
-                    <!-- Intermediate Lessons -->
-                    <div class="lesson-card" data-level="intermediate" data-topic="strategy">
-                        <div class="lesson-image intermediate-bg">
-                            <span class="level-indicator">Intermediate</span>
-                        </div>
-                        <div class="lesson-content">
-                            <h3>Make the Most of Your Pieces</h3>
-                            <p>Explore the strengths and weaknesses of each piece to maximize their potential.</p>
-                            <a href="https://www.chess.com/lessons/make-the-most-of-your-pieces" class="lesson-link btn-small btn-primary">Start Lesson</a>
-                        </div>
-                    </div>
-                    
-                    <div class="lesson-card" data-level="intermediate" data-topic="endgame">
-                        <div class="lesson-image intermediate-bg">
-                            <span class="level-indicator">Intermediate</span>
-                        </div>
-                        <div class="lesson-content">
-                            <h3>Understanding Endgames</h3>
-                            <p>Know what to do when most pieces are off the board to convert advantages.</p>
-                            <a href="https://www.chess.com/lessons/understanding-endgames" class="lesson-link btn-small btn-primary">Start Lesson</a>
-                        </div>
-                    </div>
-                    
+                    <!-- Basic Tactics -->
                     <div class="lesson-card" data-level="intermediate" data-topic="tactics">
                         <div class="lesson-image intermediate-bg">
                             <span class="level-indicator">Intermediate</span>
                         </div>
                         <div class="lesson-content">
-                            <h3>Winning with Tactics</h3>
-                            <p>Surprise your opponents with powerful winning moves and tactical motifs.</p>
-                            <a href="https://www.chess.com/lessons/winning-with-tactics" class="lesson-link btn-small btn-primary">Start Lesson</a>
+                            <h3>Essential Chess Tactics</h3>
+                            <p>Master fundamental tactical patterns like pins, forks, and skewers.</p>
+                            <a href="https://www.chess.com/lessons/essential-tactics" class="lesson-link btn-small btn-primary">Start Lesson</a>
                         </div>
                     </div>
 
-                    <div class="lesson-card" data-level="intermediate" data-topic="tactics">
+                    <!-- Opening Principles -->
+                    <div class="lesson-card" data-level="intermediate" data-topic="openings">
                         <div class="lesson-image intermediate-bg">
                             <span class="level-indicator">Intermediate</span>
                         </div>
                         <div class="lesson-content">
-                            <h3>Forcing Moves</h3>
-                            <p>Control the game by calculating a few moves ahead and forcing your opponent's responses.</p>
-                            <a href="https://www.chess.com/lessons/forcing-moves" class="lesson-link btn-small btn-primary">Start Lesson</a>
+                            <h3>Opening Fundamentals</h3>
+                            <p>Learn key opening principles and how to develop your pieces effectively.</p>
+                            <a href="https://www.chess.com/lessons/opening-principles" class="lesson-link btn-small btn-primary">Start Lesson</a>
                         </div>
                     </div>
 
-                    <div class="lesson-card" data-level="intermediate" data-topic="strategy">
+                    <!-- Basic Endgames -->
+                    <div class="lesson-card" data-level="intermediate" data-topic="endgames">
                         <div class="lesson-image intermediate-bg">
                             <span class="level-indicator">Intermediate</span>
                         </div>
                         <div class="lesson-content">
-                            <h3>Reading the Board</h3>
-                            <p>See the whole board so you can decide on the best plan and improve position evaluation.</p>
-                            <a href="https://www.chess.com/lessons/reading-the-board" class="lesson-link btn-small btn-primary">Start Lesson</a>
+                            <h3>Essential Endgames</h3>
+                            <p>Master fundamental endgame techniques and basic checkmates.</p>
+                            <a href="https://www.chess.com/lessons/essential-endgames" class="lesson-link btn-small btn-primary">Start Lesson</a>
                         </div>
                     </div>
 
-                    <!-- Advanced Level Header -->
+                    <!-- Advanced Level -->
                     <div class="level-header advanced-header">
                         <h2>Advanced Level</h2>
                     </div>
 
-                    <!-- Advanced Lessons -->
-                    <div class="lesson-card" data-level="advanced" data-topic="openings">
-                        <div class="lesson-image advanced-bg">
-                            <span class="level-indicator">Advanced</span>
-                        </div>
-                        <div class="lesson-content">
-                            <h3>Key Openings</h3>
-                            <p>Understand what makes the most popular openings great and build a repertoire.</p>
-                            <a href="https://www.chess.com/lessons/key-openings" class="lesson-link btn-small btn-primary">Start Lesson</a>
-                        </div>
-                    </div>
-                    
+                    <!-- Strategic Concepts -->
                     <div class="lesson-card" data-level="advanced" data-topic="strategy">
                         <div class="lesson-image advanced-bg">
                             <span class="level-indicator">Advanced</span>
                         </div>
                         <div class="lesson-content">
-                            <h3>Choosing the Best Move</h3>
-                            <p>Train yourself to discover the right plans and ideas for complex positions.</p>
-                            <a href="https://www.chess.com/lessons/choosing-the-best-move" class="lesson-link btn-small btn-primary">Start Lesson</a>
+                            <h3>Advanced Strategy</h3>
+                            <p>Learn complex strategic concepts and long-term planning.</p>
+                            <a href="https://www.chess.com/lessons/advanced-strategy" class="lesson-link btn-small btn-primary">Start Lesson</a>
                         </div>
                     </div>
-                    
-                    <div class="lesson-card" data-level="advanced" data-topic="strategy">
+
+                    <!-- Calculation -->
+                    <div class="lesson-card" data-level="advanced" data-topic="calculation">
                         <div class="lesson-image advanced-bg">
                             <span class="level-indicator">Advanced</span>
                         </div>
                         <div class="lesson-content">
-                            <h3>Activating Your Pieces</h3>
-                            <p>Make the most of each piece by finding its best square and optimal coordination.</p>
-                            <a href="https://www.chess.com/lessons/activating-your-pieces" class="lesson-link btn-small btn-primary">Start Lesson</a>
+                            <h3>Advanced Calculation</h3>
+                            <p>Improve your calculation abilities and visualization skills.</p>
+                            <a href="https://www.chess.com/lessons/calculation-training" class="lesson-link btn-small btn-primary">Start Lesson</a>
                         </div>
                     </div>
 
-                    <div class="lesson-card" data-level="advanced" data-topic="endgame">
-                        <div class="lesson-image advanced-bg">
-                            <span class="level-indicator">Advanced</span>
-                        </div>
-                        <div class="lesson-content">
-                            <h3>Advanced Endgames</h3>
-                            <p>Improve your endgame play with winning techniques and theoretical knowledge.</p>
-                            <a href="https://www.chess.com/lessons/advanced-endgames" class="lesson-link btn-small btn-primary">Start Lesson</a>
-                        </div>
-                    </div>
-
-                    <div class="lesson-card" data-level="advanced" data-topic="tactics">
-                        <div class="lesson-image advanced-bg">
-                            <span class="level-indicator">Advanced</span>
-                        </div>
-                        <div class="lesson-content">
-                            <h3>Attacking the King</h3>
-                            <p>Set your sights on the king and overwhelm the defenses with coordinated attacks.</p>
-                            <a href="https://www.chess.com/lessons/attacking-the-king" class="lesson-link btn-small btn-primary">Start Lesson</a>
-                        </div>
-                    </div>
-
-                    <div class="lesson-card" data-level="advanced" data-topic="tactics">
-                        <div class="lesson-image advanced-bg">
-                            <span class="level-indicator">Advanced</span>
-                        </div>
-                        <div class="lesson-content">
-                            <h3>Advanced Tactics</h3>
-                            <p>Win more games with beautiful chess combinations and complex tactical motifs.</p>
-                            <a href="https://www.chess.com/lessons/advanced-tactics" class="lesson-link btn-small btn-primary">Start Lesson</a>
-                        </div>
-                    </div>
-
-                    <!-- Master Level Header -->
+                    <!-- Master Level -->
                     <div class="level-header master-header">
                         <h2>Master Level</h2>
                     </div>
 
-                    <!-- Master Level Lessons -->
-                    <div class="lesson-card" data-level="master" data-topic="strategy">
+                    <!-- Positional Play -->
+                    <div class="lesson-card" data-level="master" data-topic="positional">
                         <div class="lesson-image master-bg">
                             <span class="level-indicator">Master</span>
                         </div>
                         <div class="lesson-content">
-                            <h3>Complex Sacrifices and Dynamic Play</h3>
-                            <p>Master the art of dynamic imbalances, complex sacrifices, and risk management in dynamic positions.</p>
-                            <a href="https://www.amazon.com/Dynamic-Chess-Strategy-Mihai-Suba/dp/1901983498" class="lesson-link btn-small btn-primary">Start Lesson</a>
+                            <h3>Advanced Positional Play</h3>
+                            <p>Master complex positional concepts and strategic planning.</p>
+                            <a href="https://www.chess.com/lessons/positional-mastery" class="lesson-link btn-small btn-primary">Start Lesson</a>
                         </div>
                     </div>
 
-                    <div class="lesson-card" data-level="master" data-topic="openings">
-                        <div class="lesson-image master-bg">
-                            <span class="level-indicator">Master</span>
-                        </div>
-                        <div class="lesson-content">
-                            <h3>Modern Opening Theory</h3>
-                            <p>Study critical lines analysis and stay current with theoretical developments at the highest level.</p>
-                            <a href="https://www.newinchess.com/yearbook" class="lesson-link btn-small btn-primary">Start Lesson</a>
-                        </div>
-                    </div>
-
+                    <!-- Chess Psychology -->
                     <div class="lesson-card" data-level="master" data-topic="psychology">
                         <div class="lesson-image master-bg">
                             <span class="level-indicator">Master</span>
                         </div>
                         <div class="lesson-content">
-                            <h3>Chess Psychology and Mental Training</h3>
-                            <p>Handle tournament pressure and develop mental toughness for high-level competition.</p>
-                            <a href="https://www.amazon.com/Psychology-Chess-Player-Reuben-Fine/dp/4871875407" class="lesson-link btn-small btn-primary">Start Lesson</a>
-                        </div>
-                    </div>
-
-                    <div class="lesson-card" data-level="master" data-topic="strategy">
-                        <div class="lesson-image master-bg">
-                            <span class="level-indicator">Master</span>
-                        </div>
-                        <div class="lesson-content">
-                            <h3>How to Win with Zugzwang</h3>
-                            <p>GM Dejan Bojkov explains how to use zugzwang to win games and force your opponents into weak moves.</p>
-                            <a href="https://www.chess.com/lessons/how-to-win-with-zugzwang" class="lesson-link btn-small btn-primary">Start Lesson</a>
-                        </div>
-                    </div>
-
-                    <div class="lesson-card" data-level="master" data-topic="strategy">
-                        <div class="lesson-image master-bg">
-                            <span class="level-indicator">Master</span>
-                        </div>
-                        <div class="lesson-content">
-                            <h3>Magnus Carlsen's Attack Method</h3>
-                            <p>Learn how the World Champion quietly builds pressure and attacks without sacrificing material.</p>
-                            <a href="https://www.chess.com/lessons/how-to-attack-without-sacrificing" class="lesson-link btn-small btn-primary">Start Lesson</a>
-                        </div>
-                    </div>
-
-                    <div class="lesson-card" data-level="master" data-topic="endgame">
-                        <div class="lesson-image master-bg">
-                            <span class="level-indicator">Master</span>
-                        </div>
-                        <div class="lesson-content">
-                            <h3>Endgame Strategy with GM van Wely</h3>
-                            <p>Eight-time Dutch Champion Loek van Wely teaches the practical side of grandmaster-level endgames.</p>
-                            <a href="https://www.chess.com/lessons/loeks-endgame-strategy" class="lesson-link btn-small btn-primary">Start Lesson</a>
+                            <h3>Chess Psychology</h3>
+                            <p>Develop mental toughness and psychological preparation for competitive play.</p>
+                            <a href="https://www.chess.com/lessons/chess-psychology" class="lesson-link btn-small btn-primary">Start Lesson</a>
                         </div>
                     </div>
                 </div>

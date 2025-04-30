@@ -1,6 +1,5 @@
 // Lesson-specific functionality
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize lesson page functionality
     initLessonPage();
 });
 
@@ -8,14 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
  * Initialize the lessons page functionality
  */
 function initLessonPage() {
-    // Initialize filters
     const levelFilter = document.getElementById('level-filter');
     const topicFilter = document.getElementById('topic-filter');
     const searchInput = document.getElementById('lesson-search');
     const lessonCards = document.querySelectorAll('.lesson-card');
-    const paginationButtons = document.querySelectorAll('.page-btn');
     
-    // Apply filters when changed
+    // Define ELO ranges for levels to match roadmap
+    const eloRanges = {
+        beginner: [0, 1200],
+        intermediate: [1200, 1800],
+        advanced: [1800, 2200],
+        master: [2200, Infinity]
+    };
+
     if (levelFilter) {
         levelFilter.addEventListener('change', applyFilters);
     }
@@ -27,33 +31,15 @@ function initLessonPage() {
     if (searchInput) {
         searchInput.addEventListener('input', applyFilters);
     }
-    
-    // Initialize pagination
-    if (paginationButtons.length > 0) {
-        paginationButtons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                // Remove active class from all buttons
-                paginationButtons.forEach(btn => btn.classList.remove('active'));
-                
-                // Add active class to clicked button
-                e.target.classList.add('active');
-                
-                // In a real implementation, this would load the next page of lessons
-                console.log('Load page: ' + e.target.textContent);
-            });
-        });
-    }
-    
+
     // Initialize lesson card click events
     lessonCards.forEach(card => {
         card.addEventListener('click', (e) => {
-            // Prevent click if clicking on the link
             if (e.target.classList.contains('lesson-link') || 
                 e.target.closest('.lesson-link')) {
                 return;
             }
             
-            // Get the link element and trigger click
             const link = card.querySelector('.lesson-link');
             if (link) {
                 link.click();
@@ -75,14 +61,13 @@ function initLessonPage() {
             const cardTitle = card.querySelector('h3').textContent.toLowerCase();
             const cardDescription = card.querySelector('p').textContent.toLowerCase();
             
-            // Check if card matches all filters
+            // Match based on level, topic, and search text
             const levelMatch = level === 'all' || cardLevel === level;
             const topicMatch = topic === 'all' || cardTopic === topic;
             const searchMatch = searchText === '' || 
-                               cardTitle.includes(searchText) || 
-                               cardDescription.includes(searchText);
+                              cardTitle.includes(searchText) || 
+                              cardDescription.includes(searchText);
             
-            // Show or hide card based on filters
             if (levelMatch && topicMatch && searchMatch) {
                 card.style.display = 'block';
             } else {
@@ -99,31 +84,44 @@ function initLessonPage() {
      */
     function updateLessonCount() {
         const visibleLessons = document.querySelectorAll('.lesson-card[style="display: block"]').length;
-        const lessonsHeader = document.querySelector('.lessons-header h2');
+        const level = levelFilter ? levelFilter.value : 'all';
+        const topic = topicFilter ? topicFilter.value : 'all';
         
-        if (lessonsHeader) {
-            const originalText = 'Chess Lessons Library';
-            lessonsHeader.textContent = `${originalText} (${visibleLessons} lessons)`;
+        const levelText = level !== 'all' ? `${level.charAt(0).toUpperCase() + level.slice(1)} Level` : 'All Levels';
+        const topicText = topic !== 'all' ? `${topic.charAt(0).toUpperCase() + topic.slice(1)}` : 'All Topics';
+        
+        const headerTitle = document.querySelector('.lessons-header h1');
+        if (headerTitle) {
+            headerTitle.textContent = `${levelText} - ${topicText} (${visibleLessons} lessons)`;
         }
     }
 
-    // Track when a lesson is started
+    // Track lesson progress
     const lessonLinks = document.querySelectorAll('.lesson-link');
     lessonLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            // In a real app, this would save progress
             const lessonCard = link.closest('.lesson-card');
             if (lessonCard) {
                 const lessonTitle = lessonCard.querySelector('h3').textContent;
-                console.log(`Starting lesson: ${lessonTitle}`);
+                const level = lessonCard.dataset.level;
+                const topic = lessonCard.dataset.topic;
                 
-                // For demo purposes, show an alert
+                // Save progress to localStorage
+                const progress = JSON.parse(localStorage.getItem('chessLessonProgress') || '{}');
+                if (!progress[level]) progress[level] = {};
+                if (!progress[level][topic]) progress[level][topic] = [];
+                
+                if (!progress[level][topic].includes(lessonTitle)) {
+                    progress[level][topic].push(lessonTitle);
+                    localStorage.setItem('chessLessonProgress', JSON.stringify(progress));
+                }
+                
                 e.preventDefault();
-                alert(`In a complete implementation, this would take you to the lesson: "${lessonTitle}"`);
+                alert(`Starting lesson: "${lessonTitle}"`);
             }
         });
     });
     
-    // Initialize lesson count on page load
+    // Initialize lesson count
     updateLessonCount();
 }
