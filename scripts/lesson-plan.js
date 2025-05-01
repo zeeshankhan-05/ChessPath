@@ -83,7 +83,6 @@ function initLessonPage() {
      * Update the count of displayed lessons
      */
     function updateLessonCount() {
-        const visibleLessons = document.querySelectorAll('.lesson-card[style="display: block"]').length;
         const level = levelFilter ? levelFilter.value : 'all';
         const topic = topicFilter ? topicFilter.value : 'all';
         
@@ -92,7 +91,7 @@ function initLessonPage() {
         
         const headerTitle = document.querySelector('.lessons-header h1');
         if (headerTitle) {
-            headerTitle.textContent = `${levelText} - ${topicText} (${visibleLessons} lessons)`;
+            headerTitle.textContent = `${levelText} - ${topicText}`;
         }
     }
 
