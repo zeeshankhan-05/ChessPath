@@ -326,16 +326,31 @@ nav {
 
 /* Roadmap levels grid container with connecting line */
 .roadmap-levels {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    margin-top: 3rem;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
 }
 
-/* Horizontal connecting line between roadmap cards */
-.roadmap-levels::before {
-    display: none;
+.level-arrow {
+    font-size: 2rem;
+    color: #e2c044;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .roadmap-levels {
+        flex-direction: column;
+    }
+    
+    .level-arrow {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+    }
 }
 
 /* Individual level card with hover effects */
@@ -347,6 +362,47 @@ nav {
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     position: relative;
     z-index: 1;
+    flex: 1;
+    min-width: 280px;
+    max-width: 320px;
+    transition: all 0.3s ease;
+}
+
+.level-card.beginner {
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15) 0%, rgba(76, 175, 80, 0.05) 100%);
+}
+
+.level-card.intermediate {
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 215, 0, 0.05) 100%);
+}
+
+.level-card.advanced {
+    border: 1px solid rgba(255, 68, 68, 0.3);
+    background: linear-gradient(135deg, rgba(255, 68, 68, 0.15) 0%, rgba(255, 68, 68, 0.05) 100%);
+}
+
+.level-card.master {
+    border: 1px solid rgba(156, 39, 176, 0.3);
+    background: linear-gradient(135deg, rgba(156, 39, 176, 0.15) 0%, rgba(156, 39, 176, 0.05) 100%);
+}
+
+.level-card h3 {
+    color: #e6f1ff;
+    margin-bottom: 1rem;
+}
+
+.level-card.beginner h3 { color: #4CAF50; }
+.level-card.intermediate h3 { color: #FFD700; }
+.level-card.advanced h3 { color: #FF4444; }
+.level-card.master h3 { color: #9C27B0; }
+
+.level-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(226, 192, 68, 0.2);
+    background: linear-gradient(140deg, rgba(226, 192, 68, 0.08) 0%, rgba(226, 192, 68, 0.03) 100%);
 }
 
 /* Arrow connecting level cards */
@@ -366,38 +422,40 @@ nav {
     display: none;
 }
 
-.level-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    border-color: rgba(226, 192, 68, 0.2);
-    background: linear-gradient(140deg, rgba(226, 192, 68, 0.08) 0%, rgba(226, 192, 68, 0.03) 100%);
+.level-arrow {
+    color: rgba(226, 192, 68, 0.6);
+    font-size: 1.8rem;
+    margin: 0 0.5rem;
 }
 
-/* Level card heading */
-.level-card h3 {
-    color: #e2c044;
-    margin-bottom: 1.5rem;
-    font-size: 1.7rem;
-    font-weight: 600;
+@media (max-width: 768px) {
+    .roadmap-levels {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .level-arrow {
+        transform: rotate(90deg);
+        margin: 0.5rem 0;
+    }
+    
+    .level-card {
+        width: 100%;
+    }
 }
 
-/* Level card list container */
-.level-card ul {
-    list-style: none;
+.level-card.master {
+    background: linear-gradient(140deg, rgba(123, 97, 255, 0.08) 0%, rgba(123, 97, 255, 0.03) 100%);
+    border: 1px solid rgba(123, 97, 255, 0.1);
 }
 
-/* Level card list items with arrow markers */
-.level-card li {
-    color: #a8b2d1;
-    margin-bottom: 0.8rem;
-    padding-left: 1.5rem;
-    position: relative;
+.level-card.master h3 {
+    color: rgba(123, 97, 255, 0.9);
 }
 
-.level-card li::before {
-    content: '•';
-    color: #e2c044;
-    margin-right: 0.5rem;
+.level-card.master:hover {
+    border-color: rgba(123, 97, 255, 0.2);
+    background: linear-gradient(140deg, rgba(123, 97, 255, 0.1) 0%, rgba(123, 97, 255, 0.05) 100%);
 }
 
 /* Footer with subtle background pattern */
