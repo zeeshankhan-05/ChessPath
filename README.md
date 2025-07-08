@@ -1,98 +1,73 @@
-# Chess Roadmap
+# Welcome to your Lovable project
 
-A modern, interactive web application designed to help chess players progress from beginner to advanced levels through structured learning paths.
+## Project info
 
-## Features
+**URL**: https://lovable.dev/projects/68ed0b5e-fe39-41c0-bae4-88e2f65a1c28
 
-- **Interactive Learning Path**: Follow a carefully structured progression from basic concepts to advanced chess strategies
-- **Skill-Based Levels**: Content organized into Beginner (800-1200 ELO), Intermediate (1200-1800 ELO), and Advanced (1800+ ELO) levels
-- **Comprehensive Lesson Library**: Access a wide range of chess lessons covering:
-  - Opening principles
-  - Tactical patterns
-  - Strategic concepts
-  - Endgame theory
-  - Position analysis
-- **Progress Tracking**: Monitor your improvement with built-in progress tracking for each topic
-- **Filtered Learning**: Sort lessons by difficulty level and topic to customize your learning experience
+## How can I edit this code?
 
-## Technology Stack
+There are several ways of editing your application.
 
-- HTML5
-- CSS3 (with modern features like CSS Grid, Flexbox, and CSS Variables)
-- JavaScript (Vanilla)
-- SVG for interactive diagrams
+**Use Lovable**
 
-## Project Structure
+Simply visit the [Lovable Project](https://lovable.dev/projects/68ed0b5e-fe39-41c0-bae4-88e2f65a1c28) and start prompting.
 
-```
-ChessRoadmap/
-├── index.html              # Main landing page
-├── styles/
-│   ├── styles.css         # Main stylesheet
-│   ├── chess-theme.css    # Chess-specific styling
-│   └── roadmap.css        # Roadmap page styling
-├── scripts/
-│   ├── script.js          # Main JavaScript file
-│   ├── lesson-plan.js     # Lesson functionality
-│   └── roadmap-functions.js # Roadmap interactivity
-└── lessons/
-    ├── chess-lessons.html # Lesson library page
-    └── lesson-roadmap.html # Interactive roadmap page
+Changes made via Lovable will be committed automatically to this repo.
+
+**Use your preferred IDE**
+
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
 ```
 
-## Getting Started
+**Edit a file directly in GitHub**
 
-1. Clone the repository:
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-   ```bash
-   git clone https://github.com/yourusername/ChessRoadmap.git
-   ```
+**Use GitHub Codespaces**
 
-2. Open the project in your preferred code editor
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-3. Launch the website using a local server:
+## What technologies are used for this project?
 
-   ```bash
-   # Using Python 3
-   python -m http.server
+This project is built with:
 
-   # Using Node.js
-   npx serve
-   ```
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-4. Visit `http://localhost:8000` in your web browser
+## How can I deploy this project?
 
-## Development
+Simply open [Lovable](https://lovable.dev/projects/68ed0b5e-fe39-41c0-bae4-88e2f65a1c28) and click on Share -> Publish.
 
-### CSS Architecture
+## Can I connect a custom domain to my Lovable project?
 
-- Uses CSS custom properties (variables) for consistent theming
-- Responsive design with mobile-first approach
-- Modular CSS structure with separate files for different components
+Yes, you can!
 
-### JavaScript Components
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-- Modular JavaScript files for different functionalities
-- Progress tracking system
-- Interactive roadmap with SVG connections
-- Dynamic lesson filtering
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/Feature`)
-3. Commit your changes (`git commit -m 'Add some Feature'`)
-4. Push to the branch (`git push origin feature/Feature`)
-5. Open a Pull Request
-
-## Acknowledgments
-
-- Chess piece icons from Unicode chess symbols
-- Gradient patterns inspired by modern web design trends
-- Interactive learning path concept based on proven educational methodologies
-
-## Contact
-
-Zeeshan Khan - [@zeeshankhan05](https://www.linkedin.com/in/zeeshankhan05/)
-
-Project Link: [https://github.com/zeeshankhan-05/ChessRoadmap](https://github.com/zeeshankhan-05/ChessRoadmap)
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
