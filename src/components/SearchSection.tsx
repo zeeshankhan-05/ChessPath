@@ -132,7 +132,7 @@ const SearchSection = () => {
 
             {/* Difficulty Filters */}
             <div className="flex gap-2">
-              {['beginner', 'intermediate', 'advanced'].map(difficulty => (
+              {['Beginner', 'Intermediate', 'Advanced'].map(difficulty => (
                 <Button
                   key={difficulty}
                   variant={selectedFilters.difficulty.includes(difficulty) ? difficulty as any : 'outline'}
@@ -143,25 +143,6 @@ const SearchSection = () => {
                   {difficulty}
                 </Button>
               ))}
-            </div>
-
-            {/* Free/Paid Filter */}
-            <div className="flex gap-2">
-              <Button
-                variant={selectedFilters.free === true ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setSelectedFilters(prev => ({ ...prev, free: prev.free === true ? null : true }))}
-                className="bg-green-600 hover:bg-green-700 text-white border-green-600"
-              >
-                Free Only
-              </Button>
-              <Button
-                variant={selectedFilters.free === false ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setSelectedFilters(prev => ({ ...prev, free: prev.free === false ? null : false }))}
-              >
-                Paid Resources
-              </Button>
             </div>
 
             {/* Clear Filters */}

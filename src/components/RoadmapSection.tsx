@@ -44,7 +44,7 @@ const RoadmapSection = () => {
               Not sure where to start?
             </h3>
             <p className="text-foreground/70 mb-6">
-              Take our quick assessment to find your current skill level and get personalized recommendations.
+              Browse our resources to find your current skill level and get personalized recommendations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
