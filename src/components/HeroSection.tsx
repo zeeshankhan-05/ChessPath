@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
-import { ArrowRight, Star, Users, BookOpen, Trophy } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/chess-hero.jpg";
+import { Link } from "react-router-dom";
+import React from "react";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  showResourcesButton?: boolean;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ showResourcesButton }) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -45,23 +49,21 @@ const HeroSection = () => {
           <p className="text-lg sm:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed">
             Your complete guide from beginner to master. Follow our structured
             learning path with curated resources, practice recommendations, and
-            skill assessments.
+            roadmap.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button
-              size="lg"
-              onClick={() =>
-                document
-                  .getElementById("roadmap")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="bg-chess-gold text-chess-dark hover:bg-chess-gold/90 font-semibold text-lg px-8 py-6 group"
-            >
-              Start Your Chess Journey
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link to="/roadmap">
+              <Button
+                size="lg"
+                className="bg-chess-gold text-chess-dark hover:bg-chess-gold/90 font-semibold text-lg px-8 py-6 group"
+              >
+                Start Your Chess Journey
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            {/* Browse Resources button removed */}
           </div>
 
           {/* How ChessPath Works (moved from AboutSection) */}
@@ -78,7 +80,7 @@ const HeroSection = () => {
                   Assess Your Level
                 </h4>
                 <p className="text-foreground/70 text-sm">
-                  Start by identifying your current skill level
+                  Start by identifying your current skill level.
                 </p>
               </div>
               <div className="text-center">
@@ -107,63 +109,6 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-
-          {/* Stats */}
-          {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-3xl mx-auto">
-            <Card
-              className="bg-white/5 backdrop-blur border-white/10 p-6 text-center animate-scale-in"
-              style={{ animationDelay: "0.1s" }}
-            >
-              <div className="flex items-center justify-center mb-2">
-                <div className="h-10 w-10 rounded-full bg-beginner/20 flex items-center justify-center">
-                  <BookOpen className="h-5 w-5 text-beginner" />
-                </div>
-              </div>
-              <div className="text-2xl font-bold text-foreground">50+</div>
-              <div className="text-sm text-foreground/70">
-                Curated Resources
-              </div>
-            </Card>
-
-            <Card
-              className="bg-white/5 backdrop-blur border-white/10 p-6 text-center animate-scale-in"
-              style={{ animationDelay: "0.2s" }}
-            >
-              <div className="flex items-center justify-center mb-2">
-                <div className="h-10 w-10 rounded-full bg-intermediate/20 flex items-center justify-center">
-                  <Users className="h-5 w-5 text-intermediate" />
-                </div>
-              </div>
-              <div className="text-2xl font-bold text-foreground">10K+</div>
-              <div className="text-sm text-foreground/70">Active Learners</div>
-            </Card>
-
-            <Card
-              className="bg-white/5 backdrop-blur border-white/10 p-6 text-center animate-scale-in"
-              style={{ animationDelay: "0.3s" }}
-            >
-              <div className="flex items-center justify-center mb-2">
-                <div className="h-10 w-10 rounded-full bg-advanced/20 flex items-center justify-center">
-                  <Trophy className="h-5 w-5 text-advanced" />
-                </div>
-              </div>
-              <div className="text-2xl font-bold text-foreground">3</div>
-              <div className="text-sm text-foreground/70">Skill Levels</div>
-            </Card>
-
-            <Card
-              className="bg-white/5 backdrop-blur border-white/10 p-6 text-center animate-scale-in"
-              style={{ animationDelay: "0.4s" }}
-            >
-              <div className="flex items-center justify-center mb-2">
-                <div className="h-10 w-10 rounded-full bg-chess-gold/20 flex items-center justify-center">
-                  <Star className="h-5 w-5 text-chess-gold" />
-                </div>
-              </div>
-              <div className="text-2xl font-bold text-foreground">4.9</div>
-              <div className="text-sm text-foreground/70">Average Rating</div>
-            </Card>
-          </div> */}
         </div>
       </div>
 

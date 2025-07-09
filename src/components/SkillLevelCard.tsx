@@ -9,9 +9,8 @@ interface Resource {
   title: string;
   description: string;
   url: string;
-  type: 'book' | 'video' | 'website' | 'app' | 'course';
+  type: 'video' | 'website';
   difficulty: 'beginner' | 'intermediate' | 'advanced';
-  free: boolean;
   rating: number;
 }
 
@@ -42,11 +41,8 @@ interface SkillLevelCardProps {
 
 const getResourceTypeIcon = (type: string) => {
   switch (type) {
-    case 'book': return '📚';
     case 'video': return '🎥';
     case 'website': return '🌐';
-    case 'app': return '📱';
-    case 'course': return '🎓';
     default: return '📝';
   }
 };

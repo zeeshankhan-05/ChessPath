@@ -33,7 +33,7 @@ const Footer = () => {
             </div>
             <p className="text-foreground/70 text-sm mb-4">
               The complete roadmap for chess improvement. From beginner to
-              master, we guide your journey.
+              master, we provide resources to guide your journey.
             </p>
           </div>
 
