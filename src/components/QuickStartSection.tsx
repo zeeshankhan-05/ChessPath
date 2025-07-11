@@ -18,7 +18,7 @@ const QuickStartSection = () => {
       title: "Complete Beginner",
       description: "New to chess or just learning the basics",
       quickStart: {
-        firstStep: "Learn piece movement and basic rules",
+        priority: "Learn piece movement and basic rules",
         timeCommitment: "15-30 minutes daily",
         weeklyGoal: "Play 3-5 games daily, solve 10 tactics",
       },
@@ -29,7 +29,7 @@ const QuickStartSection = () => {
       title: "Developing Beginner",
       description: "Know the rules, working on fundamentals",
       quickStart: {
-        firstStep: "Master basic tactical patterns",
+        priority: "Master basic tactical patterns",
         timeCommitment: "30-45 minutes daily",
         weeklyGoal: "Solve 50+ tactics, play 10+ games",
       },
@@ -40,7 +40,7 @@ const QuickStartSection = () => {
       title: "Early Intermediate",
       description: "Solid tactics, learning strategy",
       quickStart: {
-        firstStep: "Study opening principles and middlegame strategy",
+        priority: "Study opening principles and middlegame strategy",
         timeCommitment: "45-60 minutes daily",
         weeklyGoal: "Study 2-3 master games, solve 100+ tactics",
       },
@@ -51,7 +51,7 @@ const QuickStartSection = () => {
       title: "Solid Intermediate",
       description: "Good positional understanding, refining skills",
       quickStart: {
-        firstStep: "Develop opening repertoire and endgame knowledge",
+        priority: "Develop opening repertoire and endgame knowledge",
         timeCommitment: "60-90 minutes daily",
         weeklyGoal: "Analyze your games, study specific openings",
       },
@@ -62,7 +62,7 @@ const QuickStartSection = () => {
       title: "Advanced Player",
       description: "Strong player looking to reach expert level",
       quickStart: {
-        firstStep: "Deep theoretical study and game analysis",
+        priority: "Strengthen deep theoretical study and game analysis",
         timeCommitment: "90+ minutes daily",
         weeklyGoal: "Intensive analysis, theoretical preparation",
       },
@@ -215,7 +215,7 @@ const QuickStartSection = () => {
                             First Step
                           </div>
                           <div className="text-foreground/80 text-sm">
-                            {selected.quickStart.firstStep}
+                            {selected.quickStart.priority}
                           </div>
                         </div>
                         <div className="bg-white/5 rounded-lg p-4">
