@@ -14,8 +14,8 @@ const Header = () => {
             to="/"
             className="flex items-center space-x-3 group cursor-pointer"
           >
-            <div className="h-14 w-14 flex items-center justify-center rounded bg-chess-gold transition-transform group-hover:scale-105">
-              <span className="text-5xl font-bold text-chess-dark flex items-center justify-center w-full h-full -mt-1">
+            <div className="h-12 w-12 flex items-center justify-center rounded bg-chess-gold transition-transform group-hover:scale-105">
+              <span className="text-5xl font-bold text-chess-dark flex items-center justify-center w-full h-full -mt-2">
                 ♔
               </span>
             </div>

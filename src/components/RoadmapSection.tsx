@@ -16,7 +16,7 @@ const RoadmapSection = () => {
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto leading-relaxed">
             Follow our structured path from complete beginner to advanced
-            player. Each level builds upon the previous, ensuring you develop a
+            player. Each level builds on the previous, ensuring you develop a
             solid foundation before moving to more complex concepts.
           </p>
         </div>
