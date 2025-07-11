@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Search, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -14,8 +14,10 @@ const Header = () => {
             to="/"
             className="flex items-center space-x-3 group cursor-pointer"
           >
-            <div className="h-12 w-12 rounded bg-chess-gold flex items-center justify-center transition-transform group-hover:scale-105">
-              <span className="text-3xl font-bold text-chess-dark">♔</span>
+            <div className="h-14 w-14 flex items-center justify-center rounded bg-chess-gold transition-transform group-hover:scale-105">
+              <span className="text-5xl font-bold text-chess-dark flex items-center justify-center w-full h-full -mt-1">
+                ♔
+              </span>
             </div>
             <span className="text-2xl font-bold text-foreground">
               ChessPath

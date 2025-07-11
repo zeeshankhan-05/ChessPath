@@ -115,8 +115,8 @@ const QuickStartSection = () => {
             <span className="block text-chess-gold">Your Journey</span>
           </h2>
           <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
-            Not sure where to begin? Find your current skill level and get
-            personalized recommendations to start improving immediately.
+            Select your current skill level and get personalized recommendations
+            and study plans.
           </p>
         </div>
 
@@ -198,7 +198,10 @@ const QuickStartSection = () => {
                       Your Personalized Study Plan
                     </h3>
                     <p className="text-foreground/80">
-                      Based on your skill level: {selected.title}
+                      Based on your skill level:{" "}
+                      <span className={`text-${selected.level} font-bold`}>
+                        {selected.title}
+                      </span>
                     </p>
                   </div>
 

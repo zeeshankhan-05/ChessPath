@@ -41,8 +41,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ showResourcesButton }) => {
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           {/* Main heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Chess Mastery
-            <span className="block text-chess-gold">Roadmap</span>
+            <span className="block text-chess-gold">ChessPath</span>
           </h1>
 
           {/* Subtitle */}
