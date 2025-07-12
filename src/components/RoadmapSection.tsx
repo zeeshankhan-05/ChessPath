@@ -1,7 +1,9 @@
 import { skillLevels } from "@/data/chessData";
 import SkillLevelCard from "./SkillLevelCard";
+import { useNavigate } from "react-router-dom";
 
 const RoadmapSection = () => {
+  const navigate = useNavigate();
   return (
     <section
       id="roadmap"
@@ -56,11 +58,7 @@ const RoadmapSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() =>
-                  document
-                    .getElementById("resources")
-                    ?.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={() => navigate("/resources")}
                 className="bg-chess-gold text-chess-dark hover:bg-chess-gold/90 font-semibold px-6 py-3 rounded-lg transition-all hover:scale-105"
               >
                 Browse All Resources

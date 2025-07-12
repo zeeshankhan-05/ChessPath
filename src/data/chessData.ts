@@ -1,217 +1,265 @@
 export const beginnerTopics = [
   {
-    id: 'chess-basics',
-    title: 'Chess Basics',
-    description: 'Learn how pieces move, rules, and notation',
+    id: 'rules-piece-knowledge',
+    title: 'Rules & Piece Knowledge',
+    description: 'Learn legal moves, castling, en passant, promotion, piece value, coordination, and basic checkmates.',
     timeEstimate: '1-2 weeks',
     difficulty: 'Beginner',
-    prerequisites: [],
-    skills: ['Piece movement', 'Special rules', 'Chess notation', 'Board setup'],
+    skills: [
+      'Legal moves',
+      'Castling',
+      'En passant',
+      'Promotion',
+      'Piece value',
+      'Piece coordination',
+      'Basic checkmates (K+Q, K+R)'
+    ],
     resources: [
       {
         title: 'Chess.com Learn Chess',
         description: 'Interactive lessons covering all chess basics with visual demonstrations',
         url: 'https://www.chess.com/learn-how-to-play-chess',
-        type: 'website' as const,
-        difficulty: 'Beginner' as const,
-      },
-      {
-        title: 'Bobby Fischer Teaches Chess',
-        description: 'Classic chess book perfect for absolute beginners',
-        url: 'https://www.amazon.com/Bobby-Fischer-Teaches-Chess/dp/0553263153',
-        type: 'book' as const,
-        difficulty: 'Beginner' as const,
+        type: 'website',
+        difficulty: 'Beginner',
       },
       {
         title: 'Lichess Learn',
         description: 'Free interactive chess tutorial covering all basics',
         url: 'https://lichess.org/learn',
-        type: 'website' as const,
-        difficulty: 'Beginner' as const,
+        type: 'website',
+        difficulty: 'Beginner',
       },
       {
         title: 'Saint Louis Chess Club - Chess Basics',
         description: 'Comprehensive video series on chess fundamentals',
         url: 'https://www.youtube.com/playlist?list=PLVWaFpMwtaGiBxi79IUqnqn67WF5g5PR4',
-        type: 'video' as const,
-        difficulty: 'Beginner' as const,
+        type: 'video',
+        difficulty: 'Beginner',
       }
     ]
   },
   {
-    id: 'basic-tactics',
-    title: 'Basic Tactics',
-    description: 'Master fundamental tactical patterns',
-    timeEstimate: '2-3 weeks',
+    id: 'opening-principles',
+    title: 'Opening Principles',
+    description: 'Control the center, develop pieces, castle early, and avoid common opening mistakes.',
+    timeEstimate: '1 week',
     difficulty: 'Beginner',
-    prerequisites: ['Basic piece movement', 'Chess notation'],
-    skills: ['Pin', 'Fork', 'Skewer', 'Discovery', 'Deflection'],
+    skills: [
+      'Center control',
+      'Piece development',
+      'King safety',
+      'Avoiding early queen/edge pawns'
+    ],
     resources: [
       {
-        title: 'ChessTempo Tactics',
-        description: 'Thousands of tactical puzzles with adaptive difficulty',
-        url: 'https://chesstempo.com/',
-        type: 'website' as const,
-        difficulty: 'Beginner' as const,
+        title: 'Chess.com Opening Principles',
+        description: 'Guide to opening principles and common mistakes',
+        url: 'https://www.chess.com/article/view/the-principles-of-the-opening',
+        type: 'website',
+        difficulty: 'Beginner',
+      }
+    ]
+  },
+  {
+    id: 'tactical-training',
+    title: 'Tactical Training (Daily)',
+    description: 'Practice tactics like hanging pieces, forks, pins, skewers, double attacks, and discovered checks.',
+    timeEstimate: 'Ongoing',
+    difficulty: 'Beginner',
+    skills: [
+      'Hanging pieces',
+      'Forks',
+      'Pins',
+      'Skewers',
+      'Double attacks',
+      'Discovered checks'
+    ],
+    resources: [
+      {
+        title: 'Lichess Tactics Trainer',
+        description: 'Practice tactics with puzzles and explanations',
+        url: 'https://lichess.org/training',
+        type: 'website',
+        difficulty: 'Beginner',
       },
       {
-        title: 'Tactics Time! by Tim Brennan',
-        description: 'Collection of 1001 chess tactics for beginners',
-        url: 'https://www.amazon.com/Tactics-Time-Chess-Tactics-Beginners/dp/1477624848',
-        type: 'book' as const,
-        difficulty: 'Beginner' as const,
-      },
-      {
-        title: 'Chess.com Tactics Trainer',
+        title: 'Chess.com Puzzles',
         description: 'Daily tactical puzzles with explanations',
         url: 'https://www.chess.com/puzzles',
-        type: 'website' as const,
-        difficulty: 'Beginner' as const,
-      },
-      {
-        title: 'GothamChess - Beginner Tactics',
-        description: 'Popular YouTube series on basic tactical patterns',
-        url: 'https://www.youtube.com/playlist?list=PLBRObSmbZluTUg3UJCGXeEI3LBKtJavLu',
-        type: 'video' as const,
-        difficulty: 'Beginner' as const,
+        type: 'website',
+        difficulty: 'Beginner',
       }
     ]
   },
   {
-    id: 'basic-checkmates',
-    title: 'Basic Checkmates',
-    description: 'Learn essential mating patterns',
-    timeEstimate: '1-2 weeks',
+    id: 'basic-endgames',
+    title: 'Basic Endgames',
+    description: 'Learn king and pawn vs king, king activity, opposition, and basic checkmate patterns.',
+    timeEstimate: '1 week',
     difficulty: 'Beginner',
-    prerequisites: ['Chess basics', 'Basic tactics'],
-    skills: ['Queen mate', 'Rook mate', 'Two rooks mate', 'Back rank mate'],
+    skills: [
+      'King and pawn vs king',
+      'King activity',
+      'Opposition',
+      'Ladder mate',
+      'Back rank mate'
+    ],
     resources: [
       {
-        title: 'Lichess Practice - Basic Checkmates',
-        description: 'Interactive practice for essential mating patterns',
+        title: 'Lichess Practice - Basic Endgames',
+        description: 'Interactive practice for essential endgame patterns',
         url: 'https://lichess.org/practice',
-        type: 'website' as const,
-        difficulty: 'Beginner' as const,
-      },
-      {
-        title: 'Back to Basics: Checkmates by Dan Heisman',
-        description: 'Comprehensive guide to basic mating patterns',
-        url: 'https://www.amazon.com/Back-Basics-Checkmates-Dan-Heisman/dp/0979148324',
-        type: 'book' as const,
-        difficulty: 'Beginner' as const,
-      },
-      {
-        title: 'Chess King Learn',
-        description: 'Interactive chess training app with checkmate courses',
-        url: 'https://www.chess-king.com/',
-        type: 'app' as const,
-        difficulty: 'Beginner' as const,
+        type: 'website',
+        difficulty: 'Beginner',
       }
     ]
+  },
+  {
+    id: 'thinking-process',
+    title: 'Thinking Process',
+    description: 'Develop a disciplined thinking process to avoid blunders and spot threats.',
+    timeEstimate: 'Ongoing',
+    difficulty: 'Beginner',
+    skills: [
+      'Blunder check',
+      'Threat recognition',
+      'Checks, captures, threats',
+      'Avoiding one-move blunders'
+    ],
+    resources: [
+      {
+        title: 'Chess.com - How to Avoid Blunders',
+        description: 'Tips and exercises to avoid blunders and improve your thinking process',
+        url: 'https://www.chess.com/article/view/how-to-avoid-blunders',
+        type: 'website',
+        difficulty: 'Beginner',
+      }
+    ]
+  },
+  {
+    id: 'tournament-essentials',
+    title: 'Tournament Essentials',
+    description: 'Coming soon: Learn the basics of playing in tournaments, etiquette, and rules.',
+    timeEstimate: 'TBD',
+    difficulty: 'Beginner',
+    skills: [],
+    resources: []
   }
 ];
 
 export const intermediateTopics = [
   {
-    id: 'opening-principles',
-    title: 'Opening Principles',
-    description: 'Develop your opening repertoire',
-    timeEstimate: '3-4 weeks',
+    id: 'opening-repertoire',
+    title: 'Opening Repertoire (Structured)',
+    description: 'Learn 1–2 openings as White and Black, understand mainlines, traps, and plans.',
+    timeEstimate: '2-3 weeks',
     difficulty: 'Intermediate',
-    prerequisites: ['Chess basics', 'Basic tactics'],
-    skills: ['Development', 'Center control', 'King safety', 'Repertoire building'],
+    skills: [
+      'Opening mainlines',
+      'Traps',
+      'Opening plans',
+      'Repertoire building'
+    ],
     resources: [
-      {
-        title: 'Logical Chess Move by Move by Irving Chernev',
-        description: 'Classic book explaining chess principles through complete games',
-        url: 'https://www.amazon.com/Logical-Chess-Irving-Chernev/dp/0486205121',
-        type: 'book' as const,
-        difficulty: 'Intermediate' as const,
-      },
       {
         title: 'Chess.com Opening Explorer',
         description: 'Database of opening moves with statistics and theory',
         url: 'https://www.chess.com/openings',
-        type: 'website' as const,
-        difficulty: 'Intermediate' as const,
-      },
-      {
-        title: 'Chessable Opening Courses',
-        description: 'Interactive spaced repetition learning for openings',
-        url: 'https://www.chessable.com/',
-        type: 'course' as const,
-        difficulty: 'Intermediate' as const,
-      },
-      {
-        title: 'Saint Louis Chess Club - Opening Principles',
-        description: 'Video lectures on opening theory and principles',
-        url: 'https://www.youtube.com/c/SaintLouisChessClub',
-        type: 'video' as const,
-        difficulty: 'Intermediate' as const,
+        type: 'website',
+        difficulty: 'Intermediate',
       }
     ]
   },
   {
-    id: 'middlegame-strategy',
-    title: 'Middlegame Strategy',
-    description: 'Master positional play and planning',
-    timeEstimate: '4-6 weeks',
+    id: 'intermediate-tactics',
+    title: 'Intermediate Tactics',
+    description: 'Practice overloading, deflection, attraction, zwischenzug, and mating nets.',
+    timeEstimate: '2-3 weeks',
     difficulty: 'Intermediate',
-    prerequisites: ['Opening principles', 'Basic tactics'],
-    skills: ['Pawn structures', 'Piece activity', 'Weaknesses', 'Planning'],
+    skills: [
+      'Overloading',
+      'Deflection',
+      'Attraction',
+      'Zwischenzug',
+      'Mating nets',
+      '3–5 move calculation'
+    ],
     resources: [
       {
-        title: 'The Amateur\'s Mind by Jeremy Silman',
-        description: 'Essential guide to middlegame thinking and planning',
-        url: 'https://www.amazon.com/Amateurs-Mind-Turning-Chess-Misconceptions/dp/1890085022',
-        type: 'book' as const,
-        difficulty: 'Intermediate' as const,
-      },
-      {
-        title: 'My System by Aaron Nimzowitsch',
-        description: 'Classic work on positional chess principles',
-        url: 'https://www.amazon.com/My-System-Aaron-Nimzowitsch/dp/4871878023',
-        type: 'book' as const,
-        difficulty: 'Intermediate' as const,
-      },
+        title: 'ChessTempo Tactics',
+        description: 'Thousands of tactical puzzles with adaptive difficulty',
+        url: 'https://chesstempo.com/',
+        type: 'website',
+        difficulty: 'Intermediate',
+      }
+    ]
+  },
+  {
+    id: 'strategic-concepts',
+    title: 'Strategic Concepts',
+    description: 'Learn pawn structures, outposts, open files, and trading pieces based on position.',
+    timeEstimate: '3-4 weeks',
+    difficulty: 'Intermediate',
+    skills: [
+      'Pawn structure',
+      'Outposts',
+      'Open files',
+      'Trading pieces',
+      'Strong/weak squares'
+    ],
+    resources: [
       {
         title: 'IM John Bartholomew - Chess Fundamentals',
         description: 'YouTube series on middlegame concepts and strategy',
         url: 'https://www.youtube.com/c/JohnBartholomewChess',
-        type: 'video' as const,
-        difficulty: 'Intermediate' as const,
+        type: 'video',
+        difficulty: 'Intermediate',
       }
     ]
   },
   {
-    id: 'advanced-tactics',
-    title: 'Advanced Tactics',
-    description: 'Complex combinations and calculations',
-    timeEstimate: '3-4 weeks',
+    id: 'positional-play',
+    title: 'Positional Play',
+    description: 'Plan around weaknesses, improve worst-placed piece, prophylactic moves, and recognize when to attack.',
+    timeEstimate: '2-3 weeks',
     difficulty: 'Intermediate',
-    prerequisites: ['Basic tactics', 'Pattern recognition'],
-    skills: ['Complex combinations', 'Calculation', 'Sacrifices', 'Advanced patterns'],
+    skills: [
+      'Planning',
+      'Prophylaxis',
+      'Piece improvement',
+      'Attack vs consolidate'
+    ],
     resources: [
       {
-        title: 'Combination Challenge by Lou Hays',
-        description: '300 advanced tactical positions for serious improvement',
-        url: 'https://www.amazon.com/Combination-Challenge-Lou-Hays/dp/1936490692',
-        type: 'book' as const,
-        difficulty: 'Intermediate' as const,
-      },
+        title: 'Hanging Pawns - Positional Play',
+        description: 'YouTube channel focused on positional chess concepts',
+        url: 'https://www.youtube.com/c/HangingPawns',
+        type: 'video',
+        difficulty: 'Intermediate',
+      }
+    ]
+  },
+  {
+    id: 'endgames-that-win',
+    title: 'Endgames that Win Games',
+    description: 'Learn Lucena and Philidor positions, opposition, triangulation, and practical king and pawn races.',
+    timeEstimate: '2-3 weeks',
+    difficulty: 'Intermediate',
+    skills: [
+      'Lucena position',
+      'Philidor position',
+      'Opposition',
+      'Triangulation',
+      'King and pawn races',
+      'Converting small advantages'
+    ],
+    resources: [
       {
-        title: 'Chess.com Advanced Tactics',
-        description: 'Higher difficulty tactical puzzles with detailed solutions',
-        url: 'https://www.chess.com/puzzles',
-        type: 'website' as const,
-        difficulty: 'Intermediate' as const,
-      },
-      {
-        title: 'Tactics Time 2 by Tim Brennan',
-        description: 'Intermediate to advanced tactical patterns',
-        url: 'https://www.amazon.com/Tactics-Time-Intermediate-Advanced-Problems/dp/1484817656',
-        type: 'book' as const,
-        difficulty: 'Intermediate' as const,
+        title: 'Lichess Endgame Studies',
+        description: 'Practice endgame positions with tablebase support',
+        url: 'https://lichess.org/practice',
+        type: 'website',
+        difficulty: 'Intermediate',
       }
     ]
   }
@@ -219,98 +267,115 @@ export const intermediateTopics = [
 
 export const advancedTopics = [
   {
-    id: 'strategic-concepts',
-    title: 'Strategic Concepts',
-    description: 'Deep positional understanding',
-    timeEstimate: '6-8 weeks',
-    difficulty: 'Advanced',
-    prerequisites: ['Middlegame strategy', 'Pawn structures'],
-    skills: ['Prophylaxis', 'Piece coordination', 'Weak squares', 'Dynamic factors'],
-    resources: [
-      {
-        title: 'Positional Decision Making by Boris Gelfand',
-        description: 'World-class insights into high-level positional play',
-        url: 'https://www.amazon.com/Positional-Decision-Making-Chess-Gelfand/dp/1784830003',
-        type: 'book' as const,
-        difficulty: 'Advanced' as const,
-      },
-      {
-        title: 'How to Reassess Your Chess by Jeremy Silman',
-        description: 'Advanced guide to positional evaluation and planning',
-        url: 'https://www.amazon.com/How-Reassess-Your-Chess-4th/dp/1890085138',
-        type: 'book' as const,
-        difficulty: 'Advanced' as const,
-      },
-      {
-        title: 'ChessBase Master Class Series',
-        description: 'Video courses by world champions and top GMs',
-        url: 'https://shop.chessbase.com/',
-        type: 'course' as const,
-        difficulty: 'Advanced' as const,
-      }
-    ]
-  },
-  {
-    id: 'complex-endgames',
-    title: 'Complex Endgames',
-    description: 'Master theoretical endgame positions',
-    timeEstimate: '8-10 weeks',
-    difficulty: 'Advanced',
-    prerequisites: ['Basic endgames', 'Strategic concepts'],
-    skills: ['Rook endgames', 'Queen endgames', 'Minor piece endgames', 'Pawn endgames'],
-    resources: [
-      {
-        title: 'Dvoretsky\'s Endgame Manual by Mark Dvoretsky',
-        description: 'The definitive guide to practical endgames',
-        url: 'https://www.amazon.com/Dvoretskys-Endgame-Manual-Mark-Dvoretsky/dp/1936490110',
-        type: 'book' as const,
-        difficulty: 'Advanced' as const,
-      },
-      {
-        title: 'Practical Chess Endings by Paul Keres',
-        description: 'Classic work on essential endgame knowledge',
-        url: 'https://www.amazon.com/Practical-Chess-Endings-Paul-Keres/dp/0713484394',
-        type: 'book' as const,
-        difficulty: 'Advanced' as const,
-      },
-      {
-        title: 'Lichess Endgame Studies',
-        description: 'Practice endgame positions with tablebase support',
-        url: 'https://lichess.org/practice',
-        type: 'website' as const,
-        difficulty: 'Advanced' as const,
-      }
-    ]
-  },
-  {
-    id: 'opening-theory',
-    title: 'Advanced Opening Theory',
-    description: 'Deep preparation and theoretical knowledge',
+    id: 'advanced-opening-prep',
+    title: 'Advanced Opening Prep',
+    description: 'Prepare against specific lines, know transpositions, analyze your games, and use engines wisely.',
     timeEstimate: 'Ongoing',
     difficulty: 'Advanced',
-    prerequisites: ['Opening principles', 'Strategic concepts'],
-    skills: ['Theoretical lines', 'Novelties', 'Preparation', 'Transpositions'],
+    skills: [
+      'Line preparation',
+      'Transpositions',
+      'Game analysis',
+      'Engine use'
+    ],
     resources: [
-      {
-        title: 'Modern Chess Openings (MCO-15)',
-        description: 'Comprehensive opening reference and theory',
-        url: 'https://www.amazon.com/Modern-Chess-Openings-15th/dp/0812936655',
-        type: 'book' as const,
-        difficulty: 'Advanced' as const,
-      },
       {
         title: 'ChessBase Mega Database',
         description: 'Complete database of chess games for opening research',
         url: 'https://shop.chessbase.com/en/products/mega_database_2024',
-        type: 'website' as const,
-        difficulty: 'Advanced' as const,
-      },
+        type: 'website',
+        difficulty: 'Advanced',
+      }
+    ]
+  },
+  {
+    id: 'strategic-depth',
+    title: 'Strategic Depth',
+    description: 'Long-term planning, deep pawn break understanding, dynamic vs static advantages, and counterplay.',
+    timeEstimate: '3-4 weeks',
+    difficulty: 'Advanced',
+    skills: [
+      'Long-term planning',
+      'Pawn breaks',
+      'Dynamic/static advantages',
+      'Counterplay'
+    ],
+    resources: [
       {
-        title: 'Chess24 Masters Series',
-        description: 'Opening courses by top grandmasters',
-        url: 'https://chess24.com/',
-        type: 'course' as const,
-        difficulty: 'Advanced' as const,
+        title: 'ChessNetwork - Advanced Strategy',
+        description: 'YouTube playlist on advanced chess strategy and planning',
+        url: 'https://www.youtube.com/user/ChessNetwork',
+        type: 'video',
+        difficulty: 'Advanced',
+      }
+    ]
+  },
+  {
+    id: 'calculation-visualization',
+    title: 'Calculation & Visualization',
+    description: 'Train 4–6 move calculations, blindfold puzzles, and candidate move trees.',
+    timeEstimate: 'Ongoing',
+    difficulty: 'Advanced',
+    skills: [
+      'Deep calculation',
+      'Visualization',
+      'Candidate moves',
+      'Forcing vs quiet moves'
+    ],
+    resources: [
+      {
+        title: 'Chess.com Calculation Training',
+        description: 'Advanced calculation puzzles and visualization exercises',
+        url: 'https://www.chess.com/puzzles',
+        type: 'website',
+        difficulty: 'Advanced',
+      }
+    ]
+  },
+  {
+    id: 'advanced-tactics-sacrifices',
+    title: 'Advanced Tactics & Sacrifices',
+    description: 'Learn exchange sacrifices, Greek gift, clearance, interference, and complex attacking schemes.',
+    timeEstimate: '3-4 weeks',
+    difficulty: 'Advanced',
+    skills: [
+      'Exchange sacrifices',
+      'Greek gift',
+      'Clearance',
+      'Interference',
+      'Positional sacrifices',
+      'King hunts'
+    ],
+    resources: [
+      {
+        title: 'Hanging Pawns - Advanced Tactics',
+        description: 'YouTube channel focused on advanced tactics and sacrifices',
+        url: 'https://www.youtube.com/c/HangingPawns',
+        type: 'video',
+        difficulty: 'Advanced',
+      }
+    ]
+  },
+  {
+    id: 'high-level-endgames',
+    title: 'High-Level Endgames',
+    description: 'Master complex endgames: rook + 2 pawns vs rook, Vancura, bishop vs knight, fortresses, and queen endgames.',
+    timeEstimate: '3-4 weeks',
+    difficulty: 'Advanced',
+    skills: [
+      'Rook + 2 pawns vs rook',
+      'Vancura position',
+      'Bishop vs knight',
+      'Fortresses',
+      'Queen endgames'
+    ],
+    resources: [
+      {
+        title: 'Lichess Endgame Studies',
+        description: 'Practice high-level endgame positions with tablebase support',
+        url: 'https://lichess.org/practice',
+        type: 'website',
+        difficulty: 'Advanced',
       }
     ]
   }

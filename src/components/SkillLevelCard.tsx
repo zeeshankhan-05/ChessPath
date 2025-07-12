@@ -195,19 +195,6 @@ const SkillLevelCard = ({
                               <h6 className="font-medium text-foreground text-sm">
                                 {resource.title}
                               </h6>
-                              <div className="flex items-center gap-1">
-                                {resource.free && (
-                                  <Badge
-                                    variant="outline"
-                                    className="text-xs bg-green-500/20 text-green-400 border-green-500/30"
-                                  >
-                                    Free
-                                  </Badge>
-                                )}
-                                <div className="flex items-center text-xs text-chess-gold">
-                                  {"★".repeat(Math.floor(resource.rating))}
-                                </div>
-                              </div>
                             </div>
                             <p className="text-xs text-foreground/60 mb-2">
                               {resource.description}
@@ -230,20 +217,6 @@ const SkillLevelCard = ({
             )}
           </Card>
         ))}
-      </div>
-
-      {/* Level CTA */}
-      <div className="mt-6 text-center">
-        <Link to="/roadmap">
-          <Button
-            className={cn(
-              "w-full font-semibold transition-all hover:scale-105",
-              `bg-${level} text-${level}-foreground hover:bg-${level}/90`
-            )}
-          >
-            Start {title} Path
-          </Button>
-        </Link>
       </div>
     </Card>
   );
