@@ -18,7 +18,6 @@ interface Resource {
   url: string;
   type: "video" | "website";
   difficulty: "beginner" | "intermediate" | "advanced";
-  rating: number;
 }
 
 interface Topic {
