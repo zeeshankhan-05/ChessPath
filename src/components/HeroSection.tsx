@@ -62,10 +62,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ showResourcesButton }) => {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            {/* Browse Resources button removed */}
           </div>
 
-          {/* How ChessPath Works (moved from AboutSection) */}
+          {/* How ChessPath Works */}
           <div className="max-w-4xl mx-auto mb-8">
             <h3 className="text-2xl font-bold text-center text-foreground mb-8">
               How ChessPath Works

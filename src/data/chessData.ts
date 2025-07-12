@@ -1,12 +1,10 @@
-// Chess learning roadmap data with curated resources
-
 export const beginnerTopics = [
   {
     id: 'chess-basics',
     title: 'Chess Basics',
     description: 'Learn how pieces move, rules, and notation',
     timeEstimate: '1-2 weeks',
-    difficulty: 'beginner',
+    difficulty: 'Beginner',
     prerequisites: [],
     skills: ['Piece movement', 'Special rules', 'Chess notation', 'Board setup'],
     resources: [
@@ -15,36 +13,28 @@ export const beginnerTopics = [
         description: 'Interactive lessons covering all chess basics with visual demonstrations',
         url: 'https://www.chess.com/learn-how-to-play-chess',
         type: 'website' as const,
-        difficulty: 'beginner' as const,
-        free: true,
-        rating: 5
+        difficulty: 'Beginner' as const,
       },
       {
         title: 'Bobby Fischer Teaches Chess',
         description: 'Classic chess book perfect for absolute beginners',
         url: 'https://www.amazon.com/Bobby-Fischer-Teaches-Chess/dp/0553263153',
         type: 'book' as const,
-        difficulty: 'beginner' as const,
-        free: false,
-        rating: 5
+        difficulty: 'Beginner' as const,
       },
       {
         title: 'Lichess Learn',
         description: 'Free interactive chess tutorial covering all basics',
         url: 'https://lichess.org/learn',
         type: 'website' as const,
-        difficulty: 'beginner' as const,
-        free: true,
-        rating: 5
+        difficulty: 'Beginner' as const,
       },
       {
         title: 'Saint Louis Chess Club - Chess Basics',
         description: 'Comprehensive video series on chess fundamentals',
         url: 'https://www.youtube.com/playlist?list=PLVWaFpMwtaGiBxi79IUqnqn67WF5g5PR4',
         type: 'video' as const,
-        difficulty: 'beginner' as const,
-        free: true,
-        rating: 4
+        difficulty: 'Beginner' as const,
       }
     ]
   },
@@ -53,7 +43,7 @@ export const beginnerTopics = [
     title: 'Basic Tactics',
     description: 'Master fundamental tactical patterns',
     timeEstimate: '2-3 weeks',
-    difficulty: 'beginner',
+    difficulty: 'Beginner',
     prerequisites: ['Basic piece movement', 'Chess notation'],
     skills: ['Pin', 'Fork', 'Skewer', 'Discovery', 'Deflection'],
     resources: [
@@ -62,36 +52,28 @@ export const beginnerTopics = [
         description: 'Thousands of tactical puzzles with adaptive difficulty',
         url: 'https://chesstempo.com/',
         type: 'website' as const,
-        difficulty: 'beginner' as const,
-        free: true,
-        rating: 5
+        difficulty: 'Beginner' as const,
       },
       {
         title: 'Tactics Time! by Tim Brennan',
         description: 'Collection of 1001 chess tactics for beginners',
         url: 'https://www.amazon.com/Tactics-Time-Chess-Tactics-Beginners/dp/1477624848',
         type: 'book' as const,
-        difficulty: 'beginner' as const,
-        free: false,
-        rating: 4
+        difficulty: 'Beginner' as const,
       },
       {
         title: 'Chess.com Tactics Trainer',
         description: 'Daily tactical puzzles with explanations',
         url: 'https://www.chess.com/puzzles',
         type: 'website' as const,
-        difficulty: 'beginner' as const,
-        free: true,
-        rating: 5
+        difficulty: 'Beginner' as const,
       },
       {
         title: 'GothamChess - Beginner Tactics',
         description: 'Popular YouTube series on basic tactical patterns',
         url: 'https://www.youtube.com/playlist?list=PLBRObSmbZluTUg3UJCGXeEI3LBKtJavLu',
         type: 'video' as const,
-        difficulty: 'beginner' as const,
-        free: true,
-        rating: 4
+        difficulty: 'Beginner' as const,
       }
     ]
   },
@@ -100,7 +82,7 @@ export const beginnerTopics = [
     title: 'Basic Checkmates',
     description: 'Learn essential mating patterns',
     timeEstimate: '1-2 weeks',
-    difficulty: 'beginner',
+    difficulty: 'Beginner',
     prerequisites: ['Chess basics', 'Basic tactics'],
     skills: ['Queen mate', 'Rook mate', 'Two rooks mate', 'Back rank mate'],
     resources: [
@@ -109,27 +91,21 @@ export const beginnerTopics = [
         description: 'Interactive practice for essential mating patterns',
         url: 'https://lichess.org/practice',
         type: 'website' as const,
-        difficulty: 'beginner' as const,
-        free: true,
-        rating: 5
+        difficulty: 'Beginner' as const,
       },
       {
         title: 'Back to Basics: Checkmates by Dan Heisman',
         description: 'Comprehensive guide to basic mating patterns',
         url: 'https://www.amazon.com/Back-Basics-Checkmates-Dan-Heisman/dp/0979148324',
         type: 'book' as const,
-        difficulty: 'beginner' as const,
-        free: false,
-        rating: 4
+        difficulty: 'Beginner' as const,
       },
       {
         title: 'Chess King Learn',
         description: 'Interactive chess training app with checkmate courses',
         url: 'https://www.chess-king.com/',
         type: 'app' as const,
-        difficulty: 'beginner' as const,
-        free: false,
-        rating: 4
+        difficulty: 'Beginner' as const,
       }
     ]
   }
@@ -141,7 +117,7 @@ export const intermediateTopics = [
     title: 'Opening Principles',
     description: 'Develop your opening repertoire',
     timeEstimate: '3-4 weeks',
-    difficulty: 'intermediate',
+    difficulty: 'Intermediate',
     prerequisites: ['Chess basics', 'Basic tactics'],
     skills: ['Development', 'Center control', 'King safety', 'Repertoire building'],
     resources: [
@@ -150,36 +126,28 @@ export const intermediateTopics = [
         description: 'Classic book explaining chess principles through complete games',
         url: 'https://www.amazon.com/Logical-Chess-Irving-Chernev/dp/0486205121',
         type: 'book' as const,
-        difficulty: 'intermediate' as const,
-        free: false,
-        rating: 5
+        difficulty: 'Intermediate' as const,
       },
       {
         title: 'Chess.com Opening Explorer',
         description: 'Database of opening moves with statistics and theory',
         url: 'https://www.chess.com/openings',
         type: 'website' as const,
-        difficulty: 'intermediate' as const,
-        free: true,
-        rating: 5
+        difficulty: 'Intermediate' as const,
       },
       {
         title: 'Chessable Opening Courses',
         description: 'Interactive spaced repetition learning for openings',
         url: 'https://www.chessable.com/',
         type: 'course' as const,
-        difficulty: 'intermediate' as const,
-        free: false,
-        rating: 5
+        difficulty: 'Intermediate' as const,
       },
       {
         title: 'Saint Louis Chess Club - Opening Principles',
         description: 'Video lectures on opening theory and principles',
         url: 'https://www.youtube.com/c/SaintLouisChessClub',
         type: 'video' as const,
-        difficulty: 'intermediate' as const,
-        free: true,
-        rating: 4
+        difficulty: 'Intermediate' as const,
       }
     ]
   },
@@ -188,7 +156,7 @@ export const intermediateTopics = [
     title: 'Middlegame Strategy',
     description: 'Master positional play and planning',
     timeEstimate: '4-6 weeks',
-    difficulty: 'intermediate',
+    difficulty: 'Intermediate',
     prerequisites: ['Opening principles', 'Basic tactics'],
     skills: ['Pawn structures', 'Piece activity', 'Weaknesses', 'Planning'],
     resources: [
@@ -197,27 +165,21 @@ export const intermediateTopics = [
         description: 'Essential guide to middlegame thinking and planning',
         url: 'https://www.amazon.com/Amateurs-Mind-Turning-Chess-Misconceptions/dp/1890085022',
         type: 'book' as const,
-        difficulty: 'intermediate' as const,
-        free: false,
-        rating: 5
+        difficulty: 'Intermediate' as const,
       },
       {
         title: 'My System by Aaron Nimzowitsch',
         description: 'Classic work on positional chess principles',
         url: 'https://www.amazon.com/My-System-Aaron-Nimzowitsch/dp/4871878023',
         type: 'book' as const,
-        difficulty: 'intermediate' as const,
-        free: false,
-        rating: 5
+        difficulty: 'Intermediate' as const,
       },
       {
         title: 'IM John Bartholomew - Chess Fundamentals',
         description: 'YouTube series on middlegame concepts and strategy',
         url: 'https://www.youtube.com/c/JohnBartholomewChess',
         type: 'video' as const,
-        difficulty: 'intermediate' as const,
-        free: true,
-        rating: 5
+        difficulty: 'Intermediate' as const,
       }
     ]
   },
@@ -226,7 +188,7 @@ export const intermediateTopics = [
     title: 'Advanced Tactics',
     description: 'Complex combinations and calculations',
     timeEstimate: '3-4 weeks',
-    difficulty: 'intermediate',
+    difficulty: 'Intermediate',
     prerequisites: ['Basic tactics', 'Pattern recognition'],
     skills: ['Complex combinations', 'Calculation', 'Sacrifices', 'Advanced patterns'],
     resources: [
@@ -235,27 +197,21 @@ export const intermediateTopics = [
         description: '300 advanced tactical positions for serious improvement',
         url: 'https://www.amazon.com/Combination-Challenge-Lou-Hays/dp/1936490692',
         type: 'book' as const,
-        difficulty: 'intermediate' as const,
-        free: false,
-        rating: 4
+        difficulty: 'Intermediate' as const,
       },
       {
         title: 'Chess.com Advanced Tactics',
         description: 'Higher difficulty tactical puzzles with detailed solutions',
         url: 'https://www.chess.com/puzzles',
         type: 'website' as const,
-        difficulty: 'intermediate' as const,
-        free: true,
-        rating: 5
+        difficulty: 'Intermediate' as const,
       },
       {
         title: 'Tactics Time 2 by Tim Brennan',
         description: 'Intermediate to advanced tactical patterns',
         url: 'https://www.amazon.com/Tactics-Time-Intermediate-Advanced-Problems/dp/1484817656',
         type: 'book' as const,
-        difficulty: 'intermediate' as const,
-        free: false,
-        rating: 4
+        difficulty: 'Intermediate' as const,
       }
     ]
   }
@@ -267,7 +223,7 @@ export const advancedTopics = [
     title: 'Strategic Concepts',
     description: 'Deep positional understanding',
     timeEstimate: '6-8 weeks',
-    difficulty: 'advanced',
+    difficulty: 'Advanced',
     prerequisites: ['Middlegame strategy', 'Pawn structures'],
     skills: ['Prophylaxis', 'Piece coordination', 'Weak squares', 'Dynamic factors'],
     resources: [
@@ -276,27 +232,21 @@ export const advancedTopics = [
         description: 'World-class insights into high-level positional play',
         url: 'https://www.amazon.com/Positional-Decision-Making-Chess-Gelfand/dp/1784830003',
         type: 'book' as const,
-        difficulty: 'advanced' as const,
-        free: false,
-        rating: 5
+        difficulty: 'Advanced' as const,
       },
       {
         title: 'How to Reassess Your Chess by Jeremy Silman',
         description: 'Advanced guide to positional evaluation and planning',
         url: 'https://www.amazon.com/How-Reassess-Your-Chess-4th/dp/1890085138',
         type: 'book' as const,
-        difficulty: 'advanced' as const,
-        free: false,
-        rating: 5
+        difficulty: 'Advanced' as const,
       },
       {
         title: 'ChessBase Master Class Series',
         description: 'Video courses by world champions and top GMs',
         url: 'https://shop.chessbase.com/',
         type: 'course' as const,
-        difficulty: 'advanced' as const,
-        free: false,
-        rating: 5
+        difficulty: 'Advanced' as const,
       }
     ]
   },
@@ -305,7 +255,7 @@ export const advancedTopics = [
     title: 'Complex Endgames',
     description: 'Master theoretical endgame positions',
     timeEstimate: '8-10 weeks',
-    difficulty: 'advanced',
+    difficulty: 'Advanced',
     prerequisites: ['Basic endgames', 'Strategic concepts'],
     skills: ['Rook endgames', 'Queen endgames', 'Minor piece endgames', 'Pawn endgames'],
     resources: [
@@ -314,27 +264,21 @@ export const advancedTopics = [
         description: 'The definitive guide to practical endgames',
         url: 'https://www.amazon.com/Dvoretskys-Endgame-Manual-Mark-Dvoretsky/dp/1936490110',
         type: 'book' as const,
-        difficulty: 'advanced' as const,
-        free: false,
-        rating: 5
+        difficulty: 'Advanced' as const,
       },
       {
         title: 'Practical Chess Endings by Paul Keres',
         description: 'Classic work on essential endgame knowledge',
         url: 'https://www.amazon.com/Practical-Chess-Endings-Paul-Keres/dp/0713484394',
         type: 'book' as const,
-        difficulty: 'advanced' as const,
-        free: false,
-        rating: 5
+        difficulty: 'Advanced' as const,
       },
       {
         title: 'Lichess Endgame Studies',
         description: 'Practice endgame positions with tablebase support',
         url: 'https://lichess.org/practice',
         type: 'website' as const,
-        difficulty: 'advanced' as const,
-        free: true,
-        rating: 4
+        difficulty: 'Advanced' as const,
       }
     ]
   },
@@ -343,7 +287,7 @@ export const advancedTopics = [
     title: 'Advanced Opening Theory',
     description: 'Deep preparation and theoretical knowledge',
     timeEstimate: 'Ongoing',
-    difficulty: 'advanced',
+    difficulty: 'Advanced',
     prerequisites: ['Opening principles', 'Strategic concepts'],
     skills: ['Theoretical lines', 'Novelties', 'Preparation', 'Transpositions'],
     resources: [
@@ -352,27 +296,21 @@ export const advancedTopics = [
         description: 'Comprehensive opening reference and theory',
         url: 'https://www.amazon.com/Modern-Chess-Openings-15th/dp/0812936655',
         type: 'book' as const,
-        difficulty: 'advanced' as const,
-        free: false,
-        rating: 4
+        difficulty: 'Advanced' as const,
       },
       {
         title: 'ChessBase Mega Database',
         description: 'Complete database of chess games for opening research',
         url: 'https://shop.chessbase.com/en/products/mega_database_2024',
         type: 'website' as const,
-        difficulty: 'advanced' as const,
-        free: false,
-        rating: 5
+        difficulty: 'Advanced' as const,
       },
       {
         title: 'Chess24 Masters Series',
         description: 'Opening courses by top grandmasters',
         url: 'https://chess24.com/',
         type: 'course' as const,
-        difficulty: 'advanced' as const,
-        free: false,
-        rating: 5
+        difficulty: 'Advanced' as const,
       }
     ]
   }

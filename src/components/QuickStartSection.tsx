@@ -215,7 +215,7 @@ const QuickStartSection = () => {
                       <div className="space-y-4">
                         <div className="bg-white/5 rounded-lg p-4">
                           <div className="font-medium text-foreground mb-1">
-                            First Step
+                            Priority
                           </div>
                           <div className="text-foreground/80 text-sm">
                             {selected.quickStart.priority}
