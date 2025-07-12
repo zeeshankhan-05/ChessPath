@@ -309,16 +309,15 @@ const QuickStartSection = () => {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                     <Button
                       className={`bg-${selected.level} text-${selected.level}-foreground hover:bg-${selected.level}/90 font-semibold`}
-                      onClick={() =>
-                        navigate(`/resources?level=${selected.level}`)
-                      }
+                      onClick={() => navigate("/roadmap")}
                     >
                       Start {selected.title} Path
                       <ChevronRight className="h-4 w-4 ml-2" />
                     </Button>
                     <Button
                       variant="outline"
-                      className="bg-transparent border-white/20 hover:bg-white/10 text-white"
+                      className="bg-transparent border-white/20 hover:bg-white/10 text-white hover:text-white"
+                      onClick={() => navigate("/resources")}
                     >
                       View All Resources
                     </Button>
