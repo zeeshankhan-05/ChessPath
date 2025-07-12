@@ -14,7 +14,7 @@ const Header = () => {
             to="/"
             className="flex items-center space-x-3 group cursor-pointer"
           >
-            <div className="h-12 w-12 flex items-center justify-center rounded bg-chess-gold transition-transform group-hover:scale-105">
+            <div className="h-11 w-11 flex items-center justify-center rounded bg-chess-gold transition-transform group-hover:scale-105">
               <span className="text-5xl font-bold text-chess-dark flex items-center justify-center w-full h-full -mt-2">
                 ♔
               </span>
@@ -26,6 +26,12 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
+            <Link
+              to="/"
+              className="text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Home
+            </Link>
             <Link
               to="/roadmap"
               className="text-foreground/80 hover:text-foreground transition-colors"
@@ -57,6 +63,12 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-white/10 animate-fade-in">
             <nav className="flex flex-col space-y-4">
+              <Link
+                to="/"
+                className="text-foreground/80 hover:text-foreground transition-colors"
+              >
+                Home
+              </Link>
               <Link
                 to="/roadmap"
                 className="text-foreground/80 hover:text-foreground transition-colors"
