@@ -14,6 +14,7 @@ export const beginnerTopics = [
       'Piece coordination',
       'Basic checkmates (K+Q, K+R)'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'Chess.com Learn Chess',
