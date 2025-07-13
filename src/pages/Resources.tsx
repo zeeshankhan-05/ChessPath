@@ -243,17 +243,9 @@ const Resources = () => {
             return (
               <Card
                 key={res.url + i}
-                className="bg-gray-900 border-gray-800 shadow-lg flex flex-col h-full p-6"
+                className="bg-gray-900 border-gray-800 shadow-lg flex flex-col h-full pt-3 pb-6 px-6 animate-slide-up"
+                style={{ animationDelay: `${i * 0.005}s` }}
               >
-                <div className="flex items-center gap-2 mb-2">
-                  <Badge variant="outline" className={`capitalize ${color}`}>
-                    {res.skillLevel}
-                  </Badge>
-                  <Badge variant="outline" className="flex items-center gap-1">
-                    {typeIcons[res.type] || null}
-                    {res.type.charAt(0).toUpperCase() + res.type.slice(1)}
-                  </Badge>
-                </div>
                 {/* Resource Title - remove source prefix */}
                 <div className="font-semibold text-base md:text-lg mb-1 text-white">
                   {res.title
@@ -266,6 +258,21 @@ const Resources = () => {
                 </div>
                 <div className="text-gray-400 text-sm mb-2 flex-1">
                   {res.description}
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                  <Badge
+                    variant="outline"
+                    className={`capitalize border border-gray-500 rounded-full px-3 py-1 text-xs ${color}`}
+                  >
+                    {res.skillLevel}
+                  </Badge>
+                  <Badge
+                    variant="outline"
+                    className="flex items-center gap-1 border border-gray-500 rounded-full px-3 py-1 text-xs"
+                  >
+                    {typeIcons[res.type] || null}
+                    {res.type.charAt(0).toUpperCase() + res.type.slice(1)}
+                  </Badge>
                 </div>
                 {/* Topic indicator styled as a badge */}
                 <div className="mb-2.5">

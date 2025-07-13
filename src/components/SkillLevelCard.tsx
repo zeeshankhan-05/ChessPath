@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import {
   ChevronDown,
   ChevronUp,
@@ -16,8 +15,8 @@ interface Resource {
   title: string;
   description: string;
   url: string;
-  type: "video" | "website";
-  difficulty: "beginner" | "intermediate" | "advanced";
+  type: string; // allow any string, matches data
+  difficulty: string; // allow any string, matches data
 }
 
 interface Topic {
