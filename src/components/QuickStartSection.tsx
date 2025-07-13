@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight, PlayCircle, BookOpen, Target } from "lucide-react";
 import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const QuickStartSection = () => {
   const [selectedElo, setSelectedElo] = useState<string | null>(null);
@@ -314,13 +314,14 @@ const QuickStartSection = () => {
                       Start {selected.title} Path
                       <ChevronRight className="h-4 w-4 ml-2" />
                     </Button>
-                    <Button
-                      variant="outline"
-                      className="bg-transparent border-white/20 hover:bg-white/10 text-white hover:text-white"
-                      onClick={() => navigate("/resources")}
-                    >
-                      View All Resources
-                    </Button>
+                    <Link to="/resources">
+                      <Button
+                        variant="outline"
+                        className="bg-transparent border-white/20 hover:bg-white/10 text-white hover:text-white"
+                      >
+                        View All Resources
+                      </Button>
+                    </Link>
                   </div>
                 </Card>
               );
