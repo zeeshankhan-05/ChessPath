@@ -156,7 +156,7 @@ export const beginnerTopics = [
 export const intermediateTopics = [
   {
     id: 'opening-repertoire',
-    title: 'Opening Repertoire (Structured)',
+    title: 'Opening Repertoire',
     description: 'Learn 1–2 openings as White and Black, understand mainlines, traps, and plans.',
     timeEstimate: '2-3 weeks',
     difficulty: 'Intermediate',
