@@ -2,399 +2,712 @@ export const beginnerTopics = [
   {
     id: 'rules-piece-knowledge',
     title: 'Rules & Piece Knowledge',
-    description: 'Learn legal moves, castling, en passant, promotion, piece value, coordination, and basic checkmates.',
-    timeEstimate: '1-2 weeks',
+    description:
+      'Learn the fundamental rules of chess.',
+    timeEstimate: '1 week',
     difficulty: 'Beginner',
     skills: [
-      'Legal moves',
-      'Castling',
-      'En passant',
-      'Promotion',
-      'Piece value',
-      'Piece coordination',
-      'Basic checkmates (K+Q, K+R)'
+      'Piece movement',
+      'Board setup',
+      'Check/checkmate basics',
+      'Special rules',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'Chess.com Learn Chess',
-        description: 'Interactive lessons covering all chess basics with visual demonstrations',
-        url: 'https://www.chess.com/learn-how-to-play-chess',
-        type: 'website',
-        difficulty: 'Beginner',
-      },
-      {
-        title: 'Lichess Learn',
-        description: 'Free interactive chess tutorial covering all basics',
+        title: 'Lichess.org - Learn Chess',
+        description: 'Interactive lessons teaching piece movements, captures, and basic rules like castling and en passant.',
         url: 'https://lichess.org/learn',
         type: 'website',
         difficulty: 'Beginner',
       },
       {
-        title: 'Saint Louis Chess Club - Chess Basics',
-        description: 'Comprehensive video series on chess fundamentals',
-        url: 'https://www.youtube.com/playlist?list=PLVWaFpMwtaGiBxi79IUqnqn67WF5g5PR4',
+        title: 'YouTube: Learn How to Play Chess in 10 Minutes',
+        description: 'A 10-minute video covering board setup, piece movements, check/checkmate, and draw conditions.',
+        url: 'https://www.youtube.com/watch?v=1gAZ1sS5RAU',
         type: 'video',
         difficulty: 'Beginner',
-      }
-    ]
+      },
+      {
+        title: 'Chess.com - Chess Lessons',
+        description: 'Guided interactive lessons introducing the fundamentals of chess for beginners.',
+        url: 'https://www.chess.com/lessons',
+        type: 'website',
+        difficulty: 'Beginner',
+      },
+      {
+        title: 'YouTube: How To Play Chess: The Ultimate Beginner Guide by GothamChess',
+        description: 'A comprehensive video explaining chess rules and basic gameplay.',
+        url: 'https://www.youtube.com/watch?v=OCSbzArwB10',
+        type: 'video',
+        difficulty: 'Beginner',
+      },
+    ],
   },
   {
     id: 'opening-principles',
     title: 'Opening Principles',
-    description: 'Control the center, develop pieces, castle early, and avoid common opening mistakes.',
-    timeEstimate: '1 week',
+    description:
+      'Understand the fundamental principles of the opening phase.',
+    timeEstimate: '2 weeks',
     difficulty: 'Beginner',
     skills: [
       'Center control',
       'Piece development',
-      'King safety',
-      'Avoiding early queen/edge pawns'
+      'Early castling',
+      'Avoiding blunders',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'Chess.com Opening Principles',
-        description: 'Guide to opening principles and common mistakes',
-        url: 'https://www.chess.com/article/view/the-principles-of-the-opening',
+        title: 'Chess.com - Opening Principles Lessons',
+        description: 'Interactive lessons covering center control, piece development, and king safety.',
+        url: 'https://www.chess.com/lessons/openings',
         type: 'website',
         difficulty: 'Beginner',
-      }
-    ]
+      },
+      {
+        title: 'Chess Strategy Online - Opening Principles',
+        description: 'A tutorial explaining the importance of development, center control, and castling.',
+        url: 'https://www.chessstrategyonline.com/opening-principles',
+        type: 'website',
+        difficulty: 'Beginner',
+      },
+      {
+        title: 'YouTube: Basic Chess Openings Explained by GothamChess',
+        description: 'A video addressing common opening questions and principles.',
+        url: 'https://www.youtube.com/watch?v=6pZ6jSnt-To',
+        type: 'video',
+        difficulty: 'Beginner',
+      },
+      {
+        title: 'Chessable - Short & Sweet: Italian Game',
+        description: 'A free course introducing opening principles through the Italian Game.',
+        url: 'https://www.chessable.com/short-sweet-italian-game',
+        type: 'website',
+        difficulty: 'Beginner',
+      },
+    ],
   },
   {
     id: 'tactical-training',
-    title: 'Tactical Training (Daily)',
-    description: 'Practice tactics like hanging pieces, forks, pins, skewers, double attacks, and discovered checks.',
-    timeEstimate: 'Ongoing',
+    title: 'Tactical Training',
+    description:
+      'Learn to recognize and execute basic chess tactics to gain material advantages or deliver checkmate.',
+    timeEstimate: '4 weeks',
     difficulty: 'Beginner',
     skills: [
-      'Hanging pieces',
-      'Forks',
-      'Pins',
-      'Skewers',
-      'Double attacks',
-      'Discovered checks'
+      'Spot tactics',
+      'Short calculations',
+      'Pattern recognition',
+      'Avoid blunders',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'Lichess Tactics Trainer',
-        description: 'Practice tactics with puzzles and explanations',
+        title: 'Chess.com - Tactics Trainer',
+        description: 'Free daily puzzles to practice tactical pattern recognition.',
+        url: 'https://www.chess.com/puzzles',
+        type: 'website',
+        difficulty: 'Beginner',
+      },
+      {
+        title: 'Lichess - Puzzles',
+        description: 'A large database of free tactical puzzles suitable for beginners.',
         url: 'https://lichess.org/training',
         type: 'website',
         difficulty: 'Beginner',
       },
       {
-        title: 'Chess.com Puzzles',
-        description: 'Daily tactical puzzles with explanations',
-        url: 'https://www.chess.com/puzzles',
+        title: 'Chess Tempo - Chess Tactics',
+        description: 'Extensive tactics training with free registration and progress tracking.',
+        url: 'https://chesstempo.com/chess-tactics',
         type: 'website',
         difficulty: 'Beginner',
-      }
-    ]
+      },
+      {
+        title: 'YouTube: ALL Chess Tactics Explained',
+        description: 'A video covering 24 essential chess tactics for beginners.',
+        url: 'https://www.youtube.com/watch?v=9q6hgh5h4q0',
+        type: 'video',
+        difficulty: 'Beginner',
+      },
+    ],
   },
   {
     id: 'basic-endgames',
     title: 'Basic Endgames',
-    description: 'Learn king and pawn vs king, king activity, opposition, and basic checkmate patterns.',
-    timeEstimate: '1 week',
+    description:
+      'Master fundamental endgame techniques.',
+    timeEstimate: '3 weeks',
     difficulty: 'Beginner',
     skills: [
-      'King and pawn vs king',
-      'King activity',
+      'Simple checkmates',
+      'Pawn promotion',
       'Opposition',
-      'Ladder mate',
-      'Back rank mate'
+      'Basic king play',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'Lichess Practice - Basic Endgames',
-        description: 'Interactive practice for essential endgame patterns',
+        title: 'Chess.com - Endgame Lessons',
+        description: 'Interactive lessons on fundamental checkmates and pawn endgames.',
+        url: 'https://www.chess.com/lessons/endgames',
+        type: 'website',
+        difficulty: 'Beginner',
+      },
+      {
+        title: 'Lichess - Endgame Practice',
+        description: 'Practice key endgame positions, such as king and queen vs. king.',
         url: 'https://lichess.org/practice',
         type: 'website',
         difficulty: 'Beginner',
-      }
-    ]
+      },
+      {
+        title: 'YouTube: Basic Checkmates by ChessNetwork',
+        description: 'A video explaining fundamental checkmating patterns.',
+        url: 'https://www.youtube.com/watch?v=0eaVycA7VZA',
+        type: 'video',
+        difficulty: 'Beginner',
+      },
+      {
+        title: 'Chessable - Short & Sweet: Endgames',
+        description: 'A free course covering essential endgame techniques.',
+        url: 'https://www.chessable.com/short-sweet-endgames',
+        type: 'website',
+        difficulty: 'Beginner',
+      },
+    ],
   },
   {
     id: 'thinking-process',
     title: 'Thinking Process',
-    description: 'Develop a disciplined thinking process to avoid blunders and spot threats.',
-    timeEstimate: 'Ongoing',
+    description:
+      'Develop a structured approach to decision-making during a chess game.',
+    timeEstimate: '2 weeks',
     difficulty: 'Beginner',
     skills: [
-      'Blunder check',
-      'Threat recognition',
-      'Checks, captures, threats',
-      'Avoiding one-move blunders'
+      'Checks/captures/threats',
+      'Short calculations',
+      'Evaluate activity',
+      'Avoid impulses',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'Chess.com - How to Avoid Blunders',
-        description: 'Tips and exercises to avoid blunders and improve your thinking process',
-        url: 'https://www.chess.com/article/view/how-to-avoid-blunders',
+        title: 'Chess.com - How to Think in Chess',
+        description: 'An article explaining how to evaluate positions and calculate moves.',
+        url: 'https://www.chess.com/article/view/how-to-think-in-chess',
         type: 'website',
         difficulty: 'Beginner',
-      }
-    ]
+      },
+      {
+        title: 'YouTube: Chess Fundamentals by John Bartholomew',
+        description: 'A video series on basic decision-making and thought processes.',
+        url: 'https://www.youtube.com/playlist?list=PLl9uuRYQ-6MBwqkmwT42l1fI7Z0bYu2es',
+        type: 'video',
+        difficulty: 'Beginner',
+      },
+      {
+        title: 'Lichess - Studies',
+        description: 'Interactive studies to practice analyzing positions.',
+        url: 'https://lichess.org/study',
+        type: 'website',
+        difficulty: 'Beginner',
+      },
+      {
+        title: 'YouTube: How to Analyze Your Chess Games by GothamChess',
+        description: 'A video on improving thought processes through game analysis.',
+        url: 'https://www.youtube.com/watch?v=7NFei3wM3K4',
+        type: 'video',
+        difficulty: 'Beginner',
+      },
+    ],
   },
   {
     id: 'tournament-essentials',
     title: 'Tournament Essentials',
-    description: 'Coming soon: Learn the basics of playing in tournaments, etiquette, and rules.',
-    timeEstimate: 'TBD',
+    description:
+      'Learn the essentials for participating in chess tournaments.',
+    timeEstimate: '1 week',
     difficulty: 'Beginner',
-    skills: [],
-    prerequisites: [],
-    resources: []
-  }
+    skills: [
+      'Notation basics',
+      'Time controls',
+      'Tournament rules',
+    ],
+    resources: [
+      {
+        title: 'FIDE - Laws of Chess',
+        description: 'Official chess rules, including tournament regulations.',
+        url: 'https://www.fide.com/fide/handbook',
+        type: 'website',
+        difficulty: 'Beginner',
+      },
+      {
+        title: 'Chess.com - Tournament Guide',
+        description: 'An article explaining what to expect in chess tournaments.',
+        url: 'https://www.chess.com/article/view/chess-tournament-guide',
+        type: 'website',
+        difficulty: 'Beginner',
+      },
+      {
+        title: 'YouTube: Your First Chess Tournament by Chess.com',
+        description: 'A video guide on preparing for and participating in tournaments.',
+        url: 'https://www.youtube.com/watch?v=5zG9Y0yWAI0',
+        type: 'video',
+        difficulty: 'Beginner',
+      },
+      {
+        title: 'Lichess - Tournament FAQ',
+        description: 'Information on online tournament formats and rules.',
+        url: 'https://lichess.org/faq#tournaments',
+        type: 'website',
+        difficulty: 'Beginner',
+      },
+    ],
+  },
 ];
 
 export const intermediateTopics = [
   {
     id: 'opening-repertoire',
     title: 'Opening Repertoire',
-    description: 'Learn 1–2 openings as White and Black, understand mainlines, traps, and plans.',
-    timeEstimate: '2-3 weeks',
+    description:
+      'Develop a consistent set of opening moves for White and Black to create reliable game plans.',
+    timeEstimate: '4 weeks',
     difficulty: 'Intermediate',
     skills: [
-      'Opening mainlines',
-      'Traps',
-      'Opening plans',
-      'Repertoire building'
+      'Choose openings',
+      'Understand ideas',
+      'Respond flexibly',
+      'Middlegame transition',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'Chess.com Opening Explorer',
-        description: 'Database of opening moves with statistics and theory',
-        url: 'https://www.chess.com/openings',
+        title: 'Chess.com - Openings Explorer',
+        description: 'A free tool to explore opening moves and study master games.',
+        url: 'https://www.chess.com/explorer',
         type: 'website',
         difficulty: 'Intermediate',
-      }
-    ]
+      },
+      {
+        title: 'YouTube: Building an Opening Repertoire by Hanging Pawns',
+        description: 'A video series on selecting and studying openings.',
+        url: 'https://www.youtube.com/playlist?list=PLUjxDD7Htl7g0vPPL6ZWCc3zCnX8h-8tQ',
+        type: 'video',
+        difficulty: 'Intermediate',
+      },
+      {
+        title: 'Chessable - Short & Sweet: London System',
+        description: 'A free course on a solid opening for intermediates.',
+        url: 'https://www.chessable.com/short-sweet-london-system',
+        type: 'website',
+        difficulty: 'Intermediate',
+      },
+    ],
   },
   {
     id: 'intermediate-tactics',
     title: 'Intermediate Tactics',
-    description: 'Practice overloading, deflection, attraction, zwischenzug, and mating nets.',
-    timeEstimate: '2-3 weeks',
+    description:
+      'Learn advanced tactical patterns to exploit opponent mistakes and create winning opportunities in complex positions.',
+    timeEstimate: '5 weeks',
     difficulty: 'Intermediate',
     skills: [
-      'Overloading',
-      'Deflection',
-      'Attraction',
-      'Zwischenzug',
-      'Mating nets',
-      '3–5 move calculation'
+      'Advanced patterns',
+      'Longer calculations',
+      'Tactical combos',
+      'Tactic defense',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'ChessTempo Tactics',
-        description: 'Thousands of tactical puzzles with adaptive difficulty',
-        url: 'https://chesstempo.com/',
+        title: 'Chess.com - Tactics Trainer',
+        description: 'Puzzles tailored to intermediate difficulty levels.',
+        url: 'https://www.chess.com/puzzles',
         type: 'website',
         difficulty: 'Intermediate',
-      }
-    ]
+      },
+      {
+        title: 'Lichess - Puzzles',
+        description: 'Filter puzzles by rating to match intermediate skill levels.',
+        url: 'https://lichess.org/training',
+        type: 'website',
+        difficulty: 'Intermediate',
+      },
+      {
+        title: 'Chess Tempo - Tactics',
+        description: 'Customizable puzzles for intermediate players.',
+        url: 'https://chesstempo.com/chess-tactics',
+        type: 'website',
+        difficulty: 'Intermediate',
+      },
+      {
+        title: 'YouTube: Intermediate Tactics by Daniel Naroditsky',
+        description: 'Videos explaining complex tactical motifs.',
+        url: 'https://www.youtube.com/playlist?list=PLT1F2nOxLHOcmi_qi1BbY6axf6xL4-LTu',
+        type: 'video',
+        difficulty: 'Intermediate',
+      },
+    ],
   },
   {
     id: 'strategic-concepts',
     title: 'Strategic Concepts',
-    description: 'Learn pawn structures, outposts, open files, and trading pieces based on position.',
-    timeEstimate: '3-4 weeks',
+    description:
+      'Understand pawn structures, piece coordination, and strategic planning to enhance positional play and create effective game plans.',
+    timeEstimate: '4 weeks',
     difficulty: 'Intermediate',
     skills: [
-      'Pawn structure',
-      'Outposts',
-      'Open files',
-      'Trading pieces',
-      'Strong/weak squares'
+      'Pawn structures',
+      'Piece coordination',
+      'Strategic plans',
+      'Exploit weaknesses',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'IM John Bartholomew - Chess Fundamentals',
-        description: 'YouTube series on middlegame concepts and strategy',
-        url: 'https://www.youtube.com/c/JohnBartholomewChess',
+        title: 'Chess.com - Strategy Articles',
+        description: 'Articles on pawn structures and strategic planning.',
+        url: 'https://www.chess.com/articles/strategy',
+        type: 'website',
+        difficulty: 'Intermediate',
+      },
+      {
+        title: 'Lichess - Studies',
+        description: 'Interactive studies on strategic themes.',
+        url: 'https://lichess.org/study',
+        type: 'website',
+        difficulty: 'Intermediate',
+      },
+      {
+        title: 'Chessable - Free Strategy Courses',
+        description: 'Free courses on positional play and strategy.',
+        url: 'https://www.chessable.com/courses',
+        type: 'website',
+        difficulty: 'Intermediate',
+      },
+      {
+        title: 'YouTube: Fischer’s Rule Will Prevent 50% of Your Chess Mistakes',
+        description: 'Explains a strategic principle by Bobby Fischer to neutralize opponent pieces and reduce blunders.',
+        url: 'https://youtu.be/_h4KLNqvLWw',
         type: 'video',
         difficulty: 'Intermediate',
-      }
-    ]
+      },
+      {
+        title: 'YouTube: The 10 Best Chess Plans For The Middlegame',
+        description: 'Outlines key middlegame strategies and plans for effective play.',
+        url: 'https://youtu.be/F98JdnLyUXA',
+        type: 'video',
+        difficulty: 'Intermediate',
+      },
+    ],
   },
   {
     id: 'positional-play',
     title: 'Positional Play',
-    description: 'Plan around weaknesses, improve worst-placed piece, prophylactic moves, and recognize when to attack.',
-    timeEstimate: '2-3 weeks',
+    description:
+      'Master long-term planning and piece placement to strengthen your game through superior positional understanding.',
+    timeEstimate: '4 weeks',
     difficulty: 'Intermediate',
     skills: [
-      'Planning',
-      'Prophylaxis',
-      'Piece improvement',
-      'Attack vs consolidate'
+      'Piece placement',
+      'Pawn dynamics',
+      'Long-term planning',
+      'Positional evaluation',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'Hanging Pawns - Positional Play',
-        description: 'YouTube channel focused on positional chess concepts',
-        url: 'https://www.youtube.com/c/HangingPawns',
+        title: 'Chess.com - Positional Play Lessons',
+        description: 'Lessons on piece activity and pawn structure.',
+        url: 'https://www.chess.com/lessons/positional-play',
+        type: 'website',
+        difficulty: 'Intermediate',
+      },
+      {
+        title: 'YouTube: Positional Chess by John Bartholomew',
+        description: 'Videos on positional concepts for intermediates.',
+        url: 'https://www.youtube.com/playlist?list=PLl9uuRYQ-6MBwqkmwT42l1fI7Z0bYu2es',
         type: 'video',
         difficulty: 'Intermediate',
-      }
-    ]
+      },
+      {
+        title: 'Lichess - Studies',
+        description: 'Studies focusing on positional themes.',
+        url: 'https://lichess.org/study',
+        type: 'website',
+        difficulty: 'Intermediate',
+      },
+      {
+        title: 'Chess Strategy Online - Positional Concepts',
+        description: 'Tutorials on long-term planning and piece placement.',
+        url: 'https://www.chessstrategyonline.com/positional-concepts',
+        type: 'website',
+        difficulty: 'Intermediate',
+      },
+    ],
   },
   {
     id: 'endgames-that-win',
     title: 'Endgames that Win Games',
-    description: 'Learn Lucena and Philidor positions, opposition, triangulation, and practical king and pawn races.',
-    timeEstimate: '2-3 weeks',
+    description:
+      'Learn key endgame positions to convert advantages into wins.',
+    timeEstimate: '5 weeks',
     difficulty: 'Intermediate',
     skills: [
-      'Lucena position',
-      'Philidor position',
-      'Opposition',
-      'Triangulation',
-      'King and pawn races',
-      'Converting small advantages'
+      'Key positions',
+      'Material conversion',
+      'Pawn endgames',
+      'Endgame coordination',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'Lichess Endgame Studies',
-        description: 'Practice endgame positions with tablebase support',
+        title: 'Chess.com - Endgame Lessons',
+        description: 'Advanced endgame lessons for intermediates.',
+        url: 'https://www.chess.com/lessons/endgames',
+        type: 'website',
+        difficulty: 'Intermediate',
+      },
+      {
+        title: 'Lichess - Endgame Practice',
+        description: 'Practice complex endgame scenarios.',
         url: 'https://lichess.org/practice',
         type: 'website',
         difficulty: 'Intermediate',
-      }
-    ]
-  }
+      },
+      {
+        title: 'YouTube: Key Endgame Positions by ChessNetwork',
+        description: 'Videos on critical endgame techniques.',
+        url: 'https://www.youtube.com/watch?v=0eaVycA7VZA',
+        type: 'video',
+        difficulty: 'Intermediate',
+      },
+      {
+        title: 'Chessable - Short & Sweet: Endgames',
+        description: 'Free course on winning endgame positions.',
+        url: 'https://www.chessable.com/short-sweet-endgames',
+        type: 'website',
+        difficulty: 'Intermediate',
+      },
+    ],
+  },
 ];
 
 export const advancedTopics = [
   {
     id: 'advanced-opening-prep',
     title: 'Advanced Opening Prep',
-    description: 'Prepare against specific lines, know transpositions, analyze your games, and use engines wisely.',
-    timeEstimate: 'Ongoing',
+    description:
+      'Master specific opening lines and responses to gain an edge in high-level play.',
+    timeEstimate: '6 weeks',
     difficulty: 'Advanced',
     skills: [
-      'Line preparation',
-      'Transpositions',
-      'Game analysis',
-      'Engine use'
+      'Deep memorization',
+      'Anti-lines prep',
+      'Stats analysis',
+      'Style matching',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'ChessBase Mega Database',
-        description: 'Complete database of chess games for opening research',
-        url: 'https://shop.chessbase.com/en/products/mega_database_2024',
+        title: 'Chess.com - Openings Explorer',
+        description: 'Deep analysis of opening variations and statistics.',
+        url: 'https://www.chess.com/explorer',
         type: 'website',
         difficulty: 'Advanced',
-      }
-    ]
+      },
+      {
+        title: 'Lichess - Opening Explorer',
+        description: 'Detailed opening statistics and master games.',
+        url: 'https://lichess.org/analysis',
+        type: 'website',
+        difficulty: 'Advanced',
+      },
+      {
+        title: 'YouTube: Advanced Opening Prep by Daniel Naroditsky',
+        description: 'Videos on preparing specific openings.',
+        url: 'https://www.youtube.com/playlist?list=PLT1F2nOxLHOcmi_qi1BbY6axf6xL4-LTu',
+        type: 'video',
+        difficulty: 'Advanced',
+      },
+      {
+        title: 'Chessable - Free Advanced Opening Courses',
+        description: 'Free courses on complex openings like the Sicilian.',
+        url: 'https://www.chessable.com/courses',
+        type: 'website',
+        difficulty: 'Advanced',
+      },
+    ],
   },
   {
     id: 'strategic-depth',
     title: 'Strategic Depth',
-    description: 'Long-term planning, deep pawn break understanding, dynamic vs static advantages, and counterplay.',
-    timeEstimate: '3-4 weeks',
+    description:
+      'Understand nuanced strategic concepts to elevate positional mastery and outmaneuver opponents in complex positions.',
+    timeEstimate: '6 weeks',
     difficulty: 'Advanced',
     skills: [
-      'Long-term planning',
-      'Pawn breaks',
-      'Dynamic/static advantages',
-      'Counterplay'
+      'Pawn strategy',
+      'Complex coordination',
+      'Subtle advantages',
+      'Deep planning',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'ChessNetwork - Advanced Strategy',
-        description: 'YouTube playlist on advanced chess strategy and planning',
-        url: 'https://www.youtube.com/user/ChessNetwork',
+        title: 'Chess.com - Advanced Strategy Articles',
+        description: 'In-depth articles on strategic themes.',
+        url: 'https://www.chess.com/articles/strategy',
+        type: 'website',
+        difficulty: 'Advanced',
+      },
+      {
+        title: 'YouTube: Strategic Masterclass by St. Louis Chess Club',
+        description: 'Lectures by grandmasters on strategy.',
+        url: 'https://www.youtube.com/c/SaintLouisChessClub',
         type: 'video',
         difficulty: 'Advanced',
-      }
-    ]
+      },
+      {
+        title: 'Lichess - Studies',
+        description: 'Advanced studies on strategic planning.',
+        url: 'https://lichess.org/study',
+        type: 'website',
+        difficulty: 'Advanced',
+      },
+      {
+        title: 'Chess Strategy Online - Advanced Strategy',
+        description: 'Tutorials on high-level positional play.',
+        url: 'https://www.chessstrategyonline.com/advanced-strategy',
+        type: 'website',
+        difficulty: 'Advanced',
+      },
+    ],
   },
   {
     id: 'calculation-visualization',
     title: 'Calculation & Visualization',
-    description: 'Train 4–6 move calculations, blindfold puzzles, and candidate move trees.',
-    timeEstimate: 'Ongoing',
+    description:
+      'Improve calculation accuracy and board visualization to handle complex positions and long move sequences.',
+    timeEstimate: '5 weeks',
     difficulty: 'Advanced',
     skills: [
-      'Deep calculation',
-      'Visualization',
-      'Candidate moves',
-      'Forcing vs quiet moves'
+      'Long sequences',
+      'Board visualization',
+      'Opponent prediction',
+      'Time management',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'Chess.com Calculation Training',
-        description: 'Advanced calculation puzzles and visualization exercises',
+        title: 'Chess.com - Tactics Trainer',
+        description: 'High-difficulty puzzles for advanced players.',
         url: 'https://www.chess.com/puzzles',
         type: 'website',
         difficulty: 'Advanced',
-      }
-    ]
+      },
+      {
+        title: 'Lichess - Puzzles',
+        description: 'Filter for advanced-level puzzles.',
+        url: 'https://lichess.org/training',
+        type: 'website',
+        difficulty: 'Advanced',
+      },
+      {
+        title: 'YouTube: Calculation Training by Hanging Pawns',
+        description: 'Videos on improving calculation skills.',
+        url: 'https://www.youtube.com/playlist?list=PLUjxDD7Htl7g0vPPL6ZWCc3zCnX8h-8tQ',
+        type: 'video',
+        difficulty: 'Advanced',
+      },
+      {
+        title: 'Chess Tempo - Tactics',
+        description: 'Advanced tactics with performance tracking.',
+        url: 'https://chesstempo.com/chess-tactics',
+        type: 'website',
+        difficulty: 'Advanced',
+      },
+    ],
   },
   {
     id: 'advanced-tactics-sacrifices',
     title: 'Advanced Tactics & Sacrifices',
-    description: 'Learn exchange sacrifices, Greek gift, clearance, interference, and complex attacking schemes.',
-    timeEstimate: '3-4 weeks',
+    description:
+      'Master complex tactics and sacrifices to create winning opportunities in high-level games.',
+    timeEstimate: '5 weeks',
     difficulty: 'Advanced',
     skills: [
-      'Exchange sacrifices',
-      'Greek gift',
-      'Clearance',
-      'Interference',
-      'Positional sacrifices',
-      'King hunts'
+      'Tactical depth',
+      'Sacrifice planning',
+      'Threat defense',
+      'Tactics + strategy',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'Hanging Pawns - Advanced Tactics',
-        description: 'YouTube channel focused on advanced tactics and sacrifices',
-        url: 'https://www.youtube.com/c/HangingPawns',
+        title: 'Chess.com - Tactics Trainer',
+        description: 'Complex puzzles for advanced players.',
+        url: 'https://www.chess.com/puzzles',
+        type: 'website',
+        difficulty: 'Advanced',
+      },
+      {
+        title: 'Lichess - Puzzles',
+        description: 'High-rated puzzles for tactical mastery.',
+        url: 'https://lichess.org/training',
+        type: 'website',
+        difficulty: 'Advanced',
+      },
+      {
+        title: 'YouTube: Advanced Tactics by Daniel Naroditsky',
+        description: 'Videos on complex tactical patterns.',
+        url: 'https://www.youtube.com/playlist?list=PLT1F2nOxLHOcmi_qi1BbY6axf6xL4-LTu',
         type: 'video',
         difficulty: 'Advanced',
-      }
-    ]
+      },
+      {
+        title: 'Chess Tempo - Tactics',
+        description: 'Advanced tactical training.',
+        url: 'https://chesstempo.com/chess-tactics',
+        type: 'website',
+        difficulty: 'Advanced',
+      },
+    ],
   },
   {
     id: 'high-level-endgames',
     title: 'High-Level Endgames',
-    description: 'Master complex endgames: rook + 2 pawns vs rook, Vancura, bishop vs knight, fortresses, and queen endgames.',
-    timeEstimate: '3-4 weeks',
+    description:
+      'Master intricate endgame positions to secure wins in close games.',
+    timeEstimate: '6 weeks',
     difficulty: 'Advanced',
     skills: [
-      'Rook + 2 pawns vs rook',
-      'Vancura position',
-      'Bishop vs knight',
-      'Fortresses',
-      'Queen endgames'
+      'Complex king play',
+      'Piece coordination',
+      'Precise conversion',
+      'Endgame defense',
     ],
-    prerequisites: [],
     resources: [
       {
-        title: 'Lichess Endgame Studies',
-        description: 'Practice high-level endgame positions with tablebase support',
+        title: 'Chess.com - Endgame Lessons',
+        description: 'Advanced endgame techniques.',
+        url: 'https://www.chess.com/lessons/endgames',
+        type: 'website',
+        difficulty: 'Advanced',
+      },
+      {
+        title: 'Lichess - Endgame Practice',
+        description: 'Complex endgame scenarios.',
         url: 'https://lichess.org/practice',
         type: 'website',
         difficulty: 'Advanced',
-      }
-    ]
-  }
+      },
+      {
+        title: 'Chessable - Advanced Endgame Courses',
+        description: 'Free courses on complex endgames.',
+        url: 'https://www.chessable.com/courses',
+        type: 'website',
+        difficulty: 'Advanced',
+      },
+      {
+        title: 'YouTube: Difficult King & Pawn Endings by GM Ben Finegold',
+        description: 'A video on challenging king and pawn endgame positions.',
+        url: 'https://m.youtube.com/watch?v=iCh3mnnJdbc',
+        type: 'video',
+        difficulty: 'Advanced',
+      },
+    ],
+  },
 ];
 
 export const skillLevels = [
@@ -408,8 +721,8 @@ export const skillLevels = [
       primary: 'text-beginner',
       background: 'bg-beginner-muted',
       border: 'border-beginner/30',
-      shadow: 'shadow-[0_10px_30px_-10px_hsl(var(--beginner)/0.3)]'
-    }
+      shadow: 'shadow-[0_10px_30px_-10px_hsl(var(--beginner)/0.3)]',
+    },
   },
   {
     level: 'intermediate' as const,
@@ -421,8 +734,8 @@ export const skillLevels = [
       primary: 'text-intermediate',
       background: 'bg-intermediate-muted',
       border: 'border-intermediate/30',
-      shadow: 'shadow-[0_10px_30px_-10px_hsl(var(--intermediate)/0.3)]'
-    }
+      shadow: 'shadow-[0_10px_30px_-10px_hsl(var(--intermediate)/0.3)]',
+    },
   },
   {
     level: 'advanced' as const,
@@ -434,7 +747,7 @@ export const skillLevels = [
       primary: 'text-advanced',
       background: 'bg-advanced-muted',
       border: 'border-advanced/30',
-      shadow: 'shadow-[0_10px_30px_-10px_hsl(var(--advanced)/0.3)]'
-    }
-  }
+      shadow: 'shadow-[0_10px_30px_-10px_hsl(var(--advanced)/0.3)]',
+    },
+  },
 ];

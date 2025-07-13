@@ -26,7 +26,6 @@ interface Topic {
   description: string;
   timeEstimate: string;
   difficulty: string;
-  prerequisites: string[];
   resources: Resource[];
   skills: string[];
 }
@@ -157,23 +156,6 @@ const SkillLevelCard = ({
                   </div>
                 </div>
 
-                {/* Prerequisites */}
-                {topic.prerequisites.length > 0 && (
-                  <div className="mb-4">
-                    <h5 className="text-sm font-medium text-foreground/80 mb-2">
-                      Prerequisites:
-                    </h5>
-                    <ul className="text-sm text-foreground/60 space-y-1">
-                      {topic.prerequisites.map((prereq, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <span className="w-2 h-2 bg-chess-gold rounded-full mr-2 flex-shrink-0" />
-                          {prereq}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
                 {/* Resources */}
                 <div>
                   <h5 className="text-sm font-medium text-foreground/80 mb-3">
@@ -205,7 +187,7 @@ const SkillLevelCard = ({
                             className="ml-2 bg-transparent border-white/20 hover:bg-white/10"
                             onClick={() => window.open(resource.url, "_blank")}
                           >
-                            <ExternalLink className="h-3 w-3" />
+                            <ExternalLink className="h-3 w-3" color="white" />
                           </Button>
                         </div>
                       </div>
