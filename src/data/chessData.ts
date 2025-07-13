@@ -51,6 +51,7 @@ export const beginnerTopics = [
       'King safety',
       'Avoiding early queen/edge pawns'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'Chess.com Opening Principles',
@@ -75,6 +76,7 @@ export const beginnerTopics = [
       'Double attacks',
       'Discovered checks'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'Lichess Tactics Trainer',
@@ -105,6 +107,7 @@ export const beginnerTopics = [
       'Ladder mate',
       'Back rank mate'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'Lichess Practice - Basic Endgames',
@@ -127,6 +130,7 @@ export const beginnerTopics = [
       'Checks, captures, threats',
       'Avoiding one-move blunders'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'Chess.com - How to Avoid Blunders',
@@ -144,6 +148,7 @@ export const beginnerTopics = [
     timeEstimate: 'TBD',
     difficulty: 'Beginner',
     skills: [],
+    prerequisites: [],
     resources: []
   }
 ];
@@ -161,6 +166,7 @@ export const intermediateTopics = [
       'Opening plans',
       'Repertoire building'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'Chess.com Opening Explorer',
@@ -185,6 +191,7 @@ export const intermediateTopics = [
       'Mating nets',
       '3–5 move calculation'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'ChessTempo Tactics',
@@ -208,6 +215,7 @@ export const intermediateTopics = [
       'Trading pieces',
       'Strong/weak squares'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'IM John Bartholomew - Chess Fundamentals',
@@ -230,6 +238,7 @@ export const intermediateTopics = [
       'Piece improvement',
       'Attack vs consolidate'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'Hanging Pawns - Positional Play',
@@ -254,6 +263,7 @@ export const intermediateTopics = [
       'King and pawn races',
       'Converting small advantages'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'Lichess Endgame Studies',
@@ -279,6 +289,7 @@ export const advancedTopics = [
       'Game analysis',
       'Engine use'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'ChessBase Mega Database',
@@ -301,6 +312,7 @@ export const advancedTopics = [
       'Dynamic/static advantages',
       'Counterplay'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'ChessNetwork - Advanced Strategy',
@@ -323,6 +335,7 @@ export const advancedTopics = [
       'Candidate moves',
       'Forcing vs quiet moves'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'Chess.com Calculation Training',
@@ -347,6 +360,7 @@ export const advancedTopics = [
       'Positional sacrifices',
       'King hunts'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'Hanging Pawns - Advanced Tactics',
@@ -370,6 +384,7 @@ export const advancedTopics = [
       'Fortresses',
       'Queen endgames'
     ],
+    prerequisites: [],
     resources: [
       {
         title: 'Lichess Endgame Studies',
