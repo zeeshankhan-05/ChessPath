@@ -41,7 +41,7 @@ Check out the live app here: [https://chess-path-eta.vercel.app/](https://chess-
    bun run dev
    ```
 4. **Open your browser:**
-   Visit [http://localhost:5173](http://localhost:5173) to view the app.
+   Visit [http://localhost:8080](http://localhost:8080) to view the app.
 
 ## Project Structure
 
