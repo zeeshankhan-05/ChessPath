@@ -4,11 +4,14 @@ ChessPath is a modern, interactive web application designed to guide users throu
 
 ## Features
 
-- **Interactive Roadmap:** Visualize your chess learning journey with a clear, step-by-step roadmap.
-- **Skill Level Cards:** Explore content tailored to different skill levels, from beginner to advanced.
-- **Curated Resources:** Access high-quality chess resources, tutorials, and guides.
-- **Quick Start Section:** Get started with chess fundamentals quickly and easily.
-- **Responsive Design:** Enjoy a seamless experience across devices, powered by Tailwind CSS.
+- **Tech Stack:** Built with React and TypeScript for robust, type-safe development. Uses Vite for lightning-fast builds and hot module reloading, and Tailwind CSS for utility-first, responsive styling. UI components are crafted with shadcn/ui and Radix UI for accessibility and consistency. Deployed seamlessly on Vercel for global performance and reliability.
+- **Interactive Roadmap:** Visualize your chess learning journey with a clear, step-by-step roadmap powered by dynamic React components.
+- **Skill Level Cards:** Explore content tailored to different skill levels, from beginner to advanced, with visually distinct cards and smooth transitions.
+- **Curated Resources:** Access high-quality chess resources, tutorials, and guides, organized for easy discovery and continuous learning.
+- **Quick Start Section:** Get started with chess fundamentals quickly and easily, leveraging intuitive UI and guided content.
+- **Responsive Design:** Enjoy a seamless experience across devices, with adaptive layouts and mobile-friendly interactions enabled by Tailwind CSS and Radix UI primitives.
+- **Performance & Accessibility:** Optimized for speed, accessibility, and best practices, ensuring a smooth and inclusive user experience.
+- **Vercel Deployment:** Hosted and deployed on Vercel, providing fast, secure, and reliable access worldwide with zero-config continuous deployment.
 
 ## Demo
 
@@ -25,7 +28,7 @@ Check out the live app here: [https://chess-path-eta.vercel.app/](https://chess-
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/ChessPath.git
+   git clone https://github.com/zeeshankhan-05/ChessPath.git
    cd ChessPath
    ```
 2. **Install dependencies:**
@@ -74,6 +77,8 @@ Contributions are welcome! To contribute:
 5. Open a pull request
 
 Please follow the established coding standards and include clear documentation for any new features or changes.
+
+I'm always looking for quality resources to add to ChessPath. Feel free to create pull requests or contact me with your suggestions!
 
 ## License
 
