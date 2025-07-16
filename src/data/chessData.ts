@@ -9,13 +9,13 @@ export const beginnerTopics = [
     skills: [
       "Piece movement",
       "Board setup",
-      "Check/checkmate basics",
+      "Check and checkmate basics",
       "Special rules",
     ],
     resources: [
       {
         title:
-          "YouTube: How To Play Chess: The Ultimate Beginner Guide by GothamChess",
+          "YouTube: How to Play Chess: The Ultimate Beginner Guide by GothamChess",
         description:
           "A comprehensive video explaining chess rules and basic gameplay.",
         url: "https://www.youtube.com/watch?v=OCSbzArwB10",
@@ -56,7 +56,7 @@ export const beginnerTopics = [
       {
         title: "YouTube: Chess Strategy Online - Opening Principles by Remote Chess Academy",
         description:
-          "A tutorial explaining 3 key opening principles.",
+          "A tutorial explaining three key opening principles.",
         url: "https://www.youtube.com/watch?v=0uKN3t0RFl8&pp=ygUYY2hlc3Mgb3BlbmluZyBwcmluY2lwbGVz",
         type: "video",
         difficulty: "Beginner",
@@ -164,7 +164,7 @@ export const beginnerTopics = [
     timeEstimate: "2 weeks",
     difficulty: "Beginner",
     skills: [
-      "Checks/captures/threats",
+      "Checks, captures, threats",
       "Short calculations",
       "Evaluate activity",
       "Avoid impulses",
@@ -189,7 +189,7 @@ export const beginnerTopics = [
       {
         title: "YouTube: How to Think in Chess by Chess Meditations",
         description:
-          "A video explaining how to think startegically in chess.",
+          "A video explaining how to think strategically in chess.",
         url: "https://www.youtube.com/watch?v=PUt0Eh-qkqw",
         type: "video",
         difficulty: "Beginner",
@@ -207,7 +207,7 @@ export const beginnerTopics = [
       {
         title: "YouTube: How To Play In Chess Tournaments by GothamChess",
         description:
-          "An article explaining what to expect in chess tournaments.",
+          "A video explaining what to expect in chess tournaments.",
         url: "https://www.youtube.com/watch?v=dZhiRvaM8N0&",
         type: "video",
         difficulty: "Beginner",
@@ -215,7 +215,7 @@ export const beginnerTopics = [
       {
         title: "YouTube: Chess Tournament Rules by TakeLessons",
         description:
-          "A video guide on understanding the rules of the tournament.",
+          "A video guide on understanding the rules of tournaments.",
         url: "https://www.youtube.com/watch?v=6MiqqeW286Q",
         type: "video",
         difficulty: "Beginner",
