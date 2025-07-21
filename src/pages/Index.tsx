@@ -12,6 +12,11 @@ const Index = () => {
       <Header />
       <HeroSection showResourcesButton />
       <QuickStartSection />
+      <div className="text-xs text-gray-400 text-center mt-10 mb-4 px-4">
+        <span>
+          Disclaimer: All rights to the resources referenced on this site belong to their respective owners. This website is a compiled list for educational purposes only.
+        </span>
+      </div>
     </div>
   );
 };
