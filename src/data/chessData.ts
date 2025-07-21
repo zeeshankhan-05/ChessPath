@@ -401,7 +401,7 @@ export const intermediateTopics = [
       {
         title: "YouTube: Mastering Positional Chess by Daniel Naroditsky",
         description: "A video to train a player's positional chess skills.",
-        url: "https://www.youtube.com/playlist?list=PLPDGhbd64YCL66VkRx3D3zKuT6POBH4KH",
+        url: "https://www.youtube.com/watch?v=NKBbyDDzzmw",
         type: "video",
         difficulty: "Intermediate",
       },
