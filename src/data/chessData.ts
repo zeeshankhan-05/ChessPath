@@ -579,7 +579,7 @@ export const advancedTopics = [
         difficulty: "Advanced",
       },
       {
-        title: "YouTube: Mastering Endgame Technique by ChessCoah Andras",
+        title: "YouTube: Mastering Endgame Technique by ChessCoach Andras",
         description: "A video on becoming more proficient in endgame situations.",
         url: "https://www.youtube.com/watch?v=TbrjW4bUcUo",
         type: "video",
